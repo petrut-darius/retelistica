@@ -1,0 +1,74 @@
+Small Home Networks -> conecteaza cateva pc-uri intre ele si la internet
+SOHO -> le da voie angatilor sa acceseze fisiere centralizate pt lucru 
+Medium to Large Networks -> au mai mult de 100 de calculatoare
+World Wide Networks -> internetul este un network care coneteaza mai multe network-uri mai mici intre ele
+
+Smartphone-urile -> se pot conecta la internet, au GPS receiver, media player, touch screen, camera si telefon, etc.
+Tablet -> sunt ca telefoanele, insa au ecran mai mare
+Smartwatch -> se poate conecta la un telefon, ca sa ii trimita alerte sau mesaje, sau chestii precum pulsul, numaru de pasi, etc.
+Smart Glasses -> un pc in niste ochelari
+
+Radio frequency identification (RFIDs) -> ii un tag care trimite informatii prin scanarea sa. (cum functioneaza un card bancar)
+Sensors and Actuators -> senzorii pot trimite informatii catre un software, care apoi sa ii zica unui actuator ce sa faca.
+
+Bit -> are valoarea ori 1 ori 0; bit-ul este folosit pentru a transfera datele in cod ASCII
+Byte -> 8 bit's
+
+Data Transmission:
+	-Electrical signals -> datele sunt transmise ca impulsuri electrice printr-un cablu de cupru
+	-Optical signals -> datele sunt transmise ca impulsuri de lumina printr-o fibra optica
+	-Wireless signasls -> datele sunt transmise prin raze infrarosii sau unde radio
+
+Bandwith -> capacitatea unui mediu de a transmite date
+Digital bandwith-ul masoara cat de multe date se pot transmite intre doua calculatoare intr-un anumit interval de timp
+
+Bits per second -> bps -> 1bps = unitatea fundamentala a bandwith-ului
+Kilobits per second -> kbps -> 1kbps = 1,000 bps
+Megabits per second -> mbps -> 1mbps = 1,000,000 bps 
+Gigabits per second -> gbps -> 1gbps = 1,000,000,000 bps
+Terabits per second -> tbps -> 1tbps = 1,000,000,000,000 bps
+
+Throughput -> este masurarea transferului de bitzi intre calculatoare intr-o anumita perioada de timp + timul de intarziere sau eroare
+
+Toate calculatoarele care sunt conectate la internet sunt clasificate ca find host-uri
+host-urile -> pot trimite sau primii date cu ajutorul internetului, insa trebuie sa aiba instalat software-ul specific pentru a trimite sau primii informatii, sau ambele software-uri
+
+Server -> un host care are software-ul instalat specific pentru a trimite date
+
+Client -> un host care are software-ul instalat specific pentru a primii date
+
+Exemple de servere : File, Web, Email
+
+
+Peer-to-Peer networks -> cand sunt mai multe host-uri care au ambele tipuri de software-uri pe ele, astfel transmit date de la unul la altul
+
+P2P Applications -> host-urile sunt atat client cat si servere
+
+Poti avea mai multe sotware-uri client sau software-uri server pe un host
+
+Exemple:
+	Host 1: web server, file server
+	Host 2: email client, web browser
+	Host 3: file access client, web browser
+
+Network Infrastrucure -> contine end device-uri, intermediate device-uri, network media(Wireless Media, LAN Media, WAN Media)
+
+End Devices -> computere, network printers, telefoane si echipament pentru telecomunicatii, camere de securitate, device-uri mobile
+
+ISP (internet service provider) services -> face legatura intre home networkul tau sio internetul propiu-zis 
+
+An ISP can be the local cable provider, a landline telephone service provider, the cellular network that provides your smartphone service, or an independent provider who leases bandwidth on the physical network infrastructure of another company.
+
+ISP connections ->  trebuie sa ne folosim de un ruter ca sa ne conectam securizat la un ISP, ruter-ul are incorporat un switch care conecteaza host-uri sau ceva ca un GOOGLE HOME, ruter-ul atribuie oricui host o adresa IP.
+
+Cable and DSL(Digital Subscriber Line) connections:
+	-Cable: deobicei este oferit de servicile de televiziune care transmit semnalul de internet prin acelasi cablu prin care se trimit si canalele tv, are un bandwith performant, si cele doua semnale sunt separate printr-un modem(ceva ca un crossover), ca intr-un final conexiunea Ethernet  sa ajunga la ruter. 
+
+
+
+
+
+
+
+
+
