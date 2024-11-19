@@ -59,10 +59,45 @@ ISP (internet service provider) services -> face legatura intre home networkul t
 
 An ISP can be the local cable provider, a landline telephone service provider, the cellular network that provides your smartphone service, or an independent provider who leases bandwidth on the physical network infrastructure of another company.
 
+ISP exemples: orange, vodafone, rds, etc.
+
 ISP connections ->  trebuie sa ne folosim de un ruter ca sa ne conectam securizat la un ISP, ruter-ul are incorporat un switch care conecteaza host-uri sau ceva ca un GOOGLE HOME, ruter-ul atribuie oricui host o adresa IP.
 
 Cable and DSL(Digital Subscriber Line) connections:
 	-Cable: deobicei este oferit de servicile de televiziune care transmit semnalul de internet prin acelasi cablu prin care se trimit si canalele tv, are un bandwith performant, si cele doua semnale sunt separate printr-un modem(ceva ca un crossover), ca intr-un final conexiunea Ethernet  sa ajunga la ruter. 
+
+Wireless Networks:
+	-Wifi: transmitere internetului prin unde radio cu ajutorul unui ruter wireless si poate conecta device-uri intre ele ca un switch
+	-Cash Register: Near-field communication(NFC) transmiterea datelor cu ajutorul campului magnetic
+		-ex: plata cu cardu bancar sau cu telefonu  
+	
+Cell phone Interaction with different networks:
+	-GPS: se foloseste de sateliti care trimit semnale, telefonu le primeste si astfel isi calculeaza locatia cu o marja de eroare de circa 10 metrii
+	-WIFI: telefonul trebuie sa fie in raza de operare a semnalului WIFI pentru a se reusii conectarea
+		-hotspot: o incapere unde semnalul WIFI este valabil
+	-BLUETOOTH: este o tehnologie wireless care permite device-urilor sa comunice de la o scurta distanta, se pot conecta mai multe device-uri deodata prin bluetooth
+	-Near Field Communication(NFC): o tehnologie wireless care le permite deive-urilor sa transmita data de la o distanta de cativa centimetrii, foloseste campuri magnetice pentru a trimite datele
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
