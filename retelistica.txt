@@ -77,7 +77,67 @@ Cell phone Interaction with different networks:
 		-hotspot: o incapere unde semnalul WIFI este valabil
 	-BLUETOOTH: este o tehnologie wireless care permite device-urilor sa comunice de la o scurta distanta, se pot conecta mai multe device-uri deodata prin bluetooth
 	-Near Field Communication(NFC): o tehnologie wireless care le permite deive-urilor sa transmita data de la o distanta de cativa centimetrii, foloseste campuri magnetice pentru a trimite datele
-	
+
+Mobile Devices and Wifi
+	-sistemele de operare cele mai populare sunt Android si iOS.
+	-daca esti conectat la un Wifi si te indepratezi de raza sa, telefonul va incerca sa se conecteze la un alt Wifi, iar daca nu gaseste se va conecta la datele mobile(if ON)
+	-daca intrii in raza unui Wifi te vei conecta automat(if ON) si ti se va inchide conexiunea cu datele mobile
+Configure Mobile Wifi connectivity
+	SSID - numele wifi-ului
+	Passphrase - parola wifi-ului
+	-scehma aia ca tre sa bagi numele si parola corecte ca sa se faca conexiunea, daca are parolel
+Configure Cellular Data Settings 
+	-cellular data - date mobile
+	-telefoanele sunt programata ca in momentul in care esti in raza unui WIFI sa se foloseasca de acea conexiune, iar cand nu sa se foloseasca de datele mobile
+Simple Connectivity with Bluetooth	
+	-se dau exemple de dispozitive care se pot conecta la bluetooth cu anumite roluri
+Bluetooth Pairing
+	-se intampla cand doua dispozitive creaza o conexiune prin care sa transmita date
+	-razele bluetooth se porneesc, si unul dintre dispozitive cauta alte dispozitive, celalalt dispozitiv trebuie sa fie setat pe discoverable mode, numit si visible, ca sa poata fi detectat
+	-cand un dispozitiv este setat in discoverabal mode acesta transmite la cererea altui dispozitiv date precum:
+		-nume
+		-clasa bluetooth
+		-servicii pe care dispozitivul le poate folosi
+		-informatii tehnice, precum specificatile bluetooth-ului
+	-in timpul procesului de pairing exista posibilitatea sa iti ceara un PIN, ca sa autentifici conexiunea dintre cele doua dispozitive, deobicei PIN-ul este un numar, un cod numeric sau un passkey
+	-PIN-ul este stocat in dispozitivele conectate, astfel nu o sa ti-l mai ceara
+		-ex: cand mi se conecteaza castile de dimineata fara sa mai apas ca le aleg pe ele
+Wireless Networks:
+	-Mobile phones use radio waves to transmit voice signals to antennas mounted on towers located in specific geographic areas. When a telephone call is made, the voice signal is relayed from one tower to another tower until it is delivered to its destination. This type of network is used when you make a phone call to another mobile phone or to a wired telephone. It is also used to send text messages directly from the phone. The most common type of cellular telephone network is called a GSM network. The abbreviations 3G, 4G, 4G-LTE, and 5G are used to describe enhanced cell phone networks that are optimized for the fast transmission of data. Currently, 4G still dominates as the current mobile network used by most phones.
+
+	In addition to the GSM and 4G/5G transmitters and receivers, smartphones make connections in a variety of ways.
+
+	Wi-Fi transmitters and receivers located within the smartphone enable the phone to connect to local networks and the internet. Wi-Fi networks are usually privately owned but often provide guest or public access hotspots. A hotspot is an area where Wi-Fi signals are available.
+
+	Bluetooth is wireless technology that allows devices to communicate over short distances. Multiple devices can be connected at the same time with Bluetooth.
+
+	NFC is a wireless communication technology that enables data to be exchanged by devices that are in very close proximity to each other, usually less than a few centimeters.
+Mobile Device Connectivity:
+	-Almost all mobile devices are capable of connecting to Wi-Fi networks. These precautions should be taken to protect Wi-Fi communications on mobile devices:
+		-Never send login or password information using unencrypted text (plaintext).
+		-Use a VPN connection when possible if you are sending sensitive data.
+		-Enable security on home networks.
+		-Use WPA2 or higher encryption for security.
+		
+	Two of the most popular operating systems for mobile devices are Android and Apple iOS. Mobile devices are preprogrammed to use a Wi-Fi network for the internet if one is available, and the device can connect to the access point and receive an IP address. If no Wi-Fi network is available, the device uses the cellular data capability if it is configured.
+
+	Bluetooth technology provides a simple way for mobile devices to connect to each other and to wireless accessories. Bluetooth is wireless, automatic, and uses very little power, which helps conserve battery life. Some examples of devices that use Bluetooth include hands-free headsets, keyboards, a mouse, stereo controls, car speakerphones, and mobile speakers.
+
+	Bluetooth pairing occurs when two Bluetooth devices establish a connection to share resources. In order for the devices to pair, the Bluetooth radios are turned on, and one device begins searching for other devices. Other devices must be set to discoverable mode, also called visible, so that they can be detected.
+
+	When a Bluetooth device is in discoverable mode, it transmits the following information when another Bluetooth device requests it:
+		-Name
+		-Bluetooth class
+		-Services that the device can use
+		-Technical information, such as the features or the Bluetooth specification that it supports
+		-During the pairing process, a PIN may be requested to authenticate the pairing process.
+
+
+
+
+
+
+
 
 
 
