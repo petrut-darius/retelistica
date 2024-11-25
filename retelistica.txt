@@ -162,7 +162,23 @@ Wired Network Technologies:
 	-cablu de Etharnet are deobicei o mufa de tip RJ-45
 	-Category 5e, este cel mai folosit tip de cablu la conexiunile LAN(ca la hidi)
 	-Coaxial calbe, ca la xbox 360, ala de zici ca firu de cupru ii o puta
-	-Fiber-optic cables, este un fir facut ori din plastic ori din sticla cu diametrul egal cu al unui fir de par, au bandwith foarte rapid, cea ce ii permite sa transfere date mari rapid  
+	-Fiber-optic cables, este un fir facut ori din plastic ori din sticla cu diametrul egal cu al unui fir de par, au bandwith foarte rapid, cea ce ii permite sa transfere date mari rapid
+	  
+Wifi -> ii dupa regula 802.11 de la IEEE
+Network mode: determiina tipul tehnologiei pe care il suporta sistemul
+	ex:802.11b, 801.11g, 802.11 sau un mod amestecat din astea
+Network Name(SSID): folosit pentru identificarea WLAN-ului, toate dispozitivele care vor sa participe in WLAN sunt nevoite sa aiba acelasi SSID
+
+Standard Channel: specifica pe ce tunel sa se duca ca un port, deobicei e setat pe AUTO acces point(AP).
+
+SSID Broadcast: determina daca SSID va imparti semnal la fiecare dispozitiv din raza sa, by default e setat pe enabled
+
+
+
+
+
+
+
 
 
 
