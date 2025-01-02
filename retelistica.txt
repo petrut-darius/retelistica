@@ -169,18 +169,92 @@ Network mode: determiina tipul tehnologiei pe care il suporta sistemul
 	ex:802.11b, 801.11g, 802.11 sau un mod amestecat din astea
 Network Name(SSID): folosit pentru identificarea WLAN-ului, toate dispozitivele care vor sa participe in WLAN sunt nevoite sa aiba acelasi SSID
 
+IEEE : responsabili de crearea standardelor tehnice ale wifi-ului	
+Wifi Alliance: responsabili de testarea dispozitivelor LAN
+
 Standard Channel: specifica pe ce tunel sa se duca ca un port, deobicei e setat pe AUTO acces point(AP).
 
 SSID Broadcast: determina daca SSID va imparti semnal la fiecare dispozitiv din raza sa, by default e setat pe enabled
 
+Network Mode:
+	-daca toate dispozitivele conectate la wifi sunt conectate prin protocolul 802.11, atunci pot fi atinse vitezele maxime
+	-daca punctull de acces este configurat sa accepte doar un port la 802.11 standard, dispozitivele care nu stiu sa acceseze acel port nu se pot conecta
+	-un mod wireless mixt poate fi setat astfel incat sa se poate conecta la orice wifi standard
+
+Wifi:
+
+	-First Time Setup:
+
+-ai nevoie de un PC sau  laptop pe care sa il  conectezi prin cablu ethhernet, trebuie coonectat neaparat intr-un port LAN al routerului, dupa ce se conecteaza i se va atribui automat o adresa ip, iar daca nu primeste o adresa ip, citeste documentatia routerului si va tu demersurile cu ip-u subnet masku, default gateaway-u si confirmatia DNS
 
 
+	-Design Considerations:
+
+-trebuie mereu sa te gandesti la functionalitatea router-ului tau, nu vrei sa il configuri si ai ceva limit la ce poti face pe net, in plus nu vrei sa iti lasi network neprotejat
+
+-dispozitivele wireless transmit sau primesc unde radio la o frecventa specifica. Daca un dispozitiv poate sa emita unde radio doar pentru 802.11 b/g acesta nu se va putea conecta la un router care are acces point-u setat sa accepte doar semanele 802.11n sau 802.11ac. Daca toate dispozitivele functioneaza pe acelasi network standard atunci network-u va functiona la viteza optima. Daca ai dispozitive care nu suporta 802.11n sau 802.11ac atunci va trebui sa setezi legacy mode-u(modu la care se conecteaza la dispozitive vechi prin wifi, gen standaru pt dispozitive vechi).  Legacy mode-u este un mediu network care variaza intre routerele cu conexiuni 802.11a, 802.11b,  802.11g, 801.11n si 802.11ac. Acest mod permite dispozitivelor mai vechi sa se conecteze la internet priin wireless.
+
+-poate fi setat un acces de tip invitat in care sa ai voie doar sa te folosesti de internet, acesta este un mod special pe care il acopera SSID-ul.
+
+Comnicatiion Protocols:
+-ce tip de comunicare folosim?
+-ce limba vorbim?
+-trebuie sa confirmam ca mesajele noastre au fost primite?
+
+protocoalele care trebuie sa fie urmate ca mesajul sa fie trimit si inteles:
+	-un emitator si un receptor identificati
+	-sa se stie prin ce metoda se comunica
+	-sa fie o limba comuna
+	-viteza si sincronizarea convorbirii
+	-confirmarea sau instintarea 
+cerintelor
+
+Caracteristicile Protocoalelor:
+	-message format: cand un mesaj e trimis acesta trebuie sa fie de un anumit format
+	-message size: dimensiunile difera, cand un mesaj lung trebuie trimis deobicei este necesar sa il impartim in pachetele, ca sa fim siguri ca nu o sa fie crackat
+	-timing: determina viteza la care sunt trimisi bits-i pe net, sau viteza cu care sunt transmise niste date
+	-encoding: mesajele trimise pe net sunt in primul rand transformate in bits-i, fiecare bit este transformat intr-un sunet, impuls electric sau val de luminca, depinde de ce cablu ai prin casa la router, apoi routeru care primeste bits-i ii transforma in mmesajul propiu-zis
+	-encapsulation: fiecare mesaj care e trimis pe net trebuie sa aiba un header, care trebuie sa cuprinda lucruri precum informatii despre adresa 
+	-message pattern: unele mesaje trebuie sa primeasca o aprobare ca sa fie trimise, aceasta relatie request/response este folosita la foarte multe protocoale, dar sunt si unele mesaje care nu se stie daca ajung vreodata la destinatia lor
 
 
+The internet and standards:
+	-un standard: este un set dde reguli care determina cum trebuie un lucru sa fie facut, acestea asigura transportul de acelasi tip de date pe internet
+
+Network standards organizations:
+	-cand un nou standard este propus, fiecare stagiu al developarii este salvat intru Request for Comment(RFC) document, astfel incat sa se stie evolutia acelui standard
+	-RFC-urile ale internetului sunt manegeriate de Internet Engineering Task Forice(IETF)
+	-alte orfanizatii are manegeriaza RFC-urile sunt: IEEE, ITU, TIA, IANA, ICANN
+
+The TCP/IP Model Layer:
+	application: reprezeinta datele catre utilizator,  plus encoding and dialog control
+	transport: suporta comunicatile intre dispozitive diferite, si totodata inntre networku-uri diferite
+	internet: determina cea mai buna ruta pe internet
+	network access: controleaza dispozitivele hardware si dispozitivele media, care constituie internetul
 
 
+Sunt doua tipuri de modele care descriu functile care trebuie sa fie folosite pentru ca comunicatie prin net sa fie una cu succes: protocol model sii reference models.
+	Protocol model: trebuie sa descrie functiile care apar la fiecare nivel al ansamblului de protocole
+	Reference model: acest protocol iti spune ce trebuie sa se intample la fiecare layer, dar nu si cum sa se intample
 
+Osi Model Layer:
+	1.Physical: layer-ul fizic  descrie mecanica, electrica, functionalitatea si proceduralitatea, de care este nevoie pentru a activa, a mentine si a dezactiva conexiunile fizice, pentru a transmite un bit catre si din un dispozitiv network
+	2.Data link: data link layer-ul descrie metodele pentru schimbarea datelor intre dispozitive care sunt in acelasi LAN sau WLAN
+	3.Network: network layer-ul contine servicii de schimbare a unor date individuale intre end-device-uri
+	4.Transport: transport layer-ul defineste servicile de segmentare, de transfer si de reasamblare a datelor pentru comunivatii individuale intre end-devices 
+	5.Session: session layer-ul coontine servicii prin care presentation layer-ul isi organizeaza dialogurile si isi manegereaza datele de schimb exchange
+	6.Presentation: presentation layer-ul contine pentru reprezentatii comune de transfer de date intre layere-le servicilor ale aplicatiei.
+	7.Application: application layer-ul contine protocoale folosite pentru process-to-process communications.
 
+Similaritatiile intre OSI si TCP/IP sunt in transport si network layers, insa modelele difera in modul de comunicare cu layerele anterioare sau succesoare.
+	-OSI layer 3, network layer:
+	transmite direct catre TCP/IP internet layer. Acest layer este folosit pentru a descrie protocoalelecare adreaseaza si conduc mesajele prin internet
+	-OSI layer 4, transport layer:
+	transmite direct catre TCP/IP transport layer. Acest layer descrie serviciile generale si functile care contin transmiterea de date intre sursa si destinatie
+	-TCP/IP application layer:
+	include cateva protocoale care contin functionalitati specifice catre o varietate de end user applications. Layere-le 5, 6 si 7 ale modelului OSI, sunt folosite ca referinta pentru developarii de aplicatii software, ca sa produce aplicatii care functioneaza pe net
+	-Modelele TCP/IP si OSI:
+	sunt comun folosite cand se face referire la protocoale la diferite layere. Pentru ca modelul OSi separa data link layer-ul de physical layer, acesta este comun utilizat cand ne referim la primele layere
 
 
 
