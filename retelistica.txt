@@ -1,4 +1,4 @@
-Small Home Networks -> conecteaza cateva pc-uri intre ele si la internet
+ Small Home Networks -> conecteaza cateva pc-uri intre ele si la internet
 SOHO -> le da voie angatilor sa acceseze fisiere centralizate pt lucru 
 Medium to Large Networks -> au mai mult de 100 de calculatoare
 World Wide Networks -> internetul este un network care coneteaza mai multe network-uri mai mici intre ele
@@ -256,6 +256,46 @@ Similaritatiile intre OSI si TCP/IP sunt in transport si network layers, insa mo
 	-Modelele TCP/IP si OSI:
 	sunt comun folosite cand se face referire la protocoale la diferite layere. Pentru ca modelul OSi separa data link layer-ul de physical layer, acesta este comun utilizat cand ne referim la primele layere
 
+Data este tramsisa pe net prin cabluri.
+Tipuri de cabluri:
+	-metal wires within cables -> datele sunt transformate in pulsuri electrice
+	-glass or plastic fibers within cabels -> datele sunt transformate in pulsuri de lumina
+	-wireless transmission -> datele sunt transformate prin modularea unor frecvente specifice de valuri electro-magnetice
 
+Dupa ce criterii sa iti alegi cablu:
+	-Care este distanta maxima prin care cablul poate sa care date?
+	-Care este zona(environment) in care cablul va fi instalat?
+	-Cat de multe si la ce viteza vor fi datele transmie
+	-Cat vrei sa cheltuiesti pe cablu? si pe instalarea sa?
 
+Cele mai comune cabluri de net:
+	-Twisted-Pair cable: is alea cum am folosit la casa la hidi, deobicei sunt folosite la ethernet
+	-Coaxial Cable: cablu ala de l-am pus la hidi la tv la casa, acesta cara frecvente inalte
+	-Fiber-Optic Cable: poate sa fie ori sticla ori plastic, cu un diametru la fel ca un fir de par, cara date la viteze si distante mari,
+	din cauza ca este folosita lumina in loc de electricitate, nu exista interferente care sa afecteze semnalul, este folosit in cadrul medical.
+	Au un bandwith foarte mare, care le permite sa cara date mari, este folosit in centre largi de date, si este  folosit mult de companiile telefonice
+
+Dispozitivele acceaseaza LAN-ul folosindu-se de Network Interface Card(NIC). Fiecare NIC are o adresa unica, permanent inregistrata in Media Access Control(MAC), unde sunt salvate adrese.
+Adresa MAC sursa sau destinatie, este un field din Ethernet frame.
+
+Ethernet Frame:
+	Preseamble -> are 7 biti, care sincronizeaza destinatia cu biti transmizi
+	Start Frame Delimiter -> are 1 bit, care ii zice ca de aicia incepe
+	Destination MAC addrees -> are 6 biti
+	Source MAC address -> are 6 biti
+	Length sau Type -> are 2 biti si se refera la cati biti o sa fie Data, sau ce tip de Data este
+	Data -> are intre 46 si 1500 biti si e efectiv toata data
+	Frame Check Sequence(FCS) -> are 4 biti, se verifica daca nu sunt erori
+
+Encapsulation:
+	-procesul de a plasa un mesaj intr-un alt message format se numeste encapsulation.
+	-deencapsulation se intampla la primirea unui mesaj
+	-orice mesaj este encapsulat invre-un fel, care se numeste FRAME
+	-un Frame este ca un plic in care pui o scrisoare, contine adresa destinatarului si a sursei
+	-formatul si contentului unui Frame sunt determinate de tipul mesajului si a canalului pe care se comunica
+	-mesajele care nu sunt corect formatate nu ajung cu succes la destinator
+	-IP-ul este responsabil de transmiterea mesajelor.
+
+A switch builds a MAC address table of MAC addresses and associated port numbers by examining the source MAC address found in inbound frames. To forward a frame onward, the switch examines the destination MAC address, looks in the MAC address for a port number associated with that destination MAC address, and sends it to the specific port. If the destination MAC address is not in the table, the switch forwards the frame out all ports except the inbound port that originated the frame.
+In an Ethernet network, each NIC in the network checks every arriving frame to see if the destination MAC address in the frame matches its own MAC address. If there is no match, the device discards the frame. If there is a match, the NIC passes the frame up to the next OSI layer.
 
