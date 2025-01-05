@@ -451,9 +451,9 @@ Destination on Same Network:
 	-intr-un LAN un dispozitivi are 2 adrese MAC-ul si IP-ul
 	-MAC-ul -> o adresa folosite in comunicatile NIC-to-NIC facute in LAN
 	-IP -> o adresa folosita la trimiterea unui pachet intre 2 host-uri
-	- Layer-ul 2 physical addresses(OSI) sunt folosite ca sa transporte data-link frame-urile, care au pachetul IP encapsulat in ele, si sa il trimit de la un NIC la alt NIC, NIC-urile sunt in LAN.
-	- Layeru 2 al unui Ethernet Frame consta in adresa MAC a sursei si a destinatiei
- 	- Layeru 3 al protocolului IP contine adresa IPv4 a sursei si a destinatiei
+	- Layer-ul 2 physical addresses(MAC) sunt folosite ca sa transporte data-link frame-urile, care au pachetul IP encapsulat in ele, si sa il trimit de la un NIC la alt NIC, NIC-urile sunt in LAN.
+	- Layeru 2 al OSI consta in adugarea adresei MAC a sursei si a destinatiei
+ 	- Layeru 3 al OSI contine adresa IPv4 a sursei si a destinatiei
 	
 Destination on Remote Network:
 	-cand adresa IP a destinatarului este pe netu propiu-zis, atuncia pachetu va fi trimis in LAN, iar adresa MAC a destinatarului va fi in LAN adresa gateway-ului din router
