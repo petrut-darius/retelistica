@@ -190,7 +190,7 @@ Wifi:
 
 	-Design Considerations:
 
--trebuie mereu sa te gandesti la functionalitatea router-ului tau, nu vrei sa il configuri si ai ceva limit la ce poti face pe net, in plus nu vrei sa iti lasi network neprotejat
+-trebuie mereu sa te gandesti la functionalitatea router-ului tau, nu vrei sa il configuri si ai ceva limita la ce poti face pe net, in plus nu vrei sa iti lasi networku neprotejat
 
 -dispozitivele wireless transmit sau primesc unde radio la o frecventa specifica. Daca un dispozitiv poate sa emita unde radio doar pentru 802.11 b/g acesta nu se va putea conecta la un router care are acces point-u setat sa accepte doar semanele 802.11n sau 802.11ac. Daca toate dispozitivele functioneaza pe acelasi network standard atunci network-u va functiona la viteza optima. Daca ai dispozitive care nu suporta 802.11n sau 802.11ac atunci va trebui sa setezi legacy mode-u(modu la care se conecteaza la dispozitive vechi prin wifi, gen standaru pt dispozitive vechi).  Legacy mode-u este un mediu network care variaza intre routerele cu conexiuni 802.11a, 802.11b,  802.11g, 801.11n si 802.11ac. Acest mod permite dispozitivelor mai vechi sa se conecteze la internet priin wireless.
 
@@ -206,8 +206,7 @@ protocoalele care trebuie sa fie urmate ca mesajul sa fie trimit si inteles:
 	-sa se stie prin ce metoda se comunica
 	-sa fie o limba comuna
 	-viteza si sincronizarea convorbirii
-	-confirmarea sau instintarea 
-cerintelor
+	-confirmarea sau instintarea cerintelor
 
 Caracteristicile Protocoalelor:
 	-message format: cand un mesaj e trimis acesta trebuie sa fie de un anumit format
@@ -298,4 +297,239 @@ Encapsulation:
 
 A switch builds a MAC address table of MAC addresses and associated port numbers by examining the source MAC address found in inbound frames. To forward a frame onward, the switch examines the destination MAC address, looks in the MAC address for a port number associated with that destination MAC address, and sends it to the specific port. If the destination MAC address is not in the table, the switch forwards the frame out all ports except the inbound port that originated the frame.
 In an Ethernet network, each NIC in the network checks every arriving frame to see if the destination MAC address in the frame matches its own MAC address. If there is no match, the device discards the frame. If there is a match, the NIC passes the frame up to the next OSI layer.
+
+
+The IPv4 Address:
+	-orice host care participa la un LAN are nevoie de o adresa deasta
+	-o adresa logica a internetului, care identifica un host particular
+	-trebuie sa fie unica in LAN, pentru comunicatiile locale
+	-trebuie sa fie unica in lume, pentru comunicatiile remote
+	- cu adresa asta reuseste un host sa comunice cu alte dispozitive pe net
+	-NIC-ul tine adresa IPv4 in el
+	-are 32 de biti, si sunt pe 4 grupari de 8 biti, si fiecare octet este convertit intr-o valoarea zecimala
+	
+Structura adreselor IPv4:
+	-componenta nerwork + componenta host
+	-intr-un LAN componenta network e aceasi, doar componenta host difera de la host la host
+	
+IPv4 Unicast:
+	-un pachet unicast este un pachet care are un singur host ca destinatie
+	-un pachet poate fi originar doar unui device
+
+IPv4 Broadcast:
+	-un pachet care e transmis catre toate dispozitivele din acel LAN, chiar si catre router
+	-destinatia e 255.255.255.255, cod special pt Broadcast
+	-Broadcast este doar la IPv4 nu si la IPv6
+	
+IPv4 Multicast:
+	-un pachet care e procesat doar de anumite dispozitive
+	-224.0.0.0 pana la 239.255.255.255 sunt adrese multicast(subnet mask)
+
+Types of IPv4 addresses:
+	-unele pot fi transmise pe net, si altele sunt doar pt a fi transmise pe net
+	-adresele IPv4 private:
+		- 10.0.0.0/8
+		-172.16.0.0/12
+		-192.168.0.0/16
+
+Routing to the internet:
+	-cand tu trimit un pachet catre internet, acesta are o adresa privata IPv4 care trebuie translatata la o adresa publica IPv4, cu aceasta translatare se ocupe Network Address Transalation(NAT).
+	-NAT translateaza si de la pulblic la privat
+
+Special Use IPv4 Addresses:
+	-Loopback addresses:
+		de la: 127.0.0.0/8 la 127.255.255.254
+			-astea is folosite de vre-un host ca sa isi redirectioneze trafic siezi
+	-Link-Local addresses:
+		de la 169.254.0.0/16 sau 169.254.0.1 la 169.254.255.254
+			-astea is ca Automatic Private Uo Addressing(APIPA) sau self-assigned addresses
+	
+Legacy Classful Addressing:
+	Class A(0.0.0.0/8 la 127.0.0.0/8):
+		-folosite sa suporte network-uir foarte mari, care au mai multe de 16 milione de host-uri
+		-clasa A foloseste un /8 prefix fixat, adica doar primul octet arata network-ul
+	Class B(128.0.0.0/16 la 191.25.0.0/16):
+		-folosite sa suporte network-uri medii catre mari, care au pana la aproximativ 65,000 host-uri
+		-clasa B foloseste un /16 prefix fixat, adica primele 2 octete arata network-ul
+	Clasa C(192.0.0.0/24 la 224.255.255.0/24):
+		-folosite sa suporte network-uri mici, care au maxim 254 de host-uri
+		-clasa C foloseste un /24 prefix fixat, adica primele 3 octete arata network-ul
+	Clasa D(224.0.0.0/16 la 239.0.0.0/16).
+	Clasa E(240.0.0.0/16 la 255.0.0.0/16).
+
+Assignment of IP Addresses:
+	-adresele IPv4 publice trebuie sa fie unice
+	-IPv4 si IPv6 sunt manegeriate the ASsigned Numbers Authority(IANA)
+	-IANA alocheaza block-uri de IP-uri catre Regional Internet Registries(RIR's)
+	-RIR's dau IP-uri la ISP-uri, care organizeaza ISP-uri mai mici
+	
+Network Segmentation:
+	-ruterele nu trimit broadcast's
+	
+Problems with Large Broadcast Domains:
+	-problema e ca "daca fac foarte multi utilizatori deodata broadcast fiecare"
+	-rezolvarea e sa se creeze mai multe network-uri mai mici, adica subnetting.
+	-subnetting = se folosesc de biti de la host ca sa creeze subnet-uri
+
+Reasons for Segmenting Networks:
+	-subnetting-ul ajuta la traficul de pe net, si creste viteza, il lasa pe administrator sa faca anumite operatii asupra unor subnets
+	-reduce numarul de host-uri afectate de un broadcast gresit
+
+The need for IPv6:
+	-IPv4 ramane fara adrese
+	-are 128 de biti, adica 340 * 10 la puterea 36 de adrese poate sa faca
+	-are Internet Control Message Protocol incorporat in el (ICMPv6)
+	
+IPv4 and IPv6 Coexistence:
+	-Dual stack:
+		-adica sa exista ambele in acelasi network
+		-dispozitive care pot ambele sa dea run la IPv4 cat si la IPv6
+		
+	-Tunneling:
+		-se encapsuleaza un pachet IPv6 intr-un pachet IPv4, si asa se transmit datele
+		-dupa ce e encapsulat se trimite printr-un IPv4 network
+
+	-Translation:
+		-se foloseste un NAT64 router care translateaza de la IPv6 la IPv4 sau invers, intre LAT-uri
+	
+Hexadecimal Number System:
+	-IPv6 este reprezentat cu numere hexadecimale, adica numere de la 0 la 9 si literele de la A la F
+	
+Ipv6 Addresssing Formats:
+	-128 de biti
+	-fiecare 8 biti sunt reprezentati de un caracter hexazecimal
+	
+IPv6 Formating Rules:
+	-fiecare caracter din setu de 4, se paote scrie in binary code ca 4 caractere
+	-deci fiecare 4 ii 16 biti
+	-0-urile de la inceput pot fi omise
+	-coloanele de 4 caractere care toate caracterele is 0, si is mai multe coloane succesive se pot scrie asa -> ::
+	
+Static IPv4 Address Assognment:
+	-astea pot fi puse ori static ori dinamic
+	-static ii atuncia cand administratorul trebuie sa configureze adresa manual
+	-static, se foloseste deobicei la : imprimante, servere, etc
+	-static, poate sa aduca mai mult control, dar poate dura mult sa introduci informatiile la fiecare host
+	-static, pot aparea mai usor erori pentru ca se incearca pentru niste erori basic
+	
+Dynamic IPv4 Address Assignment:
+	-la LAN-uri locale e deobicei intalnit, pentru ca se da o adresa IPv4 automat cu ajutorul la Dynamic Host Configuration Protocol(DHCP)
+	-DHCP-u atribuie adrese IPv4, subnet mask-uri, default gateaway-uri si alte configuratii 
+	-deobicei DHCP-ul este folosit la network-uri mai mari
+	-DHCP-u atribuie informatii pana cand host-u se inchide, si daca se reporneste o sa il configure altcumva
+	
+DHCPv4 operation:
+	-hostu-l care are nevoie de un IP, ii trimie la switch un DHCP Discover, adica trimite un broadcast la care o sa raspunda doar un DHCP server
+	-DHCP serveru ii trimite la host un DHCP OFFER, care are un IP, subnetmask si adresa default a gateaway-ului
+	-host-ul ii trimite la DHCP SERVER un DHCP REQUEST, care il intreaba daca poate folosi adresa IPv4 pe care i-a dat-o initial 
+	-DHCP serveru ii trimie un DHCP ACK, care ii zice host-ului ca adresa IP va fi inregistrata in tabel cu adresa MAC.
+
+Gateways to Other Networks:
+	-un gateway este o metoda prin care tranficul este trimis din LAN, catre internet-ul propiu-zis
+	-default gateway este la 192.168.1.1
+
+Routers as Gateways:
+	-router-ul are un gateway care le permite host-urilor de pe un LAN sa comunica cu alte host-uri de pe alt LAN
+	-fiecare mufa a router-ului este conectata la un LAN separat
+	-fiecare adresa IPv4 data unuei mufe identifica la ce LAN este conectat cablu de ii bagat in mufa
+	-fiecare host foloseste router-ul ca un gatewaty, asa ca fiecare host trebuie sa stie adresa IPv4 a mufei conectata la internet(backend, ce se intampla in router), la care host-u e conectat
+	-adresa gateway-ului este una default, sau poate fi configurata static
+	-cand un router wireless care este si un DHCP server, va trimite IPv4 al gateway-ului catre fiecare host
+	-un router wireless care este si un DHCP server, va trimite adresa sa propie IPv4 ca gateway
+	
+Routers as Boundaries Between Networks:
+	-cand te conectezi ca host primeste de la router(a.k.a DHCP) IPv4-le tau, subnetmask-u, si primeste adresa IPv4 a mufei LAN la care esti conectat(daca esti prin cablu)
+	-cand un router wireless este conectat la ISP, acesta va fi un DHCP client, care o sa primeasca adresele IPv4 de iesire(adica unde sa trimite routeru) ale mufelor de la LAN.
+	-ISP-urile dau internet-routable address, care le permite host-urilor conectate prin wireless sa aiba acces la net
+	-routerele wireless sunt legatura intre LAN si internetul extern
+
+Introduction to NAT(network address transaltion):
+	-translateaza de la o adresa LAN la una publica de pe internetul propiu-zis
+
+Destination on Same Network:
+	-ca un host sa trimite un mesaj unui alt host, trebuie sa ii cunoasca IP-ul is MAC-ul celuilalt host
+	-intr-un LAN un dispozitivi are 2 adrese MAC-ul si IP-ul
+	-MAC-ul -> o adresa folosite in comunicatile NIC-to-NIC facute in LAN
+	-IP -> o adresa folosita la trimiterea unui pachet intre 2 host-uri
+	- Layer-ul 2 physical addresses(OSI) sunt folosite ca sa transporte data-link frame-urile, care au pachetul IP encapsulat in ele, si sa il trimit de la un NIC la alt NIC, NIC-urile sunt in LAN.
+	- Layeru 2 al unui Ethernet Frame consta in adresa MAC a sursei si a destinatiei
+ 	- Layeru 3 al protocolului IP contine adresa IPv4 a sursei si a destinatiei
+	
+Destination on Remote Network:
+	-cand adresa IP a destinatarului este pe netu propiu-zis, atuncia pachetu va fi trimis in LAN, iar adresa MAC a destinatarului va fi in LAN adresa gateway-ului din router
+	-pentru a afla adresa MAC a unui dispozitiv stiind doar ip-ul:
+		-IPv4 va folosi: Address Resolution Protocol(ARP) in LAN
+		-IPv6 va folosi: Neighbor Discovery(ND) in LAN
+	
+The Ethernet Broadcast:
+	-cand destinatia MAC este ffff.ffff.ffff.ffff.ffff.ffff sau 1111.1111.1111.1111.1111.1111.1111.1111.1111.1111.1111.1111.1111.1111.1111.1111
+
+Broadcast Domains:
+	-cand un host primeste un mesaj care a fost trimis prin broadcast el il citeste ca si cand i-ar fi adresat direct lui
+	-cand este Broadcast traffic prea mare, atunci LAN-ul se imparte in mai multe L-an-uri diferite sau Broadcast Domains
+	
+Acces Layer Communication:
+	-un NIC accepta un frame doar daca adresa MAC este  alui sau broadcast
+	-multe LAN pot functiona si doar daca este adresa IP a destinatarului in pachet, doar ca trebuie sa foloseasca ARP-u sau ND-u ca sa faca rost de o adresa MAC
+	
+Addresss REsolution Protocol(ARP):
+	-folosit cand stim IPv4, dar nu stim adresa MAC a dispozitivului
+	-hostu care nu stie MAC trimite un broadcast cu un ARP request, care zice ca cine are IP-u ala sa trimita adresa MAC printr-un ARP reply
+
+procesu ARP:
+	-hostu trimite un frame printr-un broadcast, frame-ul contine adresa IPv4 a destinatarului
+	-fiecare host din LAN primeste acel frame si isi compara adresele IPv4
+	- host-ul care are adresa identifica, va trimite adresa MAC a sa hostului de la care a primit frame-ul	
+	- host-ul sursa noteaza adresa IPv4 si cea MAC intr-un tabel numit ARP tabel
+
+Dividing The Local Network:
+	-bagi rutere intre swtich-uri ca sa nu se faca broadcast-uri, sa fie alt LAN , etc. 
+	-fiecare switch duce printr-un ort la alt switch numa ca nu vrei ca hostu de la switchu 1 sa vada ce are hostu de la switchu 3.
+
+Router Pack Forwarding:
+	-hostu trimite la router, routeru vede la care mufa ii IP-u ala si trimite mesaju
+	
+Routing Table Entries:
+	-routere-le muta informatii intre LAN-uri, ca sa faca asta tin minte date in routing tables
+	-routing tables contin adresele LAN-urilor, nu a host-urilor
+	-aceste tabele se updateaza ori dinamic ori static
+	-routerele se folosesc de aceste tabele ca sa stie pe ce mufa sa trimita pachetu
+
+Local and Remote Network Segments:
+	-poti intr-un LAN sa ai sute de host-uri, sau mai multe LAN-uri mici care sunt interconectate printr-un distribution layer device
+	All Hosts in One Local Segment:
+		- host-urile se vad intre ele
+		k: 
+			-bun pt LAN-urile simple
+			-putin complex
+			-le da voia host-urilor sa vada alte host-uri
+			-transfer de date mai rapid, comunicatie directa
+
+		not k:
+			-greu de implementat QoS
+			-greu de implementat securitate
+			-mult internet trafic, ca is multe host-uri intr-un broadcast
+	Hosts on a Remote Segment:
+		-pui un router si ies 2 LAN-uri la 2 switchuri fiecare switch are sute de host-uri
+		k:
+			-e mai ok pt LAN-uri mai complexe
+			-mai putin trafic, ca is 2 broadcastu-uri
+			-pot maximiza performanta in fiecare LAN
+			-nu se vad host-urile din LAN-uri diferite intre ele
+			-pot fi mai securizate
+			-pot ajuta la organizarea LAN-ului
+		not k:
+			-trebuie sa te folosesti de routing
+			-router-ul poate sa incetineasca traficul dintre LAN-uri
+			-mai complex si scump(ca tre sa iei router)
+
+
+
+
+
+
+
+
+
+
 
