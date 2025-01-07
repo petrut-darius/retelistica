@@ -523,13 +523,163 @@ Local and Remote Network Segments:
 			-router-ul poate sa incetineasca traficul dintre LAN-uri
 			-mai complex si scump(ca tre sa iei router)
 
+TPC and UPD Operation:
+	-transport layer protocols
+	UDP:
+		-folosit la conversatile real-time
+		-se imparte pe pachete ca sa fie mai usor de trimis
+		-fara confirmare la primirea pachetelor
+	TCP:
+		-e mult mai bine optimizat
+		-se imparte pe pachete ca sa fie mai usor de trimis
+		-fiecare pachet are un index, ca sa stie in ce ordine sa fie asamblat
+		-:80 -> default pt web-servere
+		-cu confirmare la primirea pachetelor
+		
+Transport Layer Port Numbers:
+	-default ports on servers:
+		Web - 80
+		FTP - 21
+		Mail - 25
+	-default ports on host:
+		-is random
+	-TCP-u si UDP-u ne permite sa facem mai multe request-uri deodata
+	
+TCP and UDP Port Numbers:
+	-cand un mesaj este trimis folosind UDP sau TCP, protoacelele si servicile requested sunt identificate cu un port number
+	-cand un mesaj este primite de server, este necesar ca serverul sa poata determina ce serviciu este requested de client
+	-clientul este preconfigurat sa foloseasca un port-destinatie care este inregistrat pe internet pentru fiecare serviciu
+		-ex: client -> request :80(HTTP)
+	- port-urile sunt configurate si manageriate de catre Internet COrporation for Assigned Names and Numbers(ICANN)
+	-sunt 3 categorii de port-uri:
+		- well-known ports: port-uri destinatie care sunt folosite foarte des pe internet de la 1 la 1023
+		- registred ports: port-uri de la 1024 la 49151 pot ori port-uri destinatie sau sursa
+		- private ports: port-uri d ela 49152 la 65535 sunt folosite deobicei ca port-uri sursa 
+	-unele aplicatii pot folosii si TCP si UDP
+		-ex: DNS			
 
+Socket Pairs:
+	- portul sursa si cel destinatie sunt scrise intr-un segment
+	-segmentul este apoi encapsulat intr-un pachet IP
+	-pachetul IP contine adresa IP a sursei si a destinatiei
+	-combinatie dintre portul si IP-ul sursa sau destinatie se numeste SOCKET
+	- socketul sursa si cel destinatie, impreuna formeaza o pereche socket
+	
+The netstat Command:
+	-daca scrii "netstat" in cmd o sa iti apara o lista cu toate port-urile folosite in LAN, si poti sa-ti dai seama daca ai ceva user nepoftit conecatat la LAN
+	-daca scrii si "-n" o sa iti apara adresele IP si port-urile
 
+Client and Server Interaction:
+	- serverul este un host care are instalat un software care da informatii sau servici altor host-uri care unt conecatate la net
+	- un exemplu de software este web serverul
+	- sunt milioane de servere conectate la internet, web site-urile, email, tranzictile bancare, music downloads etc.
+	- un pac crucial pentru ca aceste comunicatii sa fie posibile, este protocoalele si standardele dupa care functioneaza
+	- un exemplu de client software este Chrome-ul sau Firefox-ul
+	- un host poate sa aiba mai multe client software-uri instalate
+	
+Web Server and Client IP Interactions:
+	- clientul baga un URL
+	-apoi se face un DNS lookup, adica trimite un request la DNS server ca sa primeasca adresa IP a URL-ului
+	-apoi se face o conexiune TCP intre client si server
+	-cand serveru primeste pachetu TCP la :80 si apoi trimite datele pe care le cere clientu
+	
+URI, URN and URL:
+	- Uniform Resource Identifier(URI) este un string care identifica o specifica sursa a internetului
+	URI = URN + URL.
+	-Uniform Resource Name(URN) identifica doar namespace-ul resursei
+		-ex: web page, document, image, etc.
+	-Uniform Resource Locator(URL) identifica locatia de pe net a unei surse specifie, URL-uri de tip HTTP si HTTPS sunt folosite deobicei pe web browsers
+		-alte protoacele precum FTP, SFTP, SSH, sau altele pot si ele fi folosite ca un URL.
+		-un URL care foloseste SFTP poate arata asa sftp://sftp.example.com
+	-Structura URI:
+		1 -> ce protocol foloseste HTTPS, FTP, SFTP, malito si NNTP	
+		2 -> hostname-ul
+		3 -> path-ul catre fisier si numele fisierului
+		4 -> fragment; ex: #page155
+	URI: https://www.example.com/author/book.html#page155
 
+Common Network Application Services:
+	-cele mai comune servicii de pe net sunt:
+		-internet searches, social media sites, video and audio streaming, on-lin shopping sites, email and messaging
+	-toate aceste servicii functioneaza dupa protocolul TCP/IP
+	- Protcoale:
+		DNS - face rost de adresa URL-ului
+		SSH - te poti conecta la un host de pe alt host
+		SMTP - trimite email-uri si atasamente de la clienti catre servere si de la servere la server
+		POP - email clientu cere email-uri si atasamente de la un email server
+		IMAP - email clientu cere email-uri si atasamente de la un email server
+		DHCP - da adrese IP automat si alte necesare ca un host sa poata comunica pe net
+		HTTP - folosit de web browsers sa dea request la pagini web, si web servere ca sa trimita fisiere care construiesc World Wide Web(WWW)
+		FTP - folosit la transferul interactiv de fisiere intre host-uri
 
+The nslookup Command:
+	-daca dupa comanda nslookup bagi un url o sa iti dea ip-ul public al acelui url
 
+HTTP and HTML:
+	- http -> protocolul care face rost de fisierul unui webpage
+	- html -> limbajul de programare in care se scrie fisierul unui webpage
+	- cand un client face un request la adresa IP a unui web server la portu 80, acest request  este trimis serverului folosinduse de Hyper Transfer Protocol(HTTP)
+	- protocolul HTTP nu este sigur, find usor de interceptat informatile de alti useri
+	- HTTP-u poate fi folosit cu secure transport protocols
+	- requestu pt HTTP securizat se fac la portu 443, iar aceste requesturi folosesc protocolul HTTPS 
+	
+File Transfer Protcol(FTP):
+	-FTP o metoda usoara de a transfera fisiera de la host la host
+	-un host care are FTP client software pot accesa un FTP server, ca sa schimbe fisiere pe acolo
+	- FTP-ul lasa un client sa faca schimb de fisiere cu un host, lasa clientul sa menegerieze fisiere remote
+	- ca FTP-ul sa poata functia accesta foloste 2 port-uri diferite pentru a comunica intre server si client
+	- FTP client software este scrie in computer operating system(windows, linux, etc) si in multe web browsere. 
 
+Telnet:
+	- unul dintre cele mai vechi application layer protocols
+	- telnet iti da voie sa folosesti terminalul unui host, de la tine de acasa, de la hostu tau 
+	- telnet asculta client request-uri pe portul TCP 23 
 
+Security Issues with Telnet:
+	- telnetu nu encripteaza datele cand le transmite la hostu la care esti conectat
+	- SSH este un telnet securizat
+	- SSH encripteaza datele cand le transmite
 
+Email Clients and Severs:
+	-emailul este una dintre cele mai populare aplicatii de tip client-server 
+	-serverele email au un software care le permite sa interactioneze cu clientul si cu alte servere email
+	-fiecare server email stocheaza mailuri pentru useri
+	-fiecare user apoi trebuie sa se foloseasca de un email client ca sa se conecteze la email server si sa citeasca email-urile
+	-protocoale folosite in procesarea email-urilor sunt SMTP, POP3, si IMAP4
 
+Email Protocols:
+	Simple Mail Transfer Protocol(SMTP):
+		-SMTP este folosit de un email client ca sa trimita email-uri catre server-u local
+		-apoi serveru local decide daca mesajul este destinat unei db locale sau unei db de pe un alt server
+		-daca serveru tre sa trimita emailu catre alt server, SMTP se va ocupa de aceasta transmitere
+		-requestu-rile SMTP se trimit la portu 25
+	Post Office Protocol(POP3):
+		-un server care are POP clients, primeste si stocheaza mesajele adresate userilor.
+		-cand clientul se conecteaza la email server, mesajele sunt downloadate catre client
+		-by default mesajele nu raman la server dupa ce au fost accesate de client
+		-clientul conecteaza POP3 server la portu 110
+ 	Internet Message Access Protocol(IMAP4):
+		-un server care suporta IMAP clients, primeste si stocheaza mesajele adresate userilor.
+		-insa IMAP tine mesajele intr-o db din server si isi face o copie care ramane la el, pana sunt sterse de client.	
+		-cea mai noua versiune de IMAP este IMAP4, care primeste client request la portu 143
 
+Text Messaging:
+	-permite userilor sa comunice pe internet in timp real.
+	-servicile de tip text-messaging pe un computer sunt deobicei accesate printr-un client bazat web(ex: Gmailu) care este integrat intr-o aplicatie de tip social media sau information sharing.
+	-clientii deobicei se conecteaza doar la ceilalti useri de pe acelasi site
+	-sunt si aplicatii de tip text messaging care au fost dezvoltate pe o platforma privata
+		ex:  cisco webex teams, microsoft team, whatsapp, facebook, messenger, etc.
+	- aceste aplicatii suporta si transferul de documente, videouri, muzica si fisiere audio 
+
+Internet Phone Calls:
+	-IP telephony se foloseste de tehnologia Voice over IP(VoIP), care transforma signalele analog ale vocii in date digitale
+	-datele vocale apoi sunt encapsulate intr-un pachet IP, apoi transmise pe net 
+	-trebe sa ai casti microfon, si un user unic
+	-daca vrei sa vorbesti de pe un telefon IP la unu normal atunci o sa folosesti un gateway ca sa accesezi the Public Switched Telephone Network(PSTN).
+	-porturile de accesare difera de la software-ul folosit
+ 
+ipconfig - Displays IP configuration information.
+ping - Tests connections to other IP hosts.
+netstat - Displays network connections.
+tracert - Displays the route taken to the destination.
+nslookup - Directly queries the name server for information on a destination domain.
