@@ -1,0 +1,454 @@
+peer-to-peer -> cand un host are si client si server software pe el si se comporta ca amebele
+
+Topology Diagrams:
+	Physical Topology Diagrams:
+		-diagrame dinalea in care iti zice camera, dulapu, sertaru, chestii deastea
+	Logical Topology Diagrams:
+		-diagrame care iti arata adresele IP, tipul de servere, iesirile din host-uri, sau dispozitive intermediare, chestii deastea
+	
+Intranetes and Extranets:
+	- intranetul este o conexiune pricata intre LAN-uri sau WLAN-uri care sunt ale unei companii
+	- acces la intraneturi au doar mebrii, angatii sau alte persoane autorizate
+	- extranetul le ofera cumparatorilor, colaboratoriilor, si altor persoane acces securizat si sigur la datele companiei daca au acces
+	
+Internet Access Technologies:
+	- DSL, wireless WAN's, mobile services, cablu
+	- servicii populare ale business-class sunt DSL, leased lines si Metro Ethernet 
+ 	
+Internet Connections:
+	prin cablu : internet data este transmis pe acelasi cablu ca cel TV
+	prin DSL : internet data este transmis pe o linie telefonica
+	cellular : date mobile
+	stellite : antena satelit
+	dial-up Telephone : suni la ISP, ei iti inchid linia telefonica si iti trimit datele net pe acelasi cablu care il bagi intr-un modem in PC
+	
+Bussines Internet Connections:
+	dedicated leased lines : sunt cabluri trase de un ISP special intre doua loucri geografic separate ale unei firme
+	metro ethernet : se exitnde accesu LAN in WAN(facem asta in alt modul zice aici)
+	business DSL : Symmetric Digital Subscriber(SDSL) un DSL normal numa ca te lasa sa uploadezi si sa downloadezi date
+	satellite : antena satelit
+
+Converged Networks:
+	- zice ca toate toate network-urile(data, telephone, video) folosesc acelasi Rule Agreement Standard
+	
+Network Architecture:
+	-caracteristicile basic pe care un network trebuie sa le implementeze ca sa fie ok:
+		-Fault Tolerance
+		-Scalability
+		-Quality of Service(QoS)
+		-Security
+	
+Fault Tolerance:
+	-in cazu in care se strica un dispozitiv intermediar, networku sa fie contrusit astfel incat sa se repare rapid
+	-adica datele sa ia o alta ruta catre internetul propiu-zis
+	-sa ai mai multe rute este cunoscut sub numele de redundancy
+	Packet Switched Network:
+		-packet switching imparte traficul in pachete care sunt trimise pe net
+		-un singur mesaj este impartit in pachete(transportation layer)
+		-si apoi ii trimis
+
+Scalability:
+	-sa poate un LAN sa fie adaugat usor fara sa trebuiasca o schimbare majora
+	
+Quality of Service(QoS):
+	-sa nu existe timp de asteptare, daca dau request la o pagina web sa o primesc instantaneu
+	
+Security:
+	-sa nu existe acces neautorizat
+	-administratorii trebuie sa respecte niste caracterestici ca sa protejeze datele dintr-un pachet
+	confidentiality : adica doar persoane autorizate si destinatarul sa aibe acces si sa citeaza data
+	integrity : data sa fie transmisa 1 la 1, sa nu se schimbe cuvinte pe acolo sau culori dracu
+	availability : acces rapid si bun la servicile de date pentru utilizatorii autorizati
+
+Recent Trends:
+	-Bring Your Own Device(BYOD)
+	-Online collaboration
+	-Video communications
+	-Cloud Computing
+	
+BYOD:
+	- sa te poti conecta la internet cu orice dispozitiv
+
+Online collaboration:
+	- sa poti colabora efectiv cu cineva pe internet, sa vorbiti, trimitei fisere etc
+
+Video communications:
+	- sa poti comunica cu cineva printr-un apel video
+
+Cloud Computing:
+	- sa iti tii date pe un server numit cloud.
+	- exista 4 tipuri de clouduri:
+		Public Clouds : chestii pe care le poate accesa oricine
+		Private Clouds : chestii pe care doar anumite persoane le poate accesa
+		Hybrid Clouds : Public Clouds + Private Clouds, useri au nivele de acces
+		Community Clouds : Public Clouds pe care se vorbeste numa despre un anumit subiect
+
+Powerline Networking:
+	-se pun niste adaptatoare care transmit pe cablurile de curent data la o anumita frecventa
+
+Wireless Internet Service Provider(WISP):
+	-se pune o antena intr-un loc inalt, si la tine acasa si din antena de pe casa se duce in router si deacolo ii exact la fel
+
+Wireless Broadband Service:
+	-se pune o antena afara care primeste data si o transmite prin cablu sau wireless
+
+Security Threats:
+	Viruses, worms, and Trojan horses : contin un software sau cod malicios pe un dispozitiv al unui user
+	Spyware and aware : un software ca colecteaza informatii de pe telefonul user-ului
+	Zero-day attacks : un atac care vine odata ce se stie despre o vulnerabilitate
+	Threat actor attacks : un hacker ataca dispozitivele user-ilor sau resurse de pe net
+	Denail of service attacks(DoS) : incetinesc sau distrug aplicatii si procese de pe un dispozitiv de pe net
+	Data interception and theft : colecteaza informatii private de pe un LAN
+	Identity theft : fura datale de logare ale unui utilizator ca sa ii aceseze datele private
+
+Security Solutions:
+	Antivirus and antispyware : aceste aplicatii protejeaza dispozitivele de la a fi infectate cu un cod malicios
+	Firewall filtering : previne accesul nesecurizat
+	Dedicated firewall systems : capabilitati mai avansate ale unui firewall
+ 	Acces control lists(ACL) : filtreaza traficul si accesul dupa adresele IP si aplicatii
+	Intrusion prevention systems(IPS) : identifica amenitari care se raspandesc rapid, ca si Zero-day attack-urile
+	Virtual private networks(VPN): dau acces securizat la o organizatie
+ 
+Operating Systems(OS):
+	-partea OS-ului care interactioneaza direct cu componentele hardware ale calculatorului este kernel
+	-partea care interactioneaza cu aplicatile si cu user-ul se numeste shell
+	-useri pot interactiona cu shell-u folosind un command-line interface(CLI) sau un graphical user interface(GUI)
+	
+GUI:
+	-ex: Windows, macOS, Linux KDE, Apple iOS sau Android
+	-acestea poate nu o sa poata tot ce poate CLI-u, pot sa se strice, sa dea crash, sau pur si simplu sa nu opereze cum ar trebuii
+	-din acest motiv dispozitivele intermediare sunt deobicei accesate folosind CLI, care cere mai putine resurse si este mai sigur
+	-OS dispozitivelor cisco se regasesc in Cisco Internetwork Operating System(IOS)
+	-Cisco IOS este folosit pe multe routere si switch-uri, precum IOS XE, IOS XR si NX-OS
+	
+Purpose of an OS:
+	GUI:
+		-ii la fel ca la calculator doar ca pentru internet
+		-te poti folosii de mouse sa selectezi lucruri si sa dai run la programe
+		-sa introduci text si comenzi bazate pe text
+		-si sa vezi output-ul pe un monitor
+	CLI:
+		-sa foloseasca o tastatura sa dea run la programe de internet bazate pe CLI
+		-sa introduci text si comenzi bazate pe text
+		-si sa vezi output-ul pe un monitor
+
+Acces Methods:
+	Console : un port pe care efectiv doar asta se face, se acceaseaza dispoziticul intermediar pentru a-i schimba setarile
+	Secure Shell(SSH) : o conexiune sigura CLI, printr-o interfata virtuala de pe net
+	Telnet : o conexiune nesecurizata CLI, nu se encrpiteaza datele, un SSH nesecurizat
+
+Primary Command Modes:
+	Cisco IOS imparte acces-ul pt managment in doua categorii:
+		-User EXEC Mode : capacitati limitate, esti in acest mod cand dupa numele dispozitivului intermediar la care este conectat este ">"
+		-Privileged EXEC Mode :	poti configura multe lucruri, ca si configurarile global, acest mod este identificat dupa semnul "#"
+
+Configuration Mode and Subconfiguration Modes:
+	-dupa ce te-ai conectat la global config mode, alegi pe care subcategorie te duci
+		Line Configuration Mode : folosit sa configureze console(eng), SSH, Telnet, sau AUX access
+		Interface Configuration Mode : folosit ca sa configureze un port de la switch sau interfata router-ului
+	
+Navigate Between IOS Modes: 
+	-odata ce te-ai conectat la switch ca sa te schimbi de la EXEC mode la privileged EXEC mode, trebuie doar sa scrii in cmd "enable" si "disable" ca sa revii la EXEC mode
+	-ca sa accesezi global configuration mode trebuie sa scrii "configure terminal" si ca sa iesi doar "exit"
+	
+Basic IOS Command Structure:
+	keyword : un parametru specific definit in OS
+	argument : nu e predefinit, o valoare sau variabila definita de user
+
+IOS Command Syntax Check:
+	boldface : textul scris bold sunt commands si keywords pe care le scrii ca in manual
+	italics : textul italic reprezinta argumente, la care eu le dau valorile
+	[x] : [] indica un argument sau keyword optional
+	{x} : {} indica un argument sau keyword neaparat
+	[x { y | z }] : alegi ori y ori z
+
+IOS Help Features:
+	-IOS ofera doua metoda de ajutor: context-sensitive help si command syntax check 
+	Context-sensitive help raspunde la intrebarile:
+		-ce comenzi pot fi folosite in ce command mode?
+		-care comenzi incep cu caracetere specifice sau grupuri de caractere specifice?
+		-la ce comenzi pot sa bag argumente si keywords-uri
+		
+	-ca sa accesezi context-sensitive help doar scrie "?" in CLI
+	Command syntax check : daca comanda nu ii bagata corect iti zice ce ii inregula cu cum ai scris-o in terminal
+	
+Devices Names:
+	-trebuie sa fie o logica dupa ce is numite switch-urile si astea, dupa loc de exemplu
+	-te duci in IOS la CLI, bagi acolo ENABLE sa te duci la privileged EXEC mode, si apoi bagi configure terminal
+	-bagi hostname si apoi "un string care sa fie numele al host-ului la care esti acuma"
+	
+Password Guidelines:
+	-cisco IOS poate fi configurat sa ceara parole la un dispozitiv intermediar
+	-si accesul la EXEC, privileged EXEC si Telnet ar trebuii sa fie cu parola, si parolele encriptate
+	-parolele ar trebuii sa aiba:
+		-minim 8 caractere
+		-litere mari si mici, numere, caractere special
+		-sa nu fie aceasi parola la toate dispozitivele una la un switch alte la alt switch
+		-sa nu folosim cuvinte comune ca is usor de ghicit
+
+Configure passwords:
+	Parola pt EXEC mode:
+	-odata ce esti in CLI, bagi enabled privileged EXEC mode
+	-apoi configure terminal
+	-line console 0
+	-password "parola ta"
+	-login (ca sa stie ca deacum trebuie sa ceara aceasta parola la intrare in EXEC mode)
+	-end( ca sa iesi din terminal)
+	Parola pt privileged EXEC mode:
+	-odata ce esti in CLI, bagi enabled privileged EXEC mode
+	-apoi configure terminal
+	-enable secret "parola ta"	
+	-exit(ca sa iesi din terminal)
+	
+	-linile de comunicare Virtual terminal(VTY) pot fi accesate si remote cu SSH sau Telnet
+	-multe switch-uri cisco suporta pana la 16VTY, indexarea lor incepe de la 0
+	Parola pt VTY lines:
+	-odata ce esti in CLI, bagi enabled privileged EXEC mode
+	-apoi configure terminal
+	-line vty 0 15(asa intrii pe o linie)
+	-password "parola"(asa pui parola la intrarea pe orice linie)
+	-login
+	-end
+
+Encrypt Passwords:
+	-in fiserele startup-config si running-config sunt salvate cele mai multe parole in plain text
+	-ca sa encriptezi aceste parole scrie "service password-encryption" aceasta este o global config command
+	-comanda aplica o encriptare slaba, si doar in fiserele adresate, nu si cat sunt transmise pe internet
+	-show running-config(functie care iti arata parolele sa vezi ca is encriptate)
+
+
+Banner Messages:
+	-mesaj care o sa fie scris cand ala greseste parola
+	-banner motd #mesaju#
+
+Configuration Files:
+	-show running-config : functie din privileged EXEC mode ca sa vezi the running config
+	-show startup-config 
+	-copy running-config startup-config : salveaza datele din startup file 
+
+Alter the Running Configuration:
+	-asa restorezi dispozitivu la configuratia lui precedenta
+	DACA ASTA NU MERGE:
+	-erase startup-config
+	
+Communications Fundamentals:
+	-message source(sender) : host-uri care trimit message to alte host-uri
+	-message destination(receiver) : hostul destinatar primeste mesajul si il interpreteaza
+	-channel : cablurile si dispozitivele intermediare, care alcatuiesc ruta fizica pe care o parcurge mesajul
+	
+Rule Establishment:
+	-regulile pe care un protocol trebuie sa le urmeze:
+		-hostul care trimite mesajul si cel care il primeste sa fie identificate
+		-o limba comuna
+		-viteza si timpul de transamitere a datelor
+		-confirmation or acknowledgment requirements
+
+Network Protocol Requirements:
+	-message encoding
+	-message formatting and encapsulation
+	-message size
+	-message timing
+	-message delivery options
+	
+Message Encoding:
+	-ce face layeru 6, transforma dintr-un format in cel care poate fi transmis pe internet
+	-converteste data in biti
+	-fiecare bit este transformat intr-o succesiune de volti, de raze infrared sau de campuri electromagnetice.
+	-destination host-ul primeste mesajul si face de la coada la cap
+
+Message Formatting and Encapsulation:
+	-IP este protocolul responsabil pentru transmiterea datelor intre doua hosturi
+	-o bagat-o pe aia ca encapsulation ii cand bagi un tip de mesaj in alt tip de mesaj, ca o foaie intr-un plic
+	
+Message Size:
+	-cand un mesaj mare este trimis acesta trebuie sa fie impartit pe segmente
+	-segmentele o sa fie trimise unu dupa altu
+	-iar mesajul final va fi asamblat de hostul destinatie
+	
+Message Timing:
+	Flow Control : procesul de manageriare a ratei de transmitere a datelor, cata informatie poate sa fie transmisa la ce viteaza 
+	Response Timeout : daca nu se primeste un acknowledgment hostul va trimite din nou mesajul
+	Access method : cand poate un host sa trimita mesajul, ca sa nu se suprapun cum ar venii
+
+Message Delivery Options:
+	Unicast : informatia este transmisa unui singur dispozitiv
+	Multicast : informatia este transmisa unui sau mai multor dispozitive
+	Broadcast : informatia este transmisa catre toate dispozitivele
+
+Network Protocol Overview:
+	Network Communications Protocols : transportul de date intre doua hostu-uri (TCP, HTTP, etc)
+	Network Security Protocols : securizeaza data, authentication, data integrity si data encryption (SSH, SSL, TLS)
+	Routing Protocols : aleg cea mai buna ruta dintre hosturi(OSPF, BGP)
+	Service Discovery Protocols : detecteaza automat dispozitive sau servici (DHCP, DNS)
+	
+Network Protocol Functions:
+	addressing : identifica senderu si receiveru mesajului (Ethernet, IPv4 si IPv6)
+	reliability : mesajul va fi trimis sigur, indiferent daca este pierdut sau stricat in transmisia dintre hosturi (TCP)
+	flow control : transferul de date se faca la o rata eficienta intre cele doua host-uri (TCP)
+	sequencing : se da un index la segmente, astfel incat sa poata fi trimis si asamblat in ordinea corecta (TCP), segmentele vor fi retransmise daca nu ajung hostul destinatie
+	error detection : verifica daca data a fost corrupted in timpul transmisiei (Ethernet, IPv4, IPv6 si TCP)
+	application interface : informatii intre aplicatii network (layeru 7) (HTTP, HTTPS)
+
+Protocol Interaction:
+	HTTP : acest protocol guverneaza cum interactioneaza un web server si un client web
+	TCP : garanteaza ca datele vor ajunge cum trebuie si ca se face la o rata eficienta
+	IP : responsabil sa trimita mesajul intre sender si receiver, este folosit de routere ca sa transmita mesajul mai departe catre alte networkuri
+	Ethernet : responsabil sa transmita data intre NIC si NIC intr-un LAN
+
+Network Protocol Suites:
+	protcol suite : grup de protocoale care lucreaza impreuna sa faca un transfer de date
+	Internet Protocol Suite or TCP/IP : un OSI layer doar ca layeru 4 TCP/IP = layerele 5, 6, 7 OSI
+	Open Systems INterconnection (OSI) : sta la baza la toate alea is alea 7
+	AppleTalk : un protocol doar pt dispozitivele apple, nu mai e implementat deloc
+	Novell NetWare : un protocol facut de astia da nu e implementat deloc
+TCP/IP Protcol Suite:
+
+	TCP/IP has two important aspects for vendors and manufacturers:
+		Open standard protocol suite : este gratis catre public si poate fi folosit si accesat de oricine
+		Standards-based protocol suite : ca este un suite calificat
+
+Application Layer:
+
+Name System
+
+	DNS - Domain Name System. Translates domain names such as cisco.com, into IP addresses.
+
+Host Config
+
+	DHCPv4 - Dynamic Host Configuration Protocol for IPv4. A DHCPv4 server dynamically assigns IPv4 addressing information to DHCPv4 clients at start-up and allows the addresses to be re-used when no longer needed.
+	DHCPv6 - Dynamic Host Configuration Protocol for IPv6. DHCPv6 is similar to DHCPv4. A DHCPv6 server dynamically assigns IPv6 addressing information to DHCPv6 clients at start-up.
+	SLAAC - Stateless Address Autoconfiguration. A method that allows a device to obtain its IPv6 addressing information without using a DHCPv6 server.
+	
+Email
+
+	SMTP - Simple Mail Transfer Protocol. Enables clients to send email to a mail server and enables servers to send email to other servers.
+	POP3 - Post Office Protocol version 3. Enables clients to retrieve email from a mail server and download the email to the client's local mail application.
+	IMAP - Internet Message Access Protocol. Enables clients to access email stored on a mail server as well as maintaining email on the server.
+	
+File Transfer
+
+	FTP - File Transfer Protocol. Sets the rules that enable a user on one host to access and transfer files to and from another host over a network. FTP is a reliable, connection-oriented, and acknowledged file delivery protocol.
+	SFTP - SSH File Transfer Protocol. As an extension to Secure Shell (SSH) protocol, SFTP can be used to establish a secure file transfer session in which the file transfer is encrypted. SSH is a method for secure remote login that is typically used for accessing the command line of a device.
+	TFTP - Trivial File Transfer Protocol. A simple, connectionless file transfer protocol with best-effort, unacknowledged file delivery. It uses less overhead than FTP.
+	
+Web and Web Service
+
+	HTTP - Hypertext Transfer Protocol. A set of rules for exchanging text, graphic images, sound, video, and other multimedia files on the World Wide Web.
+	HTTPS - HTTP Secure. A secure form of HTTP that encrypts the data that is exchanged over the World Wide Web.
+	REST - Representational State Transfer. A web service that uses application programming interfaces (APIs) and HTTP requests to create web applications.
+
+Transport layer:
+
+Connection-Oriented
+
+	TCP - Transmission Control Protocol. Enables reliable communication between processes running on separate hosts and provides reliable, acknowledged transmissions that confirm successful delivery.
+
+Connectionless
+
+	UDP - User Datagram Protocol. Enables a process running on one host to send packets to a process running on another host. However, UDP does not confirm successful datagram transmission.
+
+Internet Layer:
+
+Internet Protocol
+
+	IPv4 - Internet Protocol version 4. Receives message segments from the transport layer, packages messages into packets, and addresses packets for end-to-end delivery over a network. IPv4 uses a 32-bit address.
+	IPv6 - IP version 6. Similar to IPv4 but uses a 128-bit address.
+	NAT - Network Address Translation. Translates IPv4 addresses from a private network into globally unique public IPv4 addresses.
+
+Messaging
+
+	ICMPv4 - Internet Control Message Protocol for IPv4. Provides feedback from a destination host to a source host about errors in packet delivery.
+	ICMPv6 - ICMP for IPv6. Similar functionality to ICMPv4 but is used for IPv6 packets.
+	ICMPv6 ND - ICMPv6 Neighbor Discovery. Includes four protocol messages that are used for address resolution and duplicate address detection.
+
+Routing Protocols
+
+	OSPF - Open Shortest Path First. Link-state routing protocol that uses a hierarchical design based on areas. OSPF is an open standard interior routing protocol.
+	EIGRP - EIGRP - Enhanced Interior Gateway Routing Protocol. An open standard routing protocol developed by Cisco that uses a composite metric based on bandwidth, delay, load and reliability.
+	BGP - Border Gateway Protocol. An open standard exterior gateway routing protocol used between Internet Service Providers (ISPs). BGP is also commonly used between ISPs and their large private clients to exchange routing information.
+
+Network Access Layer:
+
+Address Resolution
+
+	ARP - Address Resolution Protocol. Provides dynamic address mapping between an IPv4 address and a hardware address.
+
+	Note: You may see other documentation state that ARP operates at the Internet Layer (OSI Layer 3). However, in this course we state that ARP operates at the Network Access layer (OSI Layer 2) because it's primary purpose is the discover the MAC address of the destination. A MAC address is a Layer 2 address.
+
+Data Link Protocols
+
+	Ethernet - Defines the rules for wiring and signaling standards of the network access layer.
+	WLAN - Wireless Local Area Network. Defines the rules for wireless signaling across the 2.4 GHz and 5 GHz radio frequencies.
+
+Open Standards:
+	- standard organization deobicei sunt vendor-neutral
+	Standard organization:
+		-IEEE, IANA, IETF, ICANN, ITU, TIA
+
+Internet Standards:
+	Internet Society(ISOC) : responsabili cu promovarea developmentului si a evolutiei a folosirii internetului prin lume
+	Internet Architecture Board(IAB) : responsabili pentru managmentul si developmentul al internet standards
+	Internet Engineering Task Force(IETF) : developeaza, updateaza si tehnologiile internetului si ale TCP/IP suite. Documente cu procese, developarea unor noi protocoale, updatarea celor vechi aceste chestii se numesc Request for Comments(RFC) documents
+	Internet Research Task Force(IRTF) : focusati pe researciul long-term despre TCP/IP protocols ca si Anti-Spam Research Group(ASRG)
+	Internet Corporation for Assigned Names and Number(ICANN) : in USA, coordoneaza adresele IP, managmentul al domain name-urilor, si scrie alte informatii folosite in TCP/IP suite
+	Internet Assigned Numbers Authority(IANA): responsabili de managerarea adreselor IP, domain name management, si protocol identifier for ICANN
+
+Electronic and Communications Standards: 
+	Institute of Electrical and Electonics Engineers(IEEE) : se dedica pentru avansarea tehnologiei inovatoare si crearae standardelor in mai multe industrii, standare deale lor sunt 802.3 Ethernet si 802.11 WLAN
+	Electronic Industries Alliance(EIA) : electrical wiring, conectori
+	Telecommunications Industry Association(TIA) : responsabila pentru developarea comunicatilor standard in multe industrii
+	Internation Telecommunications Union-Telecommunication Standardization Sector(ITU-T) : standarde pentru video compression, Internet PRotocol Television(IPTV) si broadband communications ca si DSL.
+
+Segmenting Messages:
+	-faptul ca prin segmentarea pachetelor la transport layer reusim sa trimitem datele mai rapid, aceast lucru ne permite sa trimitem deodata mai multe date mici, gen 1A 1B 2A 2B, gandeste la aia doi si pliculile lor
+
+Sequencing:
+	-segmentation si multiplexing deodata
+	-acele segmente trebuie numeroata ca stii in ce ordine sa le asamblezi
+
+Protocol Data Units:
+	-ce vrea PDUu asta sa fie
+	-fiecare layer are PDU adica valoarea care iese din acel layer
+	-frame -> layer2 PDU
+	-packet -> layer 3 PDU
+
+Emcapsulation Exemple:
+	-ba la fiecare layer se mai adauga ceva si se baga in alt plic
+	- frame > packet > segment > data
+
+Addresses:
+	-segmentele nu se duc niciunde daca nu primesc IP-uri de sursa si destinatie
+	Network layer source and destination addresses : responsabil cu transmiterea pachetului IP de la sursa la destinatie, si daca e pe LAN
+	Data link layer source and destination addresses : responsabil sa transmita frame-ul de la un NIC la alt NIC, doar pe acelasi LAN
+
+Layer 3 Logical Address:
+	-layeru 3 da 2 adrese IP cea sursa si cea destinatie
+	Source IP address : adresa IP a dispozitivului care trimite mesajul
+	Destination IP address : adresa IP a dispozitivul care primeste mesajul
+	
+	-Adresa Ip are doua parti cea care arata Netwroku si cea care arata hostu
+	network portion(IPv4) or Prefix(IPv6) : partea din stanga care arata la fel pe LAN e cea care reprezinta networku, e data de subnet mask
+	host portion(IPv4) or Interface ID(IPv6) : partea ramasa care identifica un host, este o portoiune unica pe LAN 
+
+Role of the Data Link Layer Addresses:
+
+	-layeru 2 baga adresele MAC la destinatar si sursa
+	Source MAC address : unic, o adresa a NIC-ului a hostu-ului care trimite mesajul
+	Destination MAC address : unic, o adresa a NIC-ului a hostu-ului care primeste mesajul
+	-cand host-urile sunt pe LAN-uri diferite, hostul sursa o sa isi dea seama de asta dupa IP	
+
+Different IP networks: 
+	-cand hosturile nu sunt in acelasi LAN, hostul va configura adresele destinatie, datele routerului adresa sa MAC
+		
+Data Link Addresses:
+	-daca hosturile nu sunt in acelasi LAN, pachetul cu sursa si destinatia IP va fi encapsulat intr-un data-lin frame nou, pentru ca la iesirea din dispozitivele intermediarea se schimba adresa MAC
+	Source data link address : adresa NIC a dispozitivului care trimite data link frame-ul
+	Destination data link address : adresa NIC a dispozitivului care primeste data link frame-ul, poate fi router switch sau chiar hostu destinatie
+
+	
+
+
+
+
+
+
