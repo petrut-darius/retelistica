@@ -1,0 +1,59 @@
+Application Layer:
+	-cel mai apropiat de end user
+	-interfata dintre apliicatile folosite pentru comunicare si internetul
+
+Presentation Layer:
+	-formateaza sau prezinta data de la dispozitivul sursa intr-un format compatibil care sa fie inteles de dispozitivul destinatie
+	-comprima datele intr-un anumit fel care poate fi decompresat de dispozitivul destinatie
+	-encripteaza data pentru transmitere si decripteaza data la primire
+	
+Session Layer:	
+	-mentine dialogurile intre dispozitivele sursa si cele destinatie
+	-schimbul de informatii intre host-uri
+
+Client-Server Model:
+	-un client face un requet catre un server, ori de upload ori de download
+	
+Peer-to-Peer Networks(P2P):
+	P2P are doua parti:
+		-P2P networks
+		-P2P applications
+	P2P networks:	
+	-sunt conectate 2 sau mai multe host-uri intr-un LAN si impart resurse intre ele
+
+	-orice host conectat poate fi unclient sau un server, adica hostA 	poate fi Print Client si File Server, iar hostB poate fi File 	Client si Print server
+	P2P applications:
+	-pe un host este si client si server pentru aceasi chestie(un chat live)
+	-in aceasi comunicatie este si client si server
+	-ambele hosturi au si interfata pentru user si un serviciu de backend
+	ex:
+		-BitTorrent
+		-Direct Connect
+		-eDonkey
+		-Freenet
+
+HTTP and HTTPS:
+	-un protocol de tip request/respons
+	mesaje comune:
+		GET : cere data de la server
+		POST : uploadeaza data la un server
+		PUT : updateaza resurse la un server
+
+	HTTPS : HTTP encriptat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
