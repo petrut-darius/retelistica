@@ -1,685 +1,1674 @@
- Small Home Networks -> conecteaza cateva pc-uri intre ele si la internet
-SOHO -> le da voie angatilor sa acceseze fisiere centralizate pt lucru 
-Medium to Large Networks -> au mai mult de 100 de calculatoare
-World Wide Networks -> internetul este un network care coneteaza mai multe network-uri mai mici intre ele
+ peer-to-peer -> cand un host are si client si server software pe el si se comporta ca amebele
 
-Smartphone-urile -> se pot conecta la internet, au GPS receiver, media player, touch screen, camera si telefon, etc.
-Tablet -> sunt ca telefoanele, insa au ecran mai mare
-Smartwatch -> se poate conecta la un telefon, ca sa ii trimita alerte sau mesaje, sau chestii precum pulsul, numaru de pasi, etc.
-Smart Glasses -> un pc in niste ochelari
-
-Radio frequency identification (RFIDs) -> ii un tag care trimite informatii prin scanarea sa. (cum functioneaza un card bancar)
-Sensors and Actuators -> senzorii pot trimite informatii catre un software, care apoi sa ii zica unui actuator ce sa faca.
-
-Bit -> are valoarea ori 1 ori 0; bit-ul este folosit pentru a transfera datele in cod ASCII
-Byte -> 8 bit's
-
-Data Transmission:
-	-Electrical signals -> datele sunt transmise ca impulsuri electrice printr-un cablu de cupru
-	-Optical signals -> datele sunt transmise ca impulsuri de lumina printr-o fibra optica
-	-Wireless signasls -> datele sunt transmise prin raze infrarosii sau unde radio
-
-Bandwith -> capacitatea unui mediu de a transmite date
-Digital bandwith-ul masoara cat de multe date se pot transmite intre doua calculatoare intr-un anumit interval de timp
-
-Bits per second -> bps -> 1bps = unitatea fundamentala a bandwith-ului
-Kilobits per second -> kbps -> 1kbps = 1,000 bps
-Megabits per second -> mbps -> 1mbps = 1,000,000 bps 
-Gigabits per second -> gbps -> 1gbps = 1,000,000,000 bps
-Terabits per second -> tbps -> 1tbps = 1,000,000,000,000 bps
-
-Throughput -> este masurarea transferului de bitzi intre calculatoare intr-o anumita perioada de timp + timul de intarziere sau eroare
-
-Toate calculatoarele care sunt conectate la internet sunt clasificate ca find host-uri
-host-urile -> pot trimite sau primii date cu ajutorul internetului, insa trebuie sa aiba instalat software-ul specific pentru a trimite sau primii informatii, sau ambele software-uri
-
-Server -> un host care are software-ul instalat specific pentru a trimite date
-
-Client -> un host care are software-ul instalat specific pentru a primii date
-
-Exemple de servere : File, Web, Email
-
-
-Peer-to-Peer networks -> cand sunt mai multe host-uri care au ambele tipuri de software-uri pe ele, astfel transmit date de la unul la altul
-
-P2P Applications -> host-urile sunt atat client cat si servere
-
-Poti avea mai multe sotware-uri client sau software-uri server pe un host
-
-Exemple:
-	Host 1: web server, file server
-	Host 2: email client, web browser
-	Host 3: file access client, web browser
-
-Network Infrastrucure -> contine end device-uri, intermediate device-uri, network media(Wireless Media, LAN Media, WAN Media)
-
-End Devices -> computere, network printers, telefoane si echipament pentru telecomunicatii, camere de securitate, device-uri mobile
-
-ISP (internet service provider) services -> face legatura intre home networkul tau sio internetul propiu-zis 
-
-An ISP can be the local cable provider, a landline telephone service provider, the cellular network that provides your smartphone service, or an independent provider who leases bandwidth on the physical network infrastructure of another company.
-
-ISP connections ->  trebuie sa ne folosim de un ruter ca sa ne conectam securizat la un ISP, ruter-ul are incorporat un switch care conecteaza host-uri sau ceva ca un GOOGLE HOME, ruter-ul atribuie oricui host o adresa IP.
-
-Cable and DSL(Digital Subscriber Line) connections:
-	-Cable: deobicei este oferit de servicile de televiziune care transmit semnalul de internet prin acelasi cablu prin care se trimit si canalele tv, are un bandwith performant, si cele doua semnale sunt separate printr-un modem(ceva ca un crossover), ca intr-un final conexiunea Ethernet  sa ajunga la ruter. 
-	-DSL: trebuie iarasi un modem dinala, insa semnalul de internet vine pe cablul de telefon care are trei fire: 
-		-primu fir: pentru apeluri telefonice, il lasa pe user sa vorbeasca la telefon cat timp ii conectat la internet
-		-al doilea fir: pentru a downlada informatii foarte rapid de pe internet
-		-al treilea fir: pentru a trimite sau a updata informatii, deobicei merge mai incet decat celelalte
+Topology Diagrams:
+	Physical Topology Diagrams:
+		-diagrame dinalea in care iti zice camera, dulapu, sertaru, chestii deastea
+	Logical Topology Diagrams:
+		-diagrame care iti arata adresele IP, tipul de servere, iesirile din host-uri, sau dispozitive intermediare, chestii deastea
 	
-Additional ISP connection options:
-	-cellular: is datele mobile ca te conectezi la un dinala inalt si trimitic date prin el
-	satellite: ii dinala cu antena si dupa ce conexiune e interceptata de antena semnalul trece printr-un modem special si apoi in ruter
-	dial-up telephone: suni la ISP access phone numner si apoi pula mea
-
-Wireless Networks:
-	-Wifi: transmitere internetului prin unde radio cu ajutorul unui ruter wireless si poate conecta device-uri intre ele ca un switch
-	-Cash Register: Near-field communication(NFC) transmiterea datelor cu ajutorul campului magnetic
-		-ex: plata cu cardu bancar sau cu telefonu  
+Intranetes and Extranets:
+	- intranetul este o conexiune pricata intre LAN-uri sau WLAN-uri care sunt ale unei companii
+	- acces la intraneturi au doar mebrii, angatii sau alte persoane autorizate
+	- extranetul le ofera cumparatorilor, colaboratoriilor, si altor persoane acces securizat si sigur la datele companiei daca au acces
 	
-Cell phone Interaction with different networks:
-	-GPS: se foloseste de sateliti care trimit semnale, telefonu le primeste si astfel isi calculeaza locatia cu o marja de eroare de circa 10 metrii
-	-WIFI: telefonul trebuie sa fie in raza de operare a semnalului WIFI pentru a se reusii conectarea
-		-hotspot: o incapere unde semnalul WIFI este valabil
-	-BLUETOOTH: este o tehnologie wireless care permite device-urilor sa comunice de la o scurta distanta, se pot conecta mai multe device-uri deodata prin bluetooth
-	-Near Field Communication(NFC): o tehnologie wireless care le permite deive-urilor sa transmita data de la o distanta de cativa centimetrii, foloseste campuri magnetice pentru a trimite datele
-
-Mobile Devices and Wifi
-	-sistemele de operare cele mai populare sunt Android si iOS.
-	-daca esti conectat la un Wifi si te indepratezi de raza sa, telefonul va incerca sa se conecteze la un alt Wifi, iar daca nu gaseste se va conecta la datele mobile(if ON)
-	-daca intrii in raza unui Wifi te vei conecta automat(if ON) si ti se va inchide conexiunea cu datele mobile
-Configure Mobile Wifi connectivity
-	SSID - numele wifi-ului
-	Passphrase - parola wifi-ului
-	-scehma aia ca tre sa bagi numele si parola corecte ca sa se faca conexiunea, daca are parolel
-Configure Cellular Data Settings 
-	-cellular data - date mobile
-	-telefoanele sunt programata ca in momentul in care esti in raza unui WIFI sa se foloseasca de acea conexiune, iar cand nu sa se foloseasca de datele mobile
-Simple Connectivity with Bluetooth	
-	-se dau exemple de dispozitive care se pot conecta la bluetooth cu anumite roluri
-Bluetooth Pairing
-	-se intampla cand doua dispozitive creaza o conexiune prin care sa transmita date
-	-razele bluetooth se porneesc, si unul dintre dispozitive cauta alte dispozitive, celalalt dispozitiv trebuie sa fie setat pe discoverable mode, numit si visible, ca sa poata fi detectat
-	-cand un dispozitiv este setat in discoverabal mode acesta transmite la cererea altui dispozitiv date precum:
-		-nume
-		-clasa bluetooth
-		-servicii pe care dispozitivul le poate folosi
-		-informatii tehnice, precum specificatile bluetooth-ului
-	-in timpul procesului de pairing exista posibilitatea sa iti ceara un PIN, ca sa autentifici conexiunea dintre cele doua dispozitive, deobicei PIN-ul este un numar, un cod numeric sau un passkey
-	-PIN-ul este stocat in dispozitivele conectate, astfel nu o sa ti-l mai ceara
-		-ex: cand mi se conecteaza castile de dimineata fara sa mai apas ca le aleg pe ele
-
--Pairing describes connecting two devices using Bluetooth.
--Syncing Is the term used to describe synchronizing emails and calendars across a number of devices
--Tethering is commonly done over Bluetooth or a USB cable.(tethering -> hotshpot mai securizat)
--Tethering generally provides a more secure and stable connection but is limited to one or a few devices, unlike a mobile hotspot, which can typically support multiple devices simultaneously.
--A mobile hotspot is another form of internet sharing and is provided over Wi-Fi.
-
-Wireless Networks:
-	-Mobile phones use radio waves to transmit voice signals to antennas mounted on towers located in specific geographic areas. When a telephone call is made, the voice signal is relayed from one tower to another tower until it is delivered to its destination. This type of network is used when you make a phone call to another mobile phone or to a wired telephone. It is also used to send text messages directly from the phone. The most common type of cellular telephone network is called a GSM network. The abbreviations 3G, 4G, 4G-LTE, and 5G are used to describe enhanced cell phone networks that are optimized for the fast transmission of data. Currently, 4G still dominates as the current mobile network used by most phones.
-	In addition to the GSM and 4G/5G transmitters and receivers, smartphones make connections in a variety of ways.
-	Wi-Fi transmitters and receivers located within the smartphone enable the phone to connect to local networks and the internet. Wi-Fi networks are usually privately owned but often provide guest or public access hotspots. A hotspot is an area where Wi-Fi signals are available.
-	Bluetooth is wireless technology that allows devices to communicate over short distances. Multiple devices can be connected at the same time with Bluetooth.
-	NFC is a wireless communication technology that enables data to be exchanged by devices that are in very close proximity to each other, usually less than a few centimeters.
-Mobile Device Connectivity:
-	-Almost all mobile devices are capable of connecting to Wi-Fi networks. These precautions should be taken to protect Wi-Fi communications on mobile devices:
-		-Never send login or password information using unencrypted text (plaintext).
-		-Use a VPN connection when possible if you are sending sensitive data.
-		-Enable security on home networks.
-		-Use WPA2 or higher encryption for security.
-	Two of the most popular operating systems for mobile devices are Android and Apple iOS. Mobile devices are preprogrammed to use a Wi-Fi network for the internet if one is available, and the device can connect to the access point and receive an IP address. If no Wi-Fi network is available, the device uses the cellular data capability if it is configured.
-	Bluetooth technology provides a simple way for mobile devices to connect to each other and to wireless accessories. Bluetooth is wireless, automatic, and uses very little power, which helps conserve battery life. Some examples of devices that use Bluetooth include hands-free headsets, keyboards, a mouse, stereo controls, car speakerphones, and mobile speakers.
-	Bluetooth pairing occurs when two Bluetooth devices establish a connection to share resources. In order for the devices to pair, the Bluetooth radios are turned on, and one device begins searching for other devices. Other devices must be set to discoverable mode, also called visible, so that they can be detected.
-	When a Bluetooth device is in discoverable mode, it transmits the following information when another Bluetooth device requests it:
-		-Name
-		-Bluetooth class
-		-Services that the device can use
-		-Technical information, such as the features or the Bluetooth specification that it supports
-		-During the pairing process, a PIN may be requested to authenticate the pairing process.
-
-Components of a Home Network:
-	-desktop computer
-	-gaming systems
-	-smart tv systems
-	-printers
-	-scanners
-	-security cameras
-	-telephones
-	-climate control devices
-
-Typical Home Network Routers:
-	Etharnet Ports: is mufe de etharnet(LAN) care ies din switch care ii conectat la modemu din router
-	Internet Ports: acest port(WAN) poate conecta routeru la alt internet, acest port este deobicei conectat la cable sau la DSL modem, ca sa poata accesa internetul
-
-	-foarte multe rutere au si antene radio si puncte de accesare wireless, singurul port care este conectat la un alt internet by default este Internet Port-ul
-
-LAN Wireless Frequencies:
-	-Lan-ul foloseste o  freceventa a undelor care variaza intre 2.4Ghz si 5Ghz
-	-bluetooth-ul foloseste unde de 2.4Ghz
-
-Wired Network Technologies:
-	-cablu de Etharnet are deobicei o mufa de tip RJ-45
-	-Category 5e, este cel mai folosit tip de cablu la conexiunile LAN(ca la hidi)
-	-Coaxial calbe, ca la xbox 360, ala de zici ca firu de cupru ii o puta
-	-Fiber-optic cables, este un fir facut ori din plastic ori din sticla cu diametrul egal cu al unui fir de par, au bandwith foarte rapid, cea ce ii permite sa transfere date mari rapid
-	  
-Wifi -> ii dupa regula 802.11 de la IEEE
-Network mode: determiina tipul tehnologiei pe care il suporta sistemul
-	ex:802.11b, 801.11g, 802.11 sau un mod amestecat din astea
-Network Name(SSID): folosit pentru identificarea WLAN-ului, toate dispozitivele care vor sa participe in WLAN sunt nevoite sa aiba acelasi SSID
-
-IEEE : responsabili de crearea standardelor tehnice ale wifi-ului	
-Wifi Alliance: responsabili de testarea dispozitivelor LAN
-
-Standard Channel: specifica pe ce tunel sa se duca ca un port, deobicei e setat pe AUTO acces point(AP).
-
-SSID Broadcast: determina daca SSID va imparti semnal la fiecare dispozitiv din raza sa, by default e setat pe enabled
-
-Network Mode:
-	-daca toate dispozitivele conectate la wifi sunt conectate prin protocolul 802.11, atunci pot fi atinse vitezele maxime
-	-daca punctull de acces este configurat sa accepte doar un port la 802.11 standard, dispozitivele care nu stiu sa acceseze acel port nu se pot conecta
-	-un mod wireless mixt poate fi setat astfel incat sa se poate conecta la orice wifi standard
-
-Wifi:
-
-	-First Time Setup:
-
--ai nevoie de un PC sau  laptop pe care sa il  conectezi prin cablu ethhernet, trebuie coonectat neaparat intr-un port LAN al routerului, dupa ce se conecteaza i se va atribui automat o adresa ip, iar daca nu primeste o adresa ip, citeste documentatia routerului si va tu demersurile cu ip-u subnet masku, default gateaway-u si confirmatia DNS
-
-
-	-Design Considerations:
-
--trebuie mereu sa te gandesti la functionalitatea router-ului tau, nu vrei sa il configuri si ai ceva limita la ce poti face pe net, in plus nu vrei sa iti lasi networku neprotejat
-
--dispozitivele wireless transmit sau primesc unde radio la o frecventa specifica. Daca un dispozitiv poate sa emita unde radio doar pentru 802.11 b/g acesta nu se va putea conecta la un router care are acces point-u setat sa accepte doar semanele 802.11n sau 802.11ac. Daca toate dispozitivele functioneaza pe acelasi network standard atunci network-u va functiona la viteza optima. Daca ai dispozitive care nu suporta 802.11n sau 802.11ac atunci va trebui sa setezi legacy mode-u(modu la care se conecteaza la dispozitive vechi prin wifi, gen standaru pt dispozitive vechi).  Legacy mode-u este un mediu network care variaza intre routerele cu conexiuni 802.11a, 802.11b,  802.11g, 801.11n si 802.11ac. Acest mod permite dispozitivelor mai vechi sa se conecteze la internet priin wireless.
-
--poate fi setat un acces de tip invitat in care sa ai voie doar sa te folosesti de internet, acesta este un mod special pe care il acopera SSID-ul.
-
-Comnicatiion Protocols:
--ce tip de comunicare folosim?
--ce limba vorbim?
--trebuie sa confirmam ca mesajele noastre au fost primite?
-
-protocoalele care trebuie sa fie urmate ca mesajul sa fie trimit si inteles:
-	-un emitator si un receptor identificati
-	-sa se stie prin ce metoda se comunica
-	-sa fie o limba comuna
-	-viteza si sincronizarea convorbirii
-	-confirmarea sau instintarea cerintelor
-
-Caracteristicile Protocoalelor:
-	-message format: cand un mesaj e trimis acesta trebuie sa fie de un anumit format
-	-message size: dimensiunile difera, cand un mesaj lung trebuie trimis deobicei este necesar sa il impartim in pachetele, ca sa fim siguri ca nu o sa fie crackat
-	-timing: determina viteza la care sunt trimisi bits-i pe net, sau viteza cu care sunt transmise niste date
-	-encoding: mesajele trimise pe net sunt in primul rand transformate in bits-i, fiecare bit este transformat intr-un sunet, impuls electric sau val de luminca, depinde de ce cablu ai prin casa la router, apoi routeru care primeste bits-i ii transforma in mmesajul propiu-zis
-	-encapsulation: fiecare mesaj care e trimis pe net trebuie sa aiba un header, care trebuie sa cuprinda lucruri precum informatii despre adresa 
-	-message pattern: unele mesaje trebuie sa primeasca o aprobare ca sa fie trimise, aceasta relatie request/response este folosita la foarte multe protocoale, dar sunt si unele mesaje care nu se stie daca ajung vreodata la destinatia lor
-
-
-The internet and standards:
-	-un standard: este un set dde reguli care determina cum trebuie un lucru sa fie facut, acestea asigura transportul de acelasi tip de date pe internet
-
-Network standards organizations:
-	-cand un nou standard este propus, fiecare stagiu al developarii este salvat intru Request for Comment(RFC) document, astfel incat sa se stie evolutia acelui standard
-	-RFC-urile ale internetului sunt manegeriate de Internet Engineering Task Forice(IETF)
-	-alte orfanizatii are manegeriaza RFC-urile sunt: IEEE, ITU, TIA, IANA, ICANN
-
-The TCP/IP Model Layer:
-	application: reprezeinta datele catre utilizator,  plus encoding and dialog control
-	transport: suporta comunicatile intre dispozitive diferite, si totodata inntre networku-uri diferite
-	internet: determina cea mai buna ruta pe internet
-	network access: controleaza dispozitivele hardware si dispozitivele media, care constituie internetul
-
-
-Sunt doua tipuri de modele care descriu functile care trebuie sa fie folosite pentru ca comunicatie prin net sa fie una cu succes: protocol model sii reference models.
-	Protocol model: trebuie sa descrie functiile care apar la fiecare nivel al ansamblului de protocole
-	Reference model: acest protocol iti spune ce trebuie sa se intample la fiecare layer, dar nu si cum sa se intample
-
-Osi Model Layer:
-	1.Physical: layer-ul fizic  descrie mecanica, electrica, functionalitatea si proceduralitatea, de care este nevoie pentru a activa, a mentine si a dezactiva conexiunile fizice, pentru a transmite un bit catre si din un dispozitiv network
-	2.Data link: data link layer-ul descrie metodele pentru schimbarea datelor intre dispozitive care sunt in acelasi LAN sau WLAN
-	3.Network: network layer-ul contine servicii de schimbare a unor date individuale intre end-device-uri
-	4.Transport: transport layer-ul defineste servicile de segmentare, de transfer si de reasamblare a datelor pentru comunivatii individuale intre end-devices 
-	5.Session: session layer-ul coontine servicii prin care presentation layer-ul isi organizeaza dialogurile si isi manegereaza datele de schimb exchange
-	6.Presentation: presentation layer-ul contine pentru reprezentatii comune de transfer de date intre layere-le servicilor ale aplicatiei.
-	7.Application: application layer-ul contine protocoale folosite pentru process-to-process communications.
-
-Similaritatiile intre OSI si TCP/IP sunt in transport si network layers, insa modelele difera in modul de comunicare cu layerele anterioare sau succesoare.
-	-OSI layer 3, network layer:
-	transmite direct catre TCP/IP internet layer. Acest layer este folosit pentru a descrie protocoalelecare adreaseaza si conduc mesajele prin internet
-	-OSI layer 4, transport layer:
-	transmite direct catre TCP/IP transport layer. Acest layer descrie serviciile generale si functile care contin transmiterea de date intre sursa si destinatie
-	-TCP/IP application layer:
-	include cateva protocoale care contin functionalitati specifice catre o varietate de end user applications. Layere-le 5, 6 si 7 ale modelului OSI, sunt folosite ca referinta pentru developarii de aplicatii software, ca sa produce aplicatii care functioneaza pe net
-	-Modelele TCP/IP si OSI:
-	sunt comun folosite cand se face referire la protocoale la diferite layere. Pentru ca modelul OSi separa data link layer-ul de physical layer, acesta este comun utilizat cand ne referim la primele layere
-
-Data este tramsisa pe net prin cabluri.
-Tipuri de cabluri:
-	-metal wires within cables -> datele sunt transformate in pulsuri electrice
-	-glass or plastic fibers within cabels -> datele sunt transformate in pulsuri de lumina
-	-wireless transmission -> datele sunt transformate prin modularea unor frecvente specifice de valuri electro-magnetice
-
-Dupa ce criterii sa iti alegi cablu:
-	-Care este distanta maxima prin care cablul poate sa care date?
-	-Care este zona(environment) in care cablul va fi instalat?
-	-Cat de multe si la ce viteza vor fi datele transmie
-	-Cat vrei sa cheltuiesti pe cablu? si pe instalarea sa?
-
-Cele mai comune cabluri de net:
-	-Twisted-Pair cable: is alea cum am folosit la casa la hidi, deobicei sunt folosite la ethernet
-	-Coaxial Cable: cablu ala de l-am pus la hidi la tv la casa, acesta cara frecvente inalte
-	-Fiber-Optic Cable: poate sa fie ori sticla ori plastic, cu un diametru la fel ca un fir de par, cara date la viteze si distante mari,
-	din cauza ca este folosita lumina in loc de electricitate, nu exista interferente care sa afecteze semnalul, este folosit in cadrul medical.
-	Au un bandwith foarte mare, care le permite sa cara date mari, este folosit in centre largi de date, si este  folosit mult de companiile telefonice
-
-Dispozitivele acceaseaza LAN-ul folosindu-se de Network Interface Card(NIC). Fiecare NIC are o adresa unica, permanent inregistrata in Media Access Control(MAC), unde sunt salvate adrese.
-Adresa MAC sursa sau destinatie, este un field din Ethernet frame.
-
-Ethernet Frame:
-	Preseamble -> are 7 biti, care sincronizeaza destinatia cu biti transmizi
-	Start Frame Delimiter -> are 1 bit, care ii zice ca de aicia incepe
-	Destination MAC addrees -> are 6 biti
-	Source MAC address -> are 6 biti
-	Length sau Type -> are 2 biti si se refera la cati biti o sa fie Data, sau ce tip de Data este
-	Data -> are intre 46 si 1500 biti si e efectiv toata data
-	Frame Check Sequence(FCS) -> are 4 biti, se verifica daca nu sunt erori
-
-Encapsulation:
-	-procesul de a plasa un mesaj intr-un alt message format se numeste encapsulation.
-	-deencapsulation se intampla la primirea unui mesaj
-	-orice mesaj este encapsulat invre-un fel, care se numeste FRAME
-	-un Frame este ca un plic in care pui o scrisoare, contine adresa destinatarului si a sursei
-	-formatul si contentului unui Frame sunt determinate de tipul mesajului si a canalului pe care se comunica
-	-mesajele care nu sunt corect formatate nu ajung cu succes la destinator
-	-IP-ul este responsabil de transmiterea mesajelor.
-
-A switch builds a MAC address table of MAC addresses and associated port numbers by examining the source MAC address found in inbound frames. To forward a frame onward, the switch examines the destination MAC address, looks in the MAC address for a port number associated with that destination MAC address, and sends it to the specific port. If the destination MAC address is not in the table, the switch forwards the frame out all ports except the inbound port that originated the frame.
-In an Ethernet network, each NIC in the network checks every arriving frame to see if the destination MAC address in the frame matches its own MAC address. If there is no match, the device discards the frame. If there is a match, the NIC passes the frame up to the next OSI layer.
-
-
-The IPv4 Address:
-	-orice host care participa la un LAN are nevoie de o adresa deasta
-	-o adresa logica a internetului, care identifica un host particular
-	-trebuie sa fie unica in LAN, pentru comunicatiile locale
-	-trebuie sa fie unica in lume, pentru comunicatiile remote
-	- cu adresa asta reuseste un host sa comunice cu alte dispozitive pe net
-	-NIC-ul tine adresa IPv4 in el
-	-are 32 de biti, si sunt pe 4 grupari de 8 biti, si fiecare octet este convertit intr-o valoarea zecimala
+Internet Access Technologies:
+	- DSL, wireless WAN's, mobile services, cablu
+	- servicii populare ale business-class sunt DSL, leased lines si Metro Ethernet 
+ 	
+Internet Connections:
+	prin cablu : internet data este transmis pe acelasi cablu ca cel TV
+	prin DSL : internet data este transmis pe o linie telefonica
+	cellular : date mobile
+	stellite : antena satelit
+	dial-up Telephone : suni la ISP, ei iti inchid linia telefonica si iti trimit datele net pe acelasi cablu care il bagi intr-un modem in PC
 	
-Structura adreselor IPv4:
-	-componenta nerwork + componenta host
-	-intr-un LAN componenta network e aceasi, doar componenta host difera de la host la host
-	
-IPv4 Unicast:
-	-un pachet unicast este un pachet care are un singur host ca destinatie
-	-un pachet poate fi originar doar unui device
+Bussines Internet Connections:
+	dedicated leased lines : sunt cabluri trase de un ISP special intre doua loucri geografic separate ale unei firme
+	metro ethernet : se exitnde accesu LAN in WAN(facem asta in alt modul zice aici)
+	business DSL : Symmetric Digital Subscriber(SDSL) un DSL normal numa ca te lasa sa uploadezi si sa downloadezi date
+	satellite : antena satelit
 
-IPv4 Broadcast:
-	-un pachet care e transmis catre toate dispozitivele din acel LAN, chiar si catre router
-	-destinatia e 255.255.255.255, cod special pt Broadcast
-	-Broadcast este doar la IPv4 nu si la IPv6
+Converged Networks:
+	- zice ca toate toate network-urile(data, telephone, video) folosesc acelasi Rule Agreement Standard
+	
+Network Architecture:
+	-caracteristicile basic pe care un network trebuie sa le implementeze ca sa fie ok:
+		-Fault Tolerance
+		-Scalability
+		-Quality of Service(QoS)
+		-Security
+	
+Fault Tolerance:
+	-in cazu in care se strica un dispozitiv intermediar, networku sa fie contrusit astfel incat sa se repare rapid
+	-adica datele sa ia o alta ruta catre internetul propiu-zis
+	-sa ai mai multe rute este cunoscut sub numele de redundancy
+	Packet Switched Network:
+		-packet switching imparte traficul in pachete care sunt trimise pe net
+		-un singur mesaj este impartit in pachete(transportation layer)
+		-si apoi ii trimis
+
+Scalability:
+	-sa poate un LAN sa fie adaugat usor fara sa trebuiasca o schimbare majora
+	
+Quality of Service(QoS):
+	-sa nu existe timp de asteptare, daca dau request la o pagina web sa o primesc instantaneu
+	
+Security:
+	-sa nu existe acces neautorizat
+	-administratorii trebuie sa respecte niste caracterestici ca sa protejeze datele dintr-un pachet
+	confidentiality : adica doar persoane autorizate si destinatarul sa aibe acces si sa citeaza data
+	integrity : data sa fie transmisa 1 la 1, sa nu se schimbe cuvinte pe acolo sau culori dracu
+	availability : acces rapid si bun la servicile de date pentru utilizatorii autorizati
+
+Recent Trends:
+	-Bring Your Own Device(BYOD)
+	-Online collaboration
+	-Video communications
+	-Cloud Computing
+	
+BYOD:
+	- sa te poti conecta la internet cu orice dispozitiv
+
+Online collaboration:
+	- sa poti colabora efectiv cu cineva pe internet, sa vorbiti, trimitei fisere etc
+
+Video communications:
+	- sa poti comunica cu cineva printr-un apel video
+
+Cloud Computing:
+	- sa iti tii date pe un server numit cloud.
+	- exista 4 tipuri de clouduri:
+		Public Clouds : chestii pe care le poate accesa oricine
+		Private Clouds : chestii pe care doar anumite persoane le poate accesa
+		Hybrid Clouds : Public Clouds + Private Clouds, useri au nivele de acces
+		Community Clouds : Public Clouds pe care se vorbeste numa despre un anumit subiect
+
+Powerline Networking:
+	-se pun niste adaptatoare care transmit pe cablurile de curent data la o anumita frecventa
+
+Wireless Internet Service Provider(WISP):
+	-se pune o antena intr-un loc inalt, si la tine acasa si din antena de pe casa se duce in router si deacolo ii exact la fel
+
+Wireless Broadband Service:
+	-se pune o antena afara care primeste data si o transmite prin cablu sau wireless
+
+Security Threats:
+	Viruses, worms, and Trojan horses : contin un software sau cod malicios pe un dispozitiv al unui user
+	Spyware and aware : un software ca colecteaza informatii de pe telefonul user-ului
+	Zero-day attacks : un atac care vine odata ce se stie despre o vulnerabilitate
+	Threat actor attacks : un hacker ataca dispozitivele user-ilor sau resurse de pe net
+	Denail of service attacks(DoS) : incetinesc sau distrug aplicatii si procese de pe un dispozitiv de pe net
+	Data interception and theft : colecteaza informatii private de pe un LAN
+	Identity theft : fura datale de logare ale unui utilizator ca sa ii aceseze datele private
+
+Security Solutions:
+	Antivirus and antispyware : aceste aplicatii protejeaza dispozitivele de la a fi infectate cu un cod malicios
+	Firewall filtering : previne accesul nesecurizat
+	Dedicated firewall systems : capabilitati mai avansate ale unui firewall
+ 	Acces control lists(ACL) : filtreaza traficul si accesul dupa adresele IP si aplicatii
+	Intrusion prevention systems(IPS) : identifica amenitari care se raspandesc rapid, ca si Zero-day attack-urile
+	Virtual private networks(VPN): dau acces securizat la o organizatie
+ 
+Operating Systems(OS):
+	-partea OS-ului care interactioneaza direct cu componentele hardware ale calculatorului este kernel
+	-partea care interactioneaza cu aplicatile si cu user-ul se numeste shell
+	-useri pot interactiona cu shell-u folosind un command-line interface(CLI) sau un graphical user interface(GUI)
+	
+GUI:
+	-ex: Windows, macOS, Linux KDE, Apple iOS sau Android
+	-acestea poate nu o sa poata tot ce poate CLI-u, pot sa se strice, sa dea crash, sau pur si simplu sa nu opereze cum ar trebuii
+	-din acest motiv dispozitivele intermediare sunt deobicei accesate folosind CLI, care cere mai putine resurse si este mai sigur
+	-OS dispozitivelor cisco se regasesc in Cisco Internetwork Operating System(IOS)
+	-Cisco IOS este folosit pe multe routere si switch-uri, precum IOS XE, IOS XR si NX-OS
+	
+Purpose of an OS:
+	GUI:
+		-ii la fel ca la calculator doar ca pentru internet
+		-te poti folosii de mouse sa selectezi lucruri si sa dai run la programe
+		-sa introduci text si comenzi bazate pe text
+		-si sa vezi output-ul pe un monitor
+	CLI:
+		-sa foloseasca o tastatura sa dea run la programe de internet bazate pe CLI
+		-sa introduci text si comenzi bazate pe text
+		-si sa vezi output-ul pe un monitor
+
+Acces Methods:
+	Console : un port pe care efectiv doar asta se face, se acceaseaza dispoziticul intermediar pentru a-i schimba setarile
+	Secure Shell(SSH) : o conexiune sigura CLI, printr-o interfata virtuala de pe net
+	Telnet : o conexiune nesecurizata CLI, nu se encrpiteaza datele, un SSH nesecurizat
+
+Primary Command Modes:
+	Cisco IOS imparte acces-ul pt managment in doua categorii:
+		-User EXEC Mode : capacitati limitate, esti in acest mod cand dupa numele dispozitivului intermediar la care este conectat este ">"
+		-Privileged EXEC Mode :	poti configura multe lucruri, ca si configurarile global, acest mod este identificat dupa semnul "#"
+
+Configuration Mode and Subconfiguration Modes:
+	-dupa ce te-ai conectat la global config mode, alegi pe care subcategorie te duci
+		Line Configuration Mode : folosit sa configureze console(eng), SSH, Telnet, sau AUX access
+		Interface Configuration Mode : folosit ca sa configureze un port de la switch sau interfata router-ului
+	
+Navigate Between IOS Modes: 
+	-odata ce te-ai conectat la switch ca sa te schimbi de la EXEC mode la privileged EXEC mode, trebuie doar sa scrii in cmd "enable" si "disable" ca sa revii la EXEC mode
+	-ca sa accesezi global configuration mode trebuie sa scrii "configure terminal" si ca sa iesi doar "exit"
+	
+Basic IOS Command Structure:
+	keyword : un parametru specific definit in OS
+	argument : nu e predefinit, o valoare sau variabila definita de user
+
+IOS Command Syntax Check:
+	boldface : textul scris bold sunt commands si keywords pe care le scrii ca in manual
+	italics : textul italic reprezinta argumente, la care eu le dau valorile
+	[x] : [] indica un argument sau keyword optional
+	{x} : {} indica un argument sau keyword neaparat
+	[x { y | z }] : alegi ori y ori z
+
+IOS Help Features:
+	-IOS ofera doua metoda de ajutor: context-sensitive help si command syntax check 
+	Context-sensitive help raspunde la intrebarile:
+		-ce comenzi pot fi folosite in ce command mode?
+		-care comenzi incep cu caracetere specifice sau grupuri de caractere specifice?
+		-la ce comenzi pot sa bag argumente si keywords-uri
+		
+	-ca sa accesezi context-sensitive help doar scrie "?" in CLI
+	Command syntax check : daca comanda nu ii bagata corect iti zice ce ii inregula cu cum ai scris-o in terminal
+	
+Devices Names:
+	-trebuie sa fie o logica dupa ce is numite switch-urile si astea, dupa loc de exemplu
+	-te duci in IOS la CLI, bagi acolo ENABLE sa te duci la privileged EXEC mode, si apoi bagi configure terminal
+	-bagi hostname si apoi "un string care sa fie numele al host-ului la care esti acuma"
+	
+Password Guidelines:
+	-cisco IOS poate fi configurat sa ceara parole la un dispozitiv intermediar
+	-si accesul la EXEC, privileged EXEC si Telnet ar trebuii sa fie cu parola, si parolele encriptate
+	-parolele ar trebuii sa aiba:
+		-minim 8 caractere
+		-litere mari si mici, numere, caractere special
+		-sa nu fie aceasi parola la toate dispozitivele una la un switch alte la alt switch
+		-sa nu folosim cuvinte comune ca is usor de ghicit
+
+Configure passwords:
+	Parola pt EXEC mode:
+	-odata ce esti in CLI, bagi enabled privileged EXEC mode
+	-apoi configure terminal
+	-line console 0
+	-password "parola ta"
+	-login (ca sa stie ca deacum trebuie sa ceara aceasta parola la intrare in EXEC mode)
+	-end( ca sa iesi din terminal)
+	Parola pt privileged EXEC mode:
+	-odata ce esti in CLI, bagi enabled privileged EXEC mode
+	-apoi configure terminal
+	-enable secret "parola ta"	
+	-exit(ca sa iesi din terminal)
+	
+	-linile de comunicare Virtual terminal(VTY) pot fi accesate si remote cu SSH sau Telnet
+	-multe switch-uri cisco suporta pana la 16VTY, indexarea lor incepe de la 0
+	Parola pt VTY lines:
+	-odata ce esti in CLI, bagi enabled privileged EXEC mode
+	-apoi configure terminal
+	-line vty 0 15(asa intrii pe o linie)
+	-password "parola"(asa pui parola la intrarea pe orice linie)
+	-login
+	-end
+
+Encrypt Passwords:
+	-in fiserele startup-config si running-config sunt salvate cele mai multe parole in plain text
+	-ca sa encriptezi aceste parole scrie "service password-encryption" aceasta este o global config command
+	-comanda aplica o encriptare slaba, si doar in fiserele adresate, nu si cat sunt transmise pe internet
+	-show running-config(functie care iti arata parolele sa vezi ca is encriptate)
+
+
+Banner Messages:
+	-mesaj care o sa fie scris cand ala greseste parola
+	-banner motd #mesaju#
+
+Configuration Files:
+	-show running-config : functie din privileged EXEC mode ca sa vezi the running config
+	-show startup-config 
+	-copy running-config startup-config : salveaza datele din startup file 
+
+Alter the Running Configuration:
+	-asa restorezi dispozitivu la configuratia lui precedenta
+	DACA ASTA NU MERGE:
+	-erase startup-config
+	
+Communications Fundamentals:
+	-message source(sender) : host-uri care trimit message to alte host-uri
+	-message destination(receiver) : hostul destinatar primeste mesajul si il interpreteaza
+	-channel : cablurile si dispozitivele intermediare, care alcatuiesc ruta fizica pe care o parcurge mesajul
+	
+Rule Establishment:
+	-regulile pe care un protocol trebuie sa le urmeze:
+		-hostul care trimite mesajul si cel care il primeste sa fie identificate
+		-o limba comuna
+		-viteza si timpul de transamitere a datelor
+		-confirmation or acknowledgment requirements
+
+Network Protocol Requirements:
+	-message encoding
+	-message formatting and encapsulation
+	-message size
+	-message timing
+	-message delivery options
+	
+Message Encoding:
+	-ce face layeru 6, transforma dintr-un format in cel care poate fi transmis pe internet
+	-converteste data in biti
+	-fiecare bit este transformat intr-o succesiune de volti, de raze infrared sau de campuri electromagnetice.
+	-destination host-ul primeste mesajul si face de la coada la cap
+
+Message Formatting and Encapsulation:
+	-IP este protocolul responsabil pentru transmiterea datelor intre doua hosturi
+	-o bagat-o pe aia ca encapsulation ii cand bagi un tip de mesaj in alt tip de mesaj, ca o foaie intr-un plic
+	
+Message Size:
+	-cand un mesaj mare este trimis acesta trebuie sa fie impartit pe segmente
+	-segmentele o sa fie trimise unu dupa altu
+	-iar mesajul final va fi asamblat de hostul destinatie
+	
+Message Timing:
+	Flow Control : procesul de manageriare a ratei de transmitere a datelor, cata informatie poate sa fie transmisa la ce viteaza 
+	Response Timeout : daca nu se primeste un acknowledgment hostul va trimite din nou mesajul
+	Access method : cand poate un host sa trimita mesajul, ca sa nu se suprapun cum ar venii
+
+Message Delivery Options:
+	Unicast : informatia este transmisa unui singur dispozitiv
+	Multicast : informatia este transmisa unui sau mai multor dispozitive
+	Broadcast : informatia este transmisa catre toate dispozitivele
+
+Network Protocol Overview:
+	Network Communications Protocols : transportul de date intre doua hostu-uri (TCP, HTTP, etc)
+	Network Security Protocols : securizeaza data, authentication, data integrity si data encryption (SSH, SSL, TLS)
+	Routing Protocols : aleg cea mai buna ruta dintre hosturi(OSPF, BGP)
+	Service Discovery Protocols : detecteaza automat dispozitive sau servici (DHCP, DNS)
+	
+Network Protocol Functions:
+	addressing : identifica senderu si receiveru mesajului (Ethernet, IPv4 si IPv6)
+	reliability : mesajul va fi trimis sigur, indiferent daca este pierdut sau stricat in transmisia dintre hosturi (TCP)
+	flow control : transferul de date se faca la o rata eficienta intre cele doua host-uri (TCP)
+	sequencing : se da un index la segmente, astfel incat sa poata fi trimis si asamblat in ordinea corecta (TCP), segmentele vor fi retransmise daca nu ajung hostul destinatie
+	error detection : verifica daca data a fost corrupted in timpul transmisiei (Ethernet, IPv4, IPv6 si TCP)
+	application interface : informatii intre aplicatii network (layeru 7) (HTTP, HTTPS)
+
+Protocol Interaction:
+	HTTP : acest protocol guverneaza cum interactioneaza un web server si un client web
+	TCP : garanteaza ca datele vor ajunge cum trebuie si ca se face la o rata eficienta
+	IP : responsabil sa trimita mesajul intre sender si receiver, este folosit de routere ca sa transmita mesajul mai departe catre alte networkuri
+	Ethernet : responsabil sa transmita data intre NIC si NIC intr-un LAN
+
+Network Protocol Suites:
+	protcol suite : grup de protocoale care lucreaza impreuna sa faca un transfer de date
+	Internet Protocol Suite or TCP/IP : un OSI layer doar ca layeru 4 TCP/IP = layerele 5, 6, 7 OSI
+	Open Systems INterconnection (OSI) : sta la baza la toate alea is alea 7
+	AppleTalk : un protocol doar pt dispozitivele apple, nu mai e implementat deloc
+	Novell NetWare : un protocol facut de astia da nu e implementat deloc
+TCP/IP Protcol Suite:
+
+	TCP/IP has two important aspects for vendors and manufacturers:
+		Open standard protocol suite : este gratis catre public si poate fi folosit si accesat de oricine
+		Standards-based protocol suite : ca este un suite calificat
+
+Application Layer:
+
+Name System
+
+	DNS - Domain Name System. Translates domain names such as cisco.com, into IP addresses.
+
+Host Config
+
+	DHCPv4 - Dynamic Host Configuration Protocol for IPv4. A DHCPv4 server dynamically assigns IPv4 addressing information to DHCPv4 clients at start-up and allows the addresses to be re-used when no longer needed.
+	DHCPv6 - Dynamic Host Configuration Protocol for IPv6. DHCPv6 is similar to DHCPv4. A DHCPv6 server dynamically assigns IPv6 addressing information to DHCPv6 clients at start-up.
+	SLAAC - Stateless Address Autoconfiguration. A method that allows a device to obtain its IPv6 addressing information without using a DHCPv6 server.
+	
+Email
+
+	SMTP - Simple Mail Transfer Protocol. Enables clients to send email to a mail server and enables servers to send email to other servers.
+	POP3 - Post Office Protocol version 3. Enables clients to retrieve email from a mail server and download the email to the client's local mail application.
+	IMAP - Internet Message Access Protocol. Enables clients to access email stored on a mail server as well as maintaining email on the server.
+	
+File Transfer
+
+	FTP - File Transfer Protocol. Sets the rules that enable a user on one host to access and transfer files to and from another host over a network. FTP is a reliable, connection-oriented, and acknowledged file delivery protocol.
+	SFTP - SSH File Transfer Protocol. As an extension to Secure Shell (SSH) protocol, SFTP can be used to establish a secure file transfer session in which the file transfer is encrypted. SSH is a method for secure remote login that is typically used for accessing the command line of a device.
+	TFTP - Trivial File Transfer Protocol. A simple, connectionless file transfer protocol with best-effort, unacknowledged file delivery. It uses less overhead than FTP.
+	
+Web and Web Service
+
+	HTTP - Hypertext Transfer Protocol. A set of rules for exchanging text, graphic images, sound, video, and other multimedia files on the World Wide Web.
+	HTTPS - HTTP Secure. A secure form of HTTP that encrypts the data that is exchanged over the World Wide Web.
+	REST - Representational State Transfer. A web service that uses application programming interfaces (APIs) and HTTP requests to create web applications.
+
+Transport layer:
+
+Connection-Oriented
+
+	TCP - Transmission Control Protocol. Enables reliable communication between processes running on separate hosts and provides reliable, acknowledged transmissions that confirm successful delivery.
+
+Connectionless
+
+	UDP - User Datagram Protocol. Enables a process running on one host to send packets to a process running on another host. However, UDP does not confirm successful datagram transmission.
+
+Internet Layer:
+
+Internet Protocol
+
+	IPv4 - Internet Protocol version 4. Receives message segments from the transport layer, packages messages into packets, and addresses packets for end-to-end delivery over a network. IPv4 uses a 32-bit address.
+	IPv6 - IP version 6. Similar to IPv4 but uses a 128-bit address.
+	NAT - Network Address Translation. Translates IPv4 addresses from a private network into globally unique public IPv4 addresses.
+
+Messaging
+
+	ICMPv4 - Internet Control Message Protocol for IPv4. Provides feedback from a destination host to a source host about errors in packet delivery.
+	ICMPv6 - ICMP for IPv6. Similar functionality to ICMPv4 but is used for IPv6 packets.
+	ICMPv6 ND - ICMPv6 Neighbor Discovery. Includes four protocol messages that are used for address resolution and duplicate address detection.
+
+Routing Protocols
+
+	OSPF - Open Shortest Path First. Link-state routing protocol that uses a hierarchical design based on areas. OSPF is an open standard interior routing protocol.
+	EIGRP - EIGRP - Enhanced Interior Gateway Routing Protocol. An open standard routing protocol developed by Cisco that uses a composite metric based on bandwidth, delay, load and reliability.
+	BGP - Border Gateway Protocol. An open standard exterior gateway routing protocol used between Internet Service Providers (ISPs). BGP is also commonly used between ISPs and their large private clients to exchange routing information.
+
+Network Access Layer:
+
+Address Resolution
+
+	ARP - Address Resolution Protocol. Provides dynamic address mapping between an IPv4 address and a hardware address.
+
+	Note: You may see other documentation state that ARP operates at the Internet Layer (OSI Layer 3). However, in this course we state that ARP operates at the Network Access layer (OSI Layer 2) because it's primary purpose is the discover the MAC address of the destination. A MAC address is a Layer 2 address.
+
+Data Link Protocols
+
+	Ethernet - Defines the rules for wiring and signaling standards of the network access layer.
+	WLAN - Wireless Local Area Network. Defines the rules for wireless signaling across the 2.4 GHz and 5 GHz radio frequencies.
+
+Open Standards:
+	- standard organization deobicei sunt vendor-neutral
+	Standard organization:
+		-IEEE, IANA, IETF, ICANN, ITU, TIA
+
+Internet Standards:
+	Internet Society(ISOC) : responsabili cu promovarea developmentului si a evolutiei a folosirii internetului prin lume
+	Internet Architecture Board(IAB) : responsabili pentru managmentul si developmentul al internet standards
+	Internet Engineering Task Force(IETF) : developeaza, updateaza si tehnologiile internetului si ale TCP/IP suite. Documente cu procese, developarea unor noi protocoale, updatarea celor vechi aceste chestii se numesc Request for Comments(RFC) documents
+	Internet Research Task Force(IRTF) : focusati pe researciul long-term despre TCP/IP protocols ca si Anti-Spam Research Group(ASRG)
+	Internet Corporation for Assigned Names and Number(ICANN) : in USA, coordoneaza adresele IP, managmentul al domain name-urilor, si scrie alte informatii folosite in TCP/IP suite
+	Internet Assigned Numbers Authority(IANA): responsabili de managerarea adreselor IP, domain name management, si protocol identifier for ICANN
+
+Electronic and Communications Standards: 
+	Institute of Electrical and Electonics Engineers(IEEE) : se dedica pentru avansarea tehnologiei inovatoare si crearae standardelor in mai multe industrii, standare deale lor sunt 802.3 Ethernet si 802.11 WLAN
+	Electronic Industries Alliance(EIA) : electrical wiring, conectori
+	Telecommunications Industry Association(TIA) : responsabila pentru developarea comunicatilor standard in multe industrii
+	Internation Telecommunications Union-Telecommunication Standardization Sector(ITU-T) : standarde pentru video compression, Internet PRotocol Television(IPTV) si broadband communications ca si DSL.
+
+Segmenting Messages:
+	-faptul ca prin segmentarea pachetelor la transport layer reusim sa trimitem datele mai rapid, aceast lucru ne permite sa trimitem deodata mai multe date mici, gen 1A 1B 2A 2B, gandeste la aia doi si pliculile lor
+
+Sequencing:
+	-segmentation si multiplexing deodata
+	-acele segmente trebuie numeroata ca stii in ce ordine sa le asamblezi
+
+Protocol Data Units:
+	-ce vrea PDUu asta sa fie
+	-fiecare layer are PDU adica valoarea care iese din acel layer
+	-frame -> layer2 PDU
+	-packet -> layer 3 PDU
+
+Emcapsulation Exemple:
+	-ba la fiecare layer se mai adauga ceva si se baga in alt plic
+	- frame > packet > segment > data
+
+Addresses:
+	-segmentele nu se duc niciunde daca nu primesc IP-uri de sursa si destinatie
+	Network layer source and destination addresses : responsabil cu transmiterea pachetului IP de la sursa la destinatie, si daca e pe LAN
+	Data link layer source and destination addresses : responsabil sa transmita frame-ul de la un NIC la alt NIC, doar pe acelasi LAN
+
+Layer 3 Logical Address:
+	-layeru 3 da 2 adrese IP cea sursa si cea destinatie
+	Source IP address : adresa IP a dispozitivului care trimite mesajul
+	Destination IP address : adresa IP a dispozitivul care primeste mesajul
+	
+	-Adresa Ip are doua parti cea care arata Netwroku si cea care arata hostu
+	network portion(IPv4) or Prefix(IPv6) : partea din stanga care arata la fel pe LAN e cea care reprezinta networku, e data de subnet mask
+	host portion(IPv4) or Interface ID(IPv6) : partea ramasa care identifica un host, este o portoiune unica pe LAN 
+
+Role of the Data Link Layer Addresses:
+
+	-layeru 2 baga adresele MAC la destinatar si sursa
+	Source MAC address : unic, o adresa a NIC-ului a hostu-ului care trimite mesajul
+	Destination MAC address : unic, o adresa a NIC-ului a hostu-ului care primeste mesajul
+	-cand host-urile sunt pe LAN-uri diferite, hostul sursa o sa isi dea seama de asta dupa IP	
+
+Different IP networks: 
+	-cand hosturile nu sunt in acelasi LAN, hostul va configura adresele destinatie, datele routerului adresa sa MAC
+		
+Data Link Addresses:
+	-daca hosturile nu sunt in acelasi LAN, pachetul cu sursa si destinatia IP va fi encapsulat intr-un data-lin frame nou, pentru ca la iesirea din dispozitivele intermediarea se schimba adresa MAC
+	Source data link address : adresa NIC a dispozitivului care trimite data link frame-ul
+	Destination data link address : adresa NIC a dispozitivului care primeste data link frame-ul, poate fi router switch sau chiar hostu destinatie
+
+	
+The physical connection:
+	-dispozitivele trebuie sa fie conectate la un access point(AP) fie el wireless fie prin cablu
+	-wireless router-ul trebuie sa aiba : antena wireless, internet port, port-uri ethernet
+	-network interface cards(NIC) conecteaza dispozitive la LAN, sunt folosite la conexiunea prin cablu
+	- exista doua tipuri de NIC-uri: Ethernet NICu si WLAN NICu(pt wireless)
+	
+Physical Layer Standards:
+	-servicile si protocoalele in TCP/IP suite sunt definite de IETF
+	-physical layeru este guvernat de:
+		-International Organization for Standardization (ISO)
+		-Telecommunications Industry Association/Electronic Industries Association (TIA/EIA)
+		-International Telecommunication Union (ITU)
+		-American National Standards Institute (ANSI)
+		-Institute of Electrical and Electronics Engineers (IEEE)
+		-National telecommunications regulatory authorities including the Federal Communication Commission (FCC) in the USA and the European Telecommunications Standards Institute (ETSI)
+
+Physical Components:
+	-se adreseaza urmatoarelor arii de functionare:
+		-physical components
+		-encoding
+		-signaling
+
+Encoding : metoda folosita pentru reprezentarea datelor digitale(din X in biti deobicei)
+	
+Signaling: 
+	-physical layer-u trebuie sa genereze semnalalele electrice, optice si wireless care sa reprezeinte 1 si 0
+	-felul in care biti sunt reprezentati se numeste signaling method 
+	Copper Cable:
+		-semnale electrice pe calbu de cupru
+	Fiber Optic Cable:
+		-pulsuri de lumina pe fibra optica
+	Wireless Media:
+		-semnale electromagnetic prin wireless
+	
+Bandwith:
+	-masoara cata data poate parcurge de la un host la altul intr-un timp t.
+	-este masurat in kbps, Mbps sau Gbps.
+	Factori care pot influneta the practical bandwith:
+		-propietatile a physical media
+		-tehnologia alesa pentru signaling si dispozitivele care detecteaza semnalele network
+
+Bandwidth Terminology:
+	-termeni folositi pentru masurarea calitatii bandwith-ului:
+		-latecny : timpul total de transmitere al datelor de la un punct la altul
+		-throughput: masurarea transferului de biti de la un punct fizic la altul			
+		-goodput :  timpul total de transmitere a unor date bune intr-un timp t.
+
+Characteristics Copper Cabling:
+	-cel mai comun
+	-ieftin, usor de montat, resistenta mica la electricitate
+	-limitat de distanta si interferente ale semnalului
+	-datele sunt transmise sub forma de pulsuri electrice
+	-sunt 3 tipuri
+	-cu cat semnalu merge mai departe cu atat se deterorieaza mai mult asta inseamna signal attentuation	
+	-calitatea semnalului mai poate fi interferata de alte 2 surse:
+		-Electromagnetic interference(EMI) or radio frequency interference(RFI):
+			-semnale radio si electromagnetice de la alte dispoztive
+		-Crosstalk:
+			- este cand se amesteca datele de la mai multe circuite apropiate, pentru ca datele transmise creaza un camp magnetic
+			- ca sa il eviti unele cabluri de cupru au opposing circuit wire pairs imbinate, care cica nu is afectate de crosstalk
+
+		The susceptibility of copper cables to electronic noise can also be limited using these recommendations:
+			-Selecting the cable type or category most suited to a given networking environment
+			-Designing a cable infrastructure to avoid known and potential sources of interference in the building structure
+			-Using cabling techniques that include the proper handling and termination of the cables
+	
+Types of Copper Cabling:
+	-unshielded twisted-pair(utp)
+	-shielded twisted-pair(stp)
+	-coaxial cable(ala de tv de la hidi)
+
+UTP:
+	-cel mai comun
+	-conecteaza host-uri cu dispozitive intermediare
+
+STP:
+	-better noise protection than UTP
+	-mult mai scump ca UTP, si e greu de instalat
+	-are un shield ca sa nu mai fie EMI si RFI, si wire twisting ca sa combata crosstalku
+	
+Coaxial Cable:
+	-un cablu de cupru care conduce semnalu
+	-un layer de  plastic isoleaza acest cablu
+	-plasticu este imbracat intr-un material de cupru sau metalic, care actioneaza ca un al doilea fir, care protejeaza cablul interior, reduce interferentele
+	-acest material este apoi acoperit intr-un material izolat ca sa previna physical damage
+	folosit la:
+		-wireless anstallations: ataseaza antenele la dispozitivele wireless, care frecvente radio(RF) intre antena si echipamentu radio
+		-cable internet installations: in loc de cablu interior este fibra optica pe care se trimite internet
+
+Properties of UTP Cabling:
+	-metoda de limitare a crosstalk:
+		-cancellation: se pun pe perechi firele astfel incat campul lor magnetic sa-si dea cancel, astfel incat sa dea cancel si la EMI si RFI
+	-varing the number o twists per wire pair:
+		-unele sunt mai incalcite decat altele
+
+UTP Cabling Standards and Connectors:
+	-confirma dupa standardele puse de TIA/EIA
+	Categoriile UTP cable:
+		-Category 3 was originally used for voice communication over voice lines, but later used for data transmission.(UTP)
+		-Category 5 and 5e is used for data transmission. Category 5 supports 100Mbps and Category 5e supports 1000 Mbps(UTP)
+		-Category 6 has an added separator between each wire pair to support higher speeds. Category 6 supports up to 10 Gbps.(STP)
+		-Category 7 also supports 10 Gbps.
+		-Category 8 supports 40 Gbps.
+	-au conectori de tip RJ-45, standardul TIA/EIA-568 descrie la ce pin-uri se duc ce culori
+	
+Straight-through and Crossover UTP Cables:
+	Ethernet Straight-through: cel mai comun, interconecteaza host-uri cu dispozitive intermediare
+	Ethernet Crossover: un cablu folosit sa interconecteze dispozitive similare
+
+Cable types and standards:
+	Ethernet straight-through : ambele capete T568A sau T568B, coneteaza un host la un dispozitiv intermediar
+	Ethernet Crossover : unul e T568A si celalalt e T568B, conecteaza dispozitive similare
+	Rollover : cisco proprietry, conecteaza a workstatios serial port la un router folosind un adaptator
+
+Types of Fiber Media:
+	Single-Mode Fiber :  au un singlu cablu dinala de sticla, prin care se transmite o raza de lumina, pe distante foarte mari
+	Multimode Fiber :  au un singlu cablu dar mai gros, prin ele se transmit raze LED care intra la diferite unghiuri, de catre emitatorii LED, populare in LAN, lungime de 550m si bandwidtj de 10Gbps 
+
+Fiber-Optic Cabling Usage:
+	-Enterprise Networks - Used for backbone cabling applications and interconnecting infrastructure devices
+	-Fiber-to-the-Home (FTTH) - Used to provide always-on broadband services to homes and small businesses
+	-Long-Haul Networks - Used by service providers to connect countries and cities
+	-Submarine Cable Networks - Used to provide reliable high-speed, high-capacity solutions capable of surviving in harsh undersea environments at up to transoceanic distances. Search the internet for “submarine cables telegeography map” to view various maps online.
+
+Fiber-Optic Connectors:
+	Stright-Tip(ST) Connectors:
+		-primele mufe pt fibra optica 
+		-un stil de prindere sigura "twist-on/twist-off" bayonet-style mechanism
+	Subscriber Connector(SC) Connectors:
+		-conectori standarzi
+		-se folosesc mult in LAN si WLAN
+		-mecanism push-pull
+		-merge cu ambele tipuri de fibra optica
+	Lucent Connector(LC) Simplex Connectors:
+		-un SC mai mic
+		-numit si conectori locali
+		-cunoscuti pentru marimea lor mica
+		
+	Duplex Multimode LC Connectors:
+		-doua conectoare LC una langa alta
+	
+Fiber Patch Cords:
+	SC-SC Multimode Patch Cord :  un cablu cu ambele mufe SC
+	LC-LC Single-Mode Patch : un cablu cu ambele mufe LC
+	ST-LC Multimode Patch Cord : un cablu cu o mufa ST si una LC(2 mufe din fiecare)
+	SC-ST Single-Mode Patch Cord : un cablu cu o mufs ST si alta SC(2 mufe din fiecare)
+
+Properties of Wireless Media:
+	Limitations of wireles:
+		- coverage area : anumite materiale in constructii si structuri pot limita raza wifi-ului
+		- interference : poate fi stricat de dispoztive comune
+		- security : pot fi prinse interferentele din aer
+		- sharde medium : daca multi useri acceseaza WLAN-u simultan rezulta in bandwidth-u redus pentru fiecare user in parte
+
+Types of Wireless Media:
+	Wireless standards:
+	Wifi(IEEE 802.11):
+		-NICu wireless trebuie sa asculta pentru a determina data canalul radio este gol.
+		-daca un wireless host transmite date, NICu va astepta sa se gate transmisia	
+	Bluetooth(IEEE 802.15):
+		-wireless personal area network(WPAN) standard
+		-distante intre 1-100m
+	WiMAX(IEEE 802.16):
+		-Worldwide Interoperability for Micrware Access(WiMAX)
+		-foloseste un point-to-multipoint
+	Zigbee(IEEE 802.15.4):
+		-folosit la comunicatii low-power
+		-pentru comunicatii pe o distanta scurta, low-data reates, low battery life
+		
+Wireless LAN(WLAN):
+	-intr-un WLAN trebuie sa fie aceste dispozitive:
+		Wireless Access Point(AP) : se concentreaza pe semnalul wireless de la useri si se conecteaza la un internet bazat pe fire
+		Wireless NIC adapters : acestea dau capcitatea host-urilor sa foloseasca wireless  
+
+Binary and IPv4 Addresses:
+	-adresele IP incep sub forma binary, o serie de 0 si 1, dar sunt schimbate in decimale
+	-fiecare adresa are un string de 32 biti, 4 octete, 4 X 1 byte
+	
+
+Binary Position Notation:
+	-de la dreapta la stanga se adauga o putere a bazei in care facei incepand de la indexarea 0, gen 0 la x, 1 la x 
+	-tu trebuie sa faci o suma exacta cu puterile lui x
+	ex : 
+		168 = 1010100( 2put7 + 2put5 + 2put3)
+
+Hexadecimal and IPv6 Addresses:
+	-adresele IPv6 sunt scrise in baza 16, care foloseste numerele de la 0 la 9 si literele de la A la F
+	
+Decimal to Hexadecimal Conversions:
+	-descompui numarul tau in binary
+	-apoi il imparti in doua siruri de 4 caractere
+	-iei fiecare sir si zici ce valoare au in binary 
+	-si apoi le pui una langa alta
+	- a = 10(binary) ; b = 11 ; c = 12 ; d = 13 ; e = 14 ; f = 15; 
+
+Decimal to Hexadecimal Conversions:
+	-fix invers
+	
+The Data Link Layer:
+	-permite layerelor mai mari sa acceseze media
+	-acepta data, deobicei de la layeru3, si encapsuleaza in layer2 frames
+	-controleaza cum este plasata data si primita pe media
+	-schimba frames intre doua host-uri ale internetului
+	-primeste data encapsulata, debocei pachete de layer3. si le directioneaza catre protocolul corect
+	-error detection, si rejects orice frame corupt
+	-prepareaza datele network pentru physical network
+	node : un dispozitiv care poate primii, crea, salva si trimite date pe un communications path, un host sau un dispozitiv intermediar
+	
+IEE 802 LAN/MAN Data Link Sublayers:
+	-standardele IEEE 802 LAN/MAN sunt specifice pentru LAN's, WLAN's and WPAN's
+	-data link layeru IEEE 802 LAN/MAN contine 2 sublayere:
+		-Logical Link Control(LLC):
+			-acest sublayer face comunicatia intre network software si upper layers
+			-acest sublayer face comunicatia intre network software si dispozitivele hardware
+			-encapsuleaza frame-urile	
+	-Media Access Control(MAC):
+			-da adresele MAC
+			-implementeaza acest sublayer in hardware
+		
+	-sublayerele LLC iau datale ede la layeru3 si adauga informatii de control ale layerului 2
+	-sublayeru MAC controleaza NIC-u si alte hardware-uri care sunt responsabile pentru trimiterea si receptionarea datei
+	Layeru MAC contine data encapsulation:
+		-frame delimiting : dau niste delimitatori, care fac sincronizarea intre transmitting and receiving nodes
+		-addressing : dau adresele MAC de sursa si destinatie
+		-error detection : baga un trailer la frame care sa vada daca sunt erori
+
+Providing Access to Media:
+	-de fiecare data cand unn  rtouer primeste un frame va face urmatorii pasi:
+		-accepta un frame
+		-il de-encapsuleaza 
+		-il encapsuleaza intr-un frame nou
+		-trimite nou frame unde trebuie trimis
+
+Data Link Standards:
+	-protocoalele de la acest layer nu sunt in general definite de RFC-uri
+	-IETF mentine protocoalele functionale si servicile pentru serviiciul TCP/IP
+	Ceva asocioatii:
+		Institute of Electrical and Electronics Engineers (IEEE)
+		International Telecommunication Union (ITU)
+		International Organization for Standardization (ISO)
+		American National Standards Institute (ANSI)	 	
+	
+Physicial and Logical Topologies:
+	-data link layeru pregateste datele pentru phyisical network
+	-dar trebuie sa stie logical topology of a network, ca sa poate determina ce trebuie pentru a se transfera date intre doua hosturi
+	topology of a network : un aranjament sau relatie dintre hosturi si dispozitivele intermediare
+	Sunt doar tipuri de topology:
+		-Physicial topology : identifica conexiunile fizice, si cum host-urile si dispozitivele intermediare sunt conectate
+		-Logical topology : se refera la modul de transfer al frame-urilor de la un node la altulm identifica conexiuni virtuale folosinduse de interfatele dispozitivelor si schema adreselor de la layeru 3
+
+WAN Topologies:
+	-cum sunt conectate WAN-urile
+	Point-to-point:
+		-cea mai simpla metoda 
+		-o conexiune permanenta intre doua end-pointuri
+	Hub and Spoke:
+		-star topology
+		-un device central interconecteaza alte device-uri via point-to-point
+	Mesh:
+		-fiecare device e conectat la celalalt
+		-fiecare device are o conexiune point-to point cu celelalte
+	
+Hald and Duplex Communication:
+	Half-duplex Communication:
+		-ambele dispozitive pot transmite si primii date, dar nu o potface simultan
+		-doar un dispozitiv poate primii sau transmite data
+		
+	Full-duplex Communication:
+		-ambele dispozitive pot transmite si primii date simultan
+		-data link layeru presupune ca media este valabila pentru transmisia datelor pentru ambele node-uri in orice moment
+	
+Access Control Methods:
+	-LAN-urile si WLAN-urile sunt exemple de multiacces networks, adica un network in care doua sau mai multe dispozitive pot accesa internetul simultan
+	Access Control Methods:
+		-Contention-based access
+		-Controlled access
+	Contention-based access:
+		-toate node-urile opereaza in half-duplex, intrecand-use pentru cine ajunge primu
+		exemple:
+			-Carrier sense multiple access with collision detection(CSMA/CD) folosit in bus-topology LAN's
+			-Carrier sense multiple access with collision avoidance(CSMA/CA) folost in WLAN's
+	
+	Controlled access:
+		-fiecare node are momentul sau pentru a accesa mediumu
+		-aceste networkuri sunt ineficiente
+		exemple:
+			-Legacy Token Ring
+			-Legacy ARCNET
+
+Contetion-Based Access - CSMA/CD:
+	exmple:
+		WLAN, bus-topology LAN, LAN using hub
+	-opereaza in modul half-duplex
+	-daca doua dispozitive transmit un mesaj deoadata o sa apara o coliziune, care va fi detectata de ambele dispozitive
+	-collision detection(CD) part of CSMA/CD
+	-NICu compara data transmisa cu data primita
+	-data trimisa de dispozitive va fi stricata si va trebuii sa fie retrimisa
+	
+Contention-Based Access - CSMA/CA:
+	-cand un host primeste un frame, o sa zica ca il primeste si un timp 
+	-celelalte host-uri o sa stie sa nu faca niciun request in acel timp
+	-dupa ce hostu primeste acel frame, o sa zica ca l-o primit
+	-celelalte hosturi o sa isi faca requesturile lor
+
+The Frame:
+	-layeru 2 se ocupa cu comunicatiile nic-to-nic
+	-frame-ul are 3 parti:
+		-header
+		-data
+		-trailer(doar la layeru 2)
+	
+Frame Fields:
+	Headrul Frameului contine:
+		-Frame Start : niste biti care iti zic ca acuma incepe un frame
+		-Addressing : adresele MAC sursa si destinatie  
+		-Type : ce protocol s-a folosit la Layeru 3
+		-Control : un control special al flow-ului datelor
+		-Data : pachetu primit de la layeru 3
+		-Error Detection : verifica daca frame-ul a fost trimis fara sa fie corupt
+		-Frame Stop : niste biti care iti zic ca acuma s-a incheiat frame-ul
+
+Frame Forwarding Methods on Cisco Switches:
+	-sunt 2 metode:
+	Store-and-forward switching : se vede daca nu sunt erori la trimitere si apoi se trimite
+	Cut-through switching : frame-ul este trimis inainte sa ajunga tot, cum s-au citit adresele MAC s-o si trimis
+	
+Cut-through switching:
+	-sunt 2 metode:
+	Fast-forward switching : cum a citit adresa MAC destiantie l-a si trimis, deobicei au erori
+	Fragment-free switching : se primesc primi 64 de biti, se verifica de erori , si dupa se trimite, pentru ca cele mai multe erori apar in aia 64 de biti
+
+Memory Buffering on Switches:
+	-sunt 2 metode:
+	Port-based memory: 
+		- frameurile sunt tinute intr-un queue specific pentru porturile de primire si trimite
+		- un frame este trimis doar dupa ce sunt trimise celelalte din queue
+		- exista posibilitatea ca frameurile sa intarzie pentru ca un port e prea aglomerat
+	
+	Shared Memory:
+		- frameurile sunt tinute intr-u buffer comun din care trimit toate porturile , si nu mai trebuie asa memorie buffer mare pentru ca este impartita la cate porturi sunt
+		- frameurile in buffer sunt legate dinamic la destinatie, deci un pachet poate fi trimis pe un port si sa vina pe altul
+
+Duplex and bandwdth seetings:
+	-sunt 2 tipuri:
+	Full-duplex: ambele conexiuni pot trimite si primii date simultan 
+	Half-duplex: doar o conexiune poate trimite date
+	
+	Duplex mismatch : eroare cand o conexiune e full-duplex si cealalta e half-duplex
+
+Auto-MDIX:
+	-doar pe ultime Cisco switches
+	-is a technology that automatically configures Ethernet interfaces to work with either straight-through or crossover cables
+	crossover cable(impletit intre ele ca la ala de LAN de la hidi):
+		-switch la switch
+		-ruter la host
+	staight-through cable(drept):
+		-swtich la ruter
+		-switch la host
+
+The Network Layer:
+	-servicii care le permit host-urilor sa faca schimb de date
+	Protocols:	
+		-IPv4
+		-IPv6
+		-acestea trebuie sa faca 4 operatiunii:
+			-addressing end devices : hosturile trebuie sa aiba o adresa IP unica
+			-encapsulation : se adauga un IP header la segmentu care vine de la transport layer
+			-routing : servicii pentru directionarea pachetelor la o destinatie
+			-de-encapsulation : cand un frame ajunge la un host acesta de-encapsuleaza pana ajunge la adresa IP destinatie ca sa vada daca e a adresa sa
+		
+IP Encapsulation:
+	-la segmentul primit se adauga un ip-header, si dupa encapsulare acestea formeaza un pachet
+	- ip-headeru este examinat de dispozitivele intermediare de layer 3
+
+Characteristics of IP:
+	connectionless : nu se face nicio conexiune cu destinatia pana sa se trimita pachetu
+	best effort : face tot posibilu ca pachetu tau sa ajunga, da nu e garantat
+	media independent : indepentent de medium
+
+Connectionless: 
+	-nu se face nicio conexiune cu hostu destinatie in care sa ii zici ca o sa vina un pachet
+	
+Best Effort:
+	-protocolul IP nu garanteaza ca toate pachetele ajung la destinatie
+	-protocolul IP nu afla daca toate pachetele ajung sau daca data a fost stricata in transmisie
+	
+Media Independent:
+	-pachetele pot fi trimise pe orice cablu sau prin orice metoda
+	-data link layeru este responsabil pentru prepararea pachetului IP pentru transmisia pe diferite cabluri sau diferite metode
+	-daca un pachet e prea mare pentru mediumu in care va fi trimis o sa fie impartit in mai multe pachete de router, acest proces se numeste fragmentare
+	-pachetele IPv6 nu pot fi fragmentate
+
+IPv4 Packet Header:
+	-este folosit pentru a asigura ca pachetul este trimis la urmatorul sau stop in cursa sa catre destinatie
+	
+IPv4 Packet Header Fields:
+	Version : 4 biti(0100) care identifica ca pachetul e unul IPv4
+	Differentiated Services of DiffServ(DS) : 8 biti folositi pentru a determina prioritatea fiecarui pachet
+	Time to Live(TTL) : 8 biti folositi pentru a limita viata unui pachet, adica sursa de un nr, la fiecare router acel nr scade cu unu, daca la vre-un router valoarea e 0 acesta dropeaza pachetu si il cere din nou dar cu TTL mai mare
+	Protocol  : 8 biti folositi pentru a identifica protocolul folosit in layerul anterior(4)
+	Header Checksum : folosit sa vada daca au aparut erori in headeru IPv4
+	Source IP address : 32 biti care exprima sursa IPv4 a sursei 
+	Destination IP address : 32 biti care exprima sursa IPv4 a destinatiei 
+
+IPv6 Overview:
+	increased address space : IPv6 128 biti > IPv4 32 biti
+	improvved packet handling : headru IPv6 are mai putine fielduri de completat
+	eliminates the need for NAT : nu mai trebuie NAT ca o sa fie destule adrese IP
+
+IPv6 Packet Header:
+	-contine:
+		-version
+		-traffic class
+		-payload length
+		-next header
+		-hop limit
+		-source ip address
+		-destination ip address
+	-are 40 de bytes
+
+Fields in the IPv6 Packet Header:
+	version : 4 biti(0110) care identifica ca pachetu asta e unu de IPv6
+	traffic class : 8biti echivalentul a IPv4 DS field
+	flow label : 20biti sugereaza ca toate pachetele cu acelasi flow label au aceasi prioriatate la routere
+	payload length : 16biti indica dimensiunea datei
+	next header : 8biti echivalentul a IPv4 Protocol Field
+	hop limit : 8biti echivalentul a IPv4 TTL
+	source IPv6 address : addresa IPv6 a sursei
+	destination IPv6 address : addresa IPv6 a destinatiei
+	
+Host Forwarding Decision:
+	-Hostul poate sa trimita pachete:
+		itself : sa isi dea ping lui via 127.0.01 sau ::1
+		local host : un alt host care e in acelasi LAN
+		remote host : un host care este on the internet
+	-ca sa determine daca hostu e pe acelasi LAN IPv4 se foloseste de subnetmask si de cele 2 adrese ip
+	-ca sa determine daca hostu e pe acelasi LAN IPv6 se foloseste de prefixul routerului
+	
+IP Router Routing Table:
+	-sunt stocate 3 tipuri de date:
+		-directly-connected networks : LAN-urile la care e conectat un router
+		-remote networks : doua routere sunt conectate intre ele, routeru X are doual LAN-uri unul dintre ele find comun cu routerul Y, routerul Y poate stii de al doilea LAN de la routeru X
+		-default route : se foloseste cand nu este o alta ruta mai buna de urmat a informatiei
+ 	-un router poate afla de remote networks in doua feluri:
+		-manually : le baga omu manual dupa niste rute statice
+		-dynamically : remote routes sunt automat invatat folosind un protocol dinamic
+
+Static Routing:
+	Static routes : rute bagate manual, daca se schimba ruta aceasta trebuie sa fie updatata manual
+	are 3 caracteristici:
+		-configurata manual	
+		-administratorul trebuia sa updateze rutele daca sunt schimbate
+		-rutele statice sunt pentru networkuri mici
+
+Dynamic Routing:
+	-routerele se voresc intre ele despre networkurile din care fac parte
+	automat o sa faca:
+		-o sa afle de networkuri remote
+		-o sa mentina routing info la zi
+		-o sa aleaga ceaa mai buna ruta catre networkurile destinatie
+		-o sa incerce sa caute o alta ruta daca cea favorabila nu merge
+
+ARP overview:
+	-ii dai un IP si iti da adresa MAC a acelui IP
+	are doua functii:
+		-resolving IPv4 addresses to MAC addresses
+		-maintaining a table of IPv4 to MAC address mappings
+
+ARP functions:
+	-cand un pachet e trimis la data link layer ca sa fie encapsulat, acesta se uita in tabelul ARP ca sa gaseasca adresa MAC corespunzatoare acelui IP
+	-daca nu este regasit in tabel o sa se trimita un ARP request
+	-daca este pe LAN o sa caute adresa acelui IP
+	-daca este WAN o sa caute adresa MAC a default gatewayu a routerului
+
+ARP request:
+	-daca nu se regaseste adresa MAC in tabelu ARP o sa se trimita un ARP request
+	arp request : un broadcast, care este un frame dar fara IPv4 header, ca header information are sursa si destinatia MAC si type-ul mesajului adica ARP message care are type field = 0x806, type fieldu ii zice la NIC ca aceasta data trebuie sa fie trecuta ca ARP process
+	frameul pe care il trimite consta in:
+		-ethernet header:
+			-destination MAC : FF-FF(adresa broadcast)
+			-source MAC : adresa MAC a hostului
+		-ARP request:
+			-target IPv4 : adresa IPv4 a hostului la care vrem sa-i facem rost de adresa MAC
+			-target MAC : ???(nu este nicio valoare)
+	-hostu care are target IPv4-le egal cu IPv4-le sau o sa tirmita un ARP reply
+
+ARP reply:
+	-headeru contine : destination MAC address, source MAC address, si type ARP message (0x086)
+	-daca nu este ARP reply pachetul o sa fie sters
+	frame-ul in care este ARP replyu contine:
+		-TINE CONT CA ASTEA IS INFO DE LA HOSTU CARE DA REPLYU
+		-Ethernet header:
+			-destination MAC address
+			-source MAC address
+		-ARP reply:
+			-sender IPv4
+			-sender MAC
+
+	-si dupa se saleaza sender MACu in tabelu ARP cu sender IPv4 si apoi se pot face frame-uri cu acele adrese
+	-ARPu poate fi si intre host si router
+
+Removing from ARP table:
+	-o pereche de IP si MAC o sa stea in tabel undeva de la 15 la 45 de secunde
+
+ARP tables on networking devices:
+	-functia intr-un cisco router "show ip arp" iti arata ARP Tabelu
+	-functia pe W10 "arp -a" iti arata ARP tabelu
+
+ARP issues:
+	-un arp broadcast poate sa dea flood la media
+
+IPv6 Neighbor Discovery:
+	-ARP pt IPv6
+
+IPv6 ND Messages:
+	-measajele folosite sunt:
+		-neighbor Solicitation messages
+		-neighbor Advertisement messages
+		-router Solicitation messages
+		-router Advertisement messages
+		-redirect Message
+
+	-mesajele de tip neighbor sunt intre doua hosturi, iar cele de tip router sunt intre host si router
+	-mesajele de tip router sunt foosite in SLAAC	
+
+IPv6 Neighbor Discovery - Address Resolution:
+	-ICMPv6 intreaba pe LAN cine are adresa IPv6 si asteapta un raspuns cu adresa MAC a acelui host
+
+IPv6 requestu:
+	-are in componenta:
+		ethernet header:
+			-destination MAC multicast
+			-source MAC
+		IPv6 header:
+			-source IPv6
+			-destination IPv6 SN(special solicitant) multicast:
+		ICMPv6 NS(neighbor solitication):
+			-target IPv6
+			
+IPv6 replyu:
+	-are in componenta:
+		ethernet header:
+			-destination MAC multicast
+			-source MAC
+		IPv6 header:
+			-source IPv6
+			-destination IPv6 SN(special solicitant) multicast:
+		ICMPv6 NS(neighbor solitication):
+			-target IPv6
+			-target MAC(MACu de la hostu care recunoaste adresa IPv6)
+	-hostu care o facut requestu primeste acest frame si salveaza ce este in ICMPv6 intr-un tabel DN(ca un tabel ARP numa ca pt IPv6)
+
+The Subnet Mask:
+	-folosit ca sa identifica portiunea network a IPv4 si cea host
+	-ca un host sa afle portiunile IPv4 compara adresa IPv4 cu subnet masku bit-by-bit
+	
+The Prefix length:
+	-adresa IPv4/x
+	- x-ul arata cati biti al subnet mask-ului au valoarea 1
+
+Determining the Network - Logical AND:
+	1 AND 1 = 1
+	-ca sa afli network addressu iei primu element de la ipv4 host address si subnet masku, si faci primu caracter cu primu si daca ambele is 1 bagi 1 si daca nu bagi 0, si daca iei tot asa la final o sa ai adresa network IPv4 in biti
 	
 IPv4 Multicast:
-	-un pachet care e procesat doar de anumite dispozitive
-	-224.0.0.0 pana la 239.255.255.255 sunt adrese multicast(subnet mask)
-
-Types of IPv4 addresses:
-	-unele pot fi transmise pe net, si altele sunt doar pt a fi transmise pe net
-	-adresele IPv4 private:
-		- 10.0.0.0/8
-		-172.16.0.0/12
-		-192.168.0.0/16
-
-Routing to the internet:
-	-cand tu trimit un pachet catre internet, acesta are o adresa privata IPv4 care trebuie translatata la o adresa publica IPv4, cu aceasta translatare se ocupe Network Address Transalation(NAT).
-	-NAT translateaza si de la pulblic la privat
-
+	-adrese de la 224.0.0.0 la 239.255.255.255
+	-daca un frame are destinatie Multicast, frame-ul o sa fie trimis la calculatoarele care fac parte din acel multicast
+	
+Public and Private IPv4 Addresses:
+	Adrese private:(definite in RFC 1918 Private Address Range)
+		10.0.0.0/8 - 10.255.255.255
+		172.16.0.0/12 - 172.16.255.255
+		192.168.0.0/16 - 192.168.255.255
+	NAT : translateaza IPv4 privat la public
+	
 Special Use IPv4 Addresses:
-	-Loopback addresses:
-		de la: 127.0.0.0/8 la 127.255.255.254
-			-astea is folosite de vre-un host ca sa isi redirectioneze trafic siezi
-	-Link-Local addresses:
-		de la 169.254.0.0/16 sau 169.254.0.1 la 169.254.255.254
-			-astea is ca Automatic Private Uo Addressing(APIPA) sau self-assigned addresses
-	
+	Loopback:
+		-127.0.0.1/8 - 127.255.255.254
+		-folosite de un host ca sa directioneze trafic catre el insusi, adica mesaju pe care il trimite sa ii vina tot lui
+	Link-Local addresses:
+		-169.254.0.0/16 - 169.254.255.254
+		-adrese private automate
+		-folosite deobicei de un DHCP client daca nu este niciun server DHCP
+
 Legacy Classful Addressing:
-	Class A(0.0.0.0/8 la 127.0.0.0/8):
-		-folosite sa suporte network-uir foarte mari, care au mai multe de 16 milione de host-uri
-		-clasa A foloseste un /8 prefix fixat, adica doar primul octet arata network-ul
-	Class B(128.0.0.0/16 la 191.25.0.0/16):
-		-folosite sa suporte network-uri medii catre mari, care au pana la aproximativ 65,000 host-uri
-		-clasa B foloseste un /16 prefix fixat, adica primele 2 octete arata network-ul
-	Clasa C(192.0.0.0/24 la 224.255.255.0/24):
-		-folosite sa suporte network-uri mici, care au maxim 254 de host-uri
-		-clasa C foloseste un /24 prefix fixat, adica primele 3 octete arata network-ul
-	Clasa D(224.0.0.0/16 la 239.0.0.0/16).
-	Clasa E(240.0.0.0/16 la 255.0.0.0/16).
-
+	Class A(0.0.0.0/8 - 127.0.0.0/8) : facute sa suporte networkuri foarte mari
+	Class B(128.0.0.0/16 - 191.255.0.0/16) : facute sa suporte networkuri de dimensiuni moderate
+	Class C(192.0.0.0/24 - 223.255.255.0/24) :  facut sa suporte networkuri mici
+	
 Assignment of IP Addresses:
-	-adresele IPv4 publice trebuie sa fie unice
-	-IPv4 si IPv6 sunt manegeriate the ASsigned Numbers Authority(IANA)
-	-IANA alocheaza block-uri de IP-uri catre Regional Internet Registries(RIR's)
-	-RIR's dau IP-uri la ISP-uri, care organizeaza ISP-uri mai mici
-	
-Network Segmentation:
-	-ruterele nu trimit broadcast's
-	
-Problems with Large Broadcast Domains:
-	-problema e ca "daca fac foarte multi utilizatori deodata broadcast fiecare"
-	-rezolvarea e sa se creeze mai multe network-uri mai mici, adica subnetting.
-	-subnetting = se folosesc de biti de la host ca sa creeze subnet-uri
+	-IANA managereaza adresele IPv4 si IPv6
+	-da block-uri de adrese la RIR-uri ele trebuie sa le dea la ISP-uri
+	RIR-uri:
+		-AfriNIC (African Network Information Centre) - Africa Region
+		-APNIC (Asia Pacific Network Information Centre) - Asia/Pacific Region
+		-ARIN (American Registry for Internet Numbers) - North America Region
+		-LACNIC (Regional Latin-American and Caribbean IP Address Registry) - Latin America and some Caribbean Islands
+		-RIPE NCC (Réseaux IP Européens Network Coordination Centre) - Europe, the Middle East, and Central Asia
 
-Reasons for Segmenting Networks:
-	-subnetting-ul ajuta la traficul de pe net, si creste viteza, il lasa pe administrator sa faca anumite operatii asupra unor subnets
-	-reduce numarul de host-uri afectate de un broadcast gresit
+Subnet Private versus Public IPv4 Address Space:
+	-la firme is anumite chestii care au nevoie de IP-uri publice tot tipu anumite servere
+	intranet : private IPv4 LANu organizatiei
+	dmz : public IPv4 contine resure valabile pentru internet, ca si web serverele
 
-The need for IPv6:
-	-IPv4 ramane fara adrese
-	-are 128 de biti, adica 340 * 10 la puterea 36 de adrese poate sa faca
-	-are Internet Control Message Protocol incorporat in el (ICMPv6)
-	
+VSLM(variable-length subnet mask):
+	-sa faci dintr-un subnet alte subnete
+
 IPv4 and IPv6 Coexistence:
-	-Dual stack:
-		-adica sa exista ambele in acelasi network
-		-dispozitive care pot ambele sa dea run la IPv4 cat si la IPv6
-		
-	-Tunneling:
-		-se encapsuleaza un pachet IPv6 intr-un pachet IPv4, si asa se transmit datele
-		-dupa ce e encapsulat se trimite printr-un IPv4 network
+	Dual Stack:
+		-IPv4 si IPv6 coexista pe un sistem, dispozitivele suporta si v4 si v6
+	Tunneling:
+		-un pachet IPv6 este encapsulat intr-un pachet IPv4, si il trimit sub forma de IPv4
+	Translation:
+		-se foloseste NAT64 pentru translatarea de la IPv6 la IPv6, si invers
 
-	-Translation:
-		-se foloseste un NAT64 router care translateaza de la IPv6 la IPv4 sau invers, intre LAT-uri
+IPv6 Addressing Formats:
+	-are 128 de biti
+	-e scris sub forma de 32 cifre hexadeciamale, in octete
+	-poti sa nu scrii 0-urile din fata ca sa fie mai scurta
+	-poti octetele care au doar 0-uri succesive sa le scrii ::
+	-mai multe octete de 0 succesive vor fi scrise ca ::
+	-si pula mea ma celelalte care is mai putine ii succesivitate le scrii : 0:
 	
-Hexadecimal Number System:
-	-IPv6 este reprezentat cu numere hexadecimale, adica numere de la 0 la 9 si literele de la A la F
+Unicast, Multicast, Anycast:
+	unicast - doar la un host
+	multicast - un pachet la mai multe dispozitive care fac parte dintr-un grup
+	anycast - is mai multe host-uri cu acelasi unicast address si tu trimiti pachetu si care e cel mai aproape de tine il primeste
 	
-Ipv6 Addresssing Formats:
-	-128 de biti
-	-fiecare 8 biti sunt reprezentati de un caracter hexazecimal
+IPv6 Prefix Length:
+	-portiunea network a unui IPv6 deobicei ii de 64 biti
 	
-IPv6 Formating Rules:
-	-fiecare caracter din setu de 4, se paote scrie in binary code ca 4 caractere
-	-deci fiecare 4 ii 16 biti
-	-0-urile de la inceput pot fi omise
-	-coloanele de 4 caractere care toate caracterele is 0, si is mai multe coloane succesive se pot scrie asa -> ::
-	
-Static IPv4 Address Assognment:
-	-astea pot fi puse ori static ori dinamic
-	-static ii atuncia cand administratorul trebuie sa configureze adresa manual
-	-static, se foloseste deobicei la : imprimante, servere, etc
-	-static, poate sa aduca mai mult control, dar poate dura mult sa introduci informatiile la fiecare host
-	-static, pot aparea mai usor erori pentru ca se incearca pentru niste erori basic
-	
-Dynamic IPv4 Address Assignment:
-	-la LAN-uri locale e deobicei intalnit, pentru ca se da o adresa IPv4 automat cu ajutorul la Dynamic Host Configuration Protocol(DHCP)
-	-DHCP-u atribuie adrese IPv4, subnet mask-uri, default gateaway-uri si alte configuratii 
-	-deobicei DHCP-ul este folosit la network-uri mai mari
-	-DHCP-u atribuie informatii pana cand host-u se inchide, si daca se reporneste o sa il configure altcumva
-	
-DHCPv4 operation:
-	-hostu-l care are nevoie de un IP, ii trimie la switch un DHCP Discover, adica trimite un broadcast la care o sa raspunda doar un DHCP server
-	-DHCP serveru ii trimite la host un DHCP OFFER, care are un IP, subnetmask si adresa default a gateaway-ului
-	-host-ul ii trimite la DHCP SERVER un DHCP REQUEST, care il intreaba daca poate folosi adresa IPv4 pe care i-a dat-o initial 
-	-DHCP serveru ii trimie un DHCP ACK, care ii zice host-ului ca adresa IP va fi inregistrata in tabel cu adresa MAC.
+IPv6 Unicast Addresses:
+	-IPv6 deobicei ia:
+		Global Unicast Address(GUA) : similar IPv4 public, globally unique
+		Link-local Address(LLA) : trebuie sa aiba orice IPv6-enabled device, folosite la convorbirea prin LAN 
 
-Gateways to Other Networks:
-	-un gateway este o metoda prin care tranficul este trimis din LAN, catre internet-ul propiu-zis
-	-default gateway este la 192.168.1.1
+IPv6 GUA:
+	-primul xextet incepce cu 001
+	-de la 0010 0000 0000 0000(2000) la 0011 1111 1111 1111(3fff)
+ 	
+IPv6 Address with a /48 Global Routing Prefix and /64 Prefix:
+	-adresa IPv6 GUA contine:
+		-global routing prefix(48 biti)
+		-subnet id(16 biti)
+		-interface id(64 biti)(portiunea care arata adresa hostului)
 
-Routers as Gateways:
-	-router-ul are un gateway care le permite host-urilor de pe un LAN sa comunica cu alte host-uri de pe alt LAN
-	-fiecare mufa a router-ului este conectata la un LAN separat
-	-fiecare adresa IPv4 data unuei mufe identifica la ce LAN este conectat cablu de ii bagat in mufa
-	-fiecare host foloseste router-ul ca un gatewaty, asa ca fiecare host trebuie sa stie adresa IPv4 a mufei conectata la internet(backend, ce se intampla in router), la care host-u e conectat
-	-adresa gateway-ului este una default, sau poate fi configurata static
-	-cand un router wireless care este si un DHCP server, va trimite IPv4 al gateway-ului catre fiecare host
-	-un router wireless care este si un DHCP server, va trimite adresa sa propie IPv4 ca gateway
+IPv6 GUA Structure:
+	-global routing prefix : portiunea network(prefix) care este setata de ISP, la un utilizator sau site, deobicei la utilizatori este prefixul este /48
+	-subnet id : folosit de organizatii ca sa identifice subnet-uri pe site
+	-interface id : partea host a adresei, este interface pentru ca poate un host are mai multe mufe de conectare
+
+IPv6 LLA:
+	-ii neaparata, ca gen cu asta comunici pe subnetu in care esti
+	-de la fe80::10	la febf(::10, poate nu is sigur ne zice doar de primu hextet)
+	-un dispozitiv poate primii adresa LLA static sau dynamic(si-o creaza el automat)
 	
-Routers as Boundaries Between Networks:
-	-cand te conectezi ca host primeste de la router(a.k.a DHCP) IPv4-le tau, subnetmask-u, si primeste adresa IPv4 a mufei LAN la care esti conectat(daca esti prin cablu)
-	-cand un router wireless este conectat la ISP, acesta va fi un DHCP client, care o sa primeasca adresele IPv4 de iesire(adica unde sa trimite routeru) ale mufelor de la LAN.
-	-ISP-urile dau internet-routable address, care le permite host-urilor conectate prin wireless sa aiba acces la net
-	-routerele wireless sunt legatura intre LAN si internetul extern
-
-Introduction to NAT(network address transaltion):
-	-translateaza de la o adresa LAN la una publica de pe internetul propiu-zis
-
-Destination on Same Network:
-	-ca un host sa trimite un mesaj unui alt host, trebuie sa ii cunoasca IP-ul is MAC-ul celuilalt host
-	-intr-un LAN un dispozitivi are 2 adrese MAC-ul si IP-ul
-	-MAC-ul -> o adresa folosite in comunicatile NIC-to-NIC facute in LAN
-	-IP -> o adresa folosita la trimiterea unui pachet intre 2 host-uri
-	- Layer-ul 2 physical addresses(MAC) sunt folosite ca sa transporte data-link frame-urile, care au pachetul IP encapsulat in ele, si sa il trimit de la un NIC la alt NIC, NIC-urile sunt in LAN.
-	- Layeru 2 al OSI consta in adugarea adresei MAC a sursei si a destinatiei
- 	- Layeru 3 al OSI contine adresa IPv4 a sursei si a destinatiei
 	
-Destination on Remote Network:
-	-cand adresa IP a destinatarului este pe netu propiu-zis, atuncia pachetu va fi trimis in LAN, iar adresa MAC a destinatarului va fi in LAN adresa gateway-ului din router
-	-pentru a afla adresa MAC a unui dispozitiv stiind doar ip-ul:
-		-IPv4 va folosi: Address Resolution Protocol(ARP) in LAN
-		-IPv6 va folosi: Neighbor Discovery(ND) in LAN
+Static GUA Configuration on a Windows Host:
+	-adresele GUA pot fi ori static ori automatic(SLAAC sau DHCPv6)
+
+RS and RA messages:
+	-cand un host vrea sa faca rost de o adresa IPv6 dynamic, o sa aiba loc un schimb de mesaje intre router si host
+	RA : Router Advertisment
+	RS : Router Solicitant
+	- RS-u il trimite hostu la router ca sa ii ceara adrese
+	- RA-u il trimite routeru la host care contine network prefix, prefix-length si default-gateway information
+	-un mesaj RA contine:
+		-network prefix si prefix length : ii zice la dispozitiv in ce network 
+		-default gateway address : IPv6 LLA, adresa sursa IPv6 a mesajului RA
+		-DNS addresses and domain name : adresele serverelor DNS si un nume de domeniu
+	-sunt 3 metode pentru mesaje RA:
+		-SLAAC : "Am tot ce ai nevoie prefixul, lungimea prefixului si default gateway address"
+		-SLAAC with a stateless DHCPv6 server : "Aicia is informatile mele, dar trebuie sa mai iei informatii de la un DHCPv6 server, cum ar fi adrese DNS"
+		-Stateful DHCPv6(no SLAAC) : "Iti pot da default gateway addressu, dar trebuie sa intrebi un stateful DHCPv6 server celelalte informatii	
 	
-The Ethernet Broadcast:
-	-cand destinatia MAC este ffff.ffff.ffff.ffff.ffff.ffff sau 1111.1111.1111.1111.1111.1111.1111.1111.1111.1111.1111.1111.1111.1111.1111.1111
+SLAAC:
+	-permite dispozitivelor sa isi creeze proprile informatii GUA fara servicile DHCPv6, insa sunt dependente de mesajele RA ICMPv6 primite de la router
+	adresa GUA:
+		prefixu din mesaju RA
+		EUI-64 sau isi genereaza un numar random de 64 biti
 
-Broadcast Domains:
-	-cand un host primeste un mesaj care a fost trimis prin broadcast el il citeste ca si cand i-ar fi adresat direct lui
-	-cand este Broadcast traffic prea mare, atunci LAN-ul se imparte in mai multe L-an-uri diferite sau Broadcast Domains
+SLAAC and Stateless DHCPv6:
+	-foloseste SLAAC sa isi creeze adresa GUA
+	-adresa LLA a routerului ca si default gateway
+	-si foloseste un stateless server DHCPv6 ca sa obtina informatii despre serveru DNS si un domain name
+	stateless DHCPv6 server : distribuie adrese de la servere DNS si domain names
+
+Stateful DHCPv6:
+	-adresa LLA a routerului ca si default gateway
+	-si DNS server, domain name si alte info le da un server stateful DHCPv6
 	
-Acces Layer Communication:
-	-un NIC accepta un frame doar daca adresa MAC este  alui sau broadcast
-	-multe LAN pot functiona si doar daca este adresa IP a destinatarului in pachet, doar ca trebuie sa foloseasca ARP-u sau ND-u ca sa faca rost de o adresa MAC
+EUI-64 Process vs Randomly Generated:
+	-cand mesajul RA este SLAAC sau SLAAC cu stateless DHCPv6, clientul trebuie sa isi genereze singur interface id-u
+	-interface id-u poate fi creat ori prin EUI-64 sau isi genereaza un numar random de 64 biti
+
+EUI-64 Process:
+	-interface id prin EUI-64 este reprezentata prin binary
+	-ia adresa MAC si adauga in mijlocu ei alti 16 biti
+	adresele MAC deobicei sunt reprezentate hexadeciaml si sunt facute din doua parti:
+		-Organizationally Unique Identifier (OUI) : un cod de 24 biti, 6 cifre hexadecimale, primit de la IEEE
+		-Device identifier : o valoare unica de 24 biti, 6 cifre hexadecimale intr-un OUI comun.
+	-interface id facut prin EUI-64 are 3 parti:
+		-24 biti OUI de la adresa MAc, dar al 7-lea bit este invartit(daca e 0 se face 1 si vice versa)
+		-aia 16 biti random
+		-24 biti Device Identifier de la adresa MAC
+
+Randomly Generated Interface IDs:
+	-se generaza un nr de 64 biti random
+	-windows foloseste acest proces
+	-si apoi adresa se combina cu prefixu si se face GUA-ul
+
+Dynamic LLA's:
+	-este creat folosind fe80::/10 prefix si interface id
 	
-Addresss REsolution Protocol(ARP):
-	-folosit cand stim IPv4, dar nu stim adresa MAC a dispozitivului
-	-hostu care nu stie MAC trimite un broadcast cu un ARP request, care zice ca cine are IP-u ala sa trimita adresa MAC printr-un ARP reply
+Assigned IPv6 Multicast Addresses:
+	-adresele IPv6 multicast au prefixu ff00::/8
+	sunt doua tipuri:
+		- well-known
+		-solicited node
 
-procesu ARP:
-	-hostu trimite un frame printr-un broadcast, frame-ul contine adresa IPv4 a destinatarului
-	-fiecare host din LAN primeste acel frame si isi compara adresele IPv4
-	- host-ul care are adresa identifica, va trimite adresa MAC a sa hostului de la care a primit frame-ul	
-	- host-ul sursa noteaza adresa IPv4 si cea MAC intr-un tabel numit ARP tabel
+Well-known Multicast Addresses:
+	sunt 2 grupe:
+		ff02::1 All-nodes multicast group : e ca un broadcast la IPv4, e un mesaj precesat de toate dispozitivele
+		ff02::2 All-routers multicast group : un grup multicast pentru routere, doar routerele IPv6
 
-Dividing The Local Network:
-	-bagi rutere intre swtich-uri ca sa nu se faca broadcast-uri, sa fie alt LAN , etc. 
-	-fiecare switch duce printr-un ort la alt switch numa ca nu vrei ca hostu de la switchu 1 sa vada ce are hostu de la switchu 3.
+Solicited-Node IPv6 Multicast Addresses:
+	-similar la All-nodes multicast group
+	-avantajul insa este ca este configurat la o adresa Ethernet multicast, ca un multicast la IPv4
+	-16-bit subnet ID - Creates up to 65,536 subnets.
+	-64-bit interface ID - Supports up to 18 quintillion host IPv6 addresses per subnet (i.e., 18,000,000,000,000,000,000).
 
-Router Pack Forwarding:
-	-hostu trimite la router, routeru vede la care mufa ii IP-u ala si trimite mesaju
+ICMPv4 and ICMPv6 MessagesȘ
+	-mesajele de eroare pentru TCP/IP suite
 	
-Routing Table Entries:
-	-routere-le muta informatii intre LAN-uri, ca sa faca asta tin minte date in routing tables
-	-routing tables contin adresele LAN-urilor, nu a host-urilor
-	-aceste tabele se updateaza ori dinamic ori static
-	-routerele se folosesc de aceste tabele ca sa stie pe ce mufa sa trimita pachetu
-
-Local and Remote Network Segments:
-	-poti intr-un LAN sa ai sute de host-uri, sau mai multe LAN-uri mici care sunt interconectate printr-un distribution layer device
-	All Hosts in One Local Segment:
-		- host-urile se vad intre ele
-		k: 
-			-bun pt LAN-urile simple
-			-putin complex
-			-le da voia host-urilor sa vada alte host-uri
-			-transfer de date mai rapid, comunicatie directa
-
-		not k:
-			-greu de implementat QoS
-			-greu de implementat securitate
-			-mult internet trafic, ca is multe host-uri intr-un broadcast
-	Hosts on a Remote Segment:
-		-pui un router si ies 2 LAN-uri la 2 switchuri fiecare switch are sute de host-uri
-		k:
-			-e mai ok pt LAN-uri mai complexe
-			-mai putin trafic, ca is 2 broadcastu-uri
-			-pot maximiza performanta in fiecare LAN
-			-nu se vad host-urile din LAN-uri diferite intre ele
-			-pot fi mai securizate
-			-pot ajuta la organizarea LAN-ului
-		not k:
-			-trebuie sa te folosesti de routing
-			-router-ul poate sa incetineasca traficul dintre LAN-uri
-			-mai complex si scump(ca tre sa iei router)
-
-TPC and UPD Operation:
-	-transport layer protocols
-	UDP:
-		-folosit la conversatile real-time
-		-se imparte pe pachete ca sa fie mai usor de trimis
-		-fara confirmare la primirea pachetelor
-	TCP:
-		-e mult mai bine optimizat
-		-se imparte pe pachete ca sa fie mai usor de trimis
-		-fiecare pachet are un index, ca sa stie in ce ordine sa fie asamblat
-		-:80 -> default pt web-servere
-		-cu confirmare la primirea pachetelor
-		
-Transport Layer Port Numbers:
-	-default ports on servers:
-		Web - 80
-		FTP - 21
-		Mail - 25
-	-default ports on host:
-		-is random
-	-TCP-u si UDP-u ne permite sa facem mai multe request-uri deodata
+Host Reachability:
+	-un mesaj IMCP Echo poate fi folosit ca sa testesteze conexiunea cu un host
+	-se trimite un ICMP Echo request, si daca hostu bun o sa trimita un Echo Reply
+	-aceasta folosinta a mesajelor ICMP Echo este baza in fucntia ping
 	
-TCP and UDP Port Numbers:
-	-cand un mesaj este trimis folosind UDP sau TCP, protoacelele si servicile requested sunt identificate cu un port number
-	-cand un mesaj este primite de server, este necesar ca serverul sa poata determina ce serviciu este requested de client
-	-clientul este preconfigurat sa foloseasca un port-destinatie care este inregistrat pe internet pentru fiecare serviciu
-		-ex: client -> request :80(HTTP)
-	- port-urile sunt configurate si manageriate de catre Internet COrporation for Assigned Names and Numbers(ICANN)
-	-sunt 3 categorii de port-uri:
-		- well-known ports: port-uri destinatie care sunt folosite foarte des pe internet de la 1 la 1023
-		- registred ports: port-uri de la 1024 la 49151 pot ori port-uri destinatie sau sursa
-		- private ports: port-uri d ela 49152 la 65535 sunt folosite deobicei ca port-uri sursa 
-	-unele aplicatii pot folosii si TCP si UDP
-		-ex: DNS			
+Destination or Service Unreachable:
+	-cand un host sau un gateway primesc un pachet pe care nu il pot trimite mai departe o sa trimita un mesaj ICMP Destination Unreachable ca sa ii zica la sursa ca destinatia sau serviciu nu poate fi accesat
+	Destination Unreachable codes for ICMPv4:
+		0 -> net unreachable
+		1 -> host unreachable
+		2 -> protocol unreachable
+		3 -> port unreachable
+	Destination Unreachable codes for ICMPv6:
+		0 ->no route to destination
+		1 ->communication with the destination is administratively prohibited (e.g., firewall)
+		2 ->beyond scope of the source address
+		3 ->address unreachable
+		4 ->port unreachable
+	
+Time Exceeded:
+	ICMPv4:
+		-un mesaj ICMPv4 Time Exceeded este folosit de un router ca sa indice ca un pachet nu mai poate fi trimis, finda TTL = 0
+	ICMPv6:
+		-un mesaj ICMPv6 Time Exceeded este folosit daca router-ul nu poate trimite pachetul findca acesta a expirat, ICMPv4 TTL = ICMPv6 Hop Limit
+
+ICMPv6 Messages:
+	-ICMPv6 include 4 protocoale noi in NDP(NEighbor Discovery Protocol)
+	Mesaje intre router IPv6 si dispozitivi IPv6:
+		-RS message
+		-RA message
+	Mesaje intre dispozitive IPv6:
+		-NS(neighbor solicitant) message
+		-NA message
+	
+Ping:
+	-folosit sa se incerce conectivitatea cu un alt host din acelasi LAN
+	tipuri de teste:
+		-pinging the local loopback(127.0.0.1 sau ::1)
+		-pinging the default gateway
+		-pinging the remote host
+
+Traceroute(tracert):
+	-genereaza o lista cu toate hop-urile pe care le ia un pachet pana la destinatie
+	Round Trip Time(RTT):
+		-da timpu de la node la node si indica daca un hop da fail si nu raspunde
+		-RTT este timpul in care un pachet ajunge la destinatie si de la destintie la sursa initiala
+		-se foloseste de TTL(v4) si de Hop Limit(v6)
+	-porneste cu un TTL = 1, ca sa fie retrimis de la fiecare router inapoi ca sa primeasca adresele lor 
+
+Role of the Transport Layer:
+	-transporta datele de la aplicatii la partea network,
+	sunt 2 protocoale:
+		TCP :
+		UDP :
+
+Transport Layer Responsabilities:
+	Tracking Individual Conversions : fiecare set de date care trece de la aplicatia sursa la cea destinatie este cunoscuta sub numele de conversie, no asta trebuie sa stie de toate conversile de pe un host
+	Segmenting Data and Reassembling Segments :este responsabil sa imparta application data in block-uri de dimensiuni ok, ca sa fie mai usor de transportat
+	Add Header Information : baga un header, care poate ajuta protocoalele la anumite functii
+	Identifying the Applications : identifica tipu de aplicatie dupa port number
+	Conversation Multiplexing : gen se trimit segmente unu dupa altu da gen poate primesti segmentu 1a 1b 2a 2b 1c 2c 3b 3a, ca sa nu stea celelalte pe loc cand faci un request la altele
+	
+TCP:
+	-protocol la Transportation Layer
+	Operatile pe care le face:
+		-le da un index la fiecare segment trimis ca sa stie in ce ordine sa le reasambleze
+		-cand un segment e primit, destinatia trimite un acknowledge ca sa stii ca o primit data
+		-se retransmite data daca nu se primeste acknowledge intr-o anumita perioada de timp
+		-se trimit data da poate ajung in ordine gresita
+		-se trimite data la un rate eficient ca sa poata fi acceptat de destinatie
+
+UDP:
+	-protocol la Transportation Layer
+	-se trimit segmentele unu dupa altu nu conteaza flow rate-u 
+	-nu este indexare, in ordinea in care le primeste le afiseaza
+	-nu este acknowledge
+
+TCP Features:
+	Establishes a Session : tine o sesiune deschisa pana se transmit toate datele
+	Ensures Reliable Delivery : se asigura ca orice segment ajune la destinatie
+	Provides Same-Order Delivery : cu ajutorul index-ului dat asambleaza datele in ordinea corespunzatoare
+	Supports Flow Control : cand vede ca nu poate intelege toate segmentele, trimite un request la aplicatia care trimite datel sa le trimita mai incet
+	
+TCP Header:
+	contine:
+		Source port(16 biti)
+		Destination port(16 biti)
+		Sequence Number(id)(32 biti)
+		Acknowledgement number(32 biti)
+		Header length(4 biti)
+		Reserved(6 biti)
+		Control Biti(6 biti)
+		Window(16 biti)
+		Checksum(16 biti)
+		Urgent(16 biti)
+		Options(0 sau 32 * 3, daca sunt)
+	-total de 20 bytes
+	
+TCP Header Fields:
+		Source port : identifica aplicatia sursa dupa port number 
+		Destination port : identifica aplicatia destinatie dupa port number
+		Sequence Number : folosit pentru reasamblarea datei
+		Acknowledgement number : folosit sa indice  ca data a fost primita si ca poate trimite urmatoru byte
+		Header length : lungimea TCP segment header-ului	
+		Reserved : folosit pentru folosirea in vitor
+		Control Biti : include coduri bit sau flags, care indica ce trebuie sa faca segmentul TCP
+		Window : indica numeru de byte's care pot fi aceptati deodata
+		Checksum : folosit pentru error checking a segmentului si a datei 
+		Urgent : indica daca data continuta este urgenta
+
+Applications that use TCP:
+	-FTP, SMTP, HTTP, SSH
+
+UDP Features:
+	-data este reconstruita in ordinea in care e trimisa
+	-segmentele pierdute sau corupte nu se retrimit
+	-nu exista o sesiune, ca gen nu se retrimite nimica
+	
+UDP Header:
+	-segmentele la UDP se numesc datagrams
+	contine:
+		Source port(16 biti)
+		Destination port(16 biti)
+		Length(16 biti)
+		Checksum(16 biti)	
+	-are 8 byte
+
+UDP Header Fields:
+	Source port : identifica aplicatia sursa dupa port number
+	Destination port : identifica aplicatia destinatie dupa port number
+	Length : indica lungimea a UDP datagram header-ului
+	Checksum : folosit la error checking a datagram header-ului si a datei
+
+Applications that use UDP:
+	-Live video and multimedia applications : VoIP, livestreaming video
+	-Simple request reply applications : DNS, DHCP
+	-Applications that handel reliability themselves : SNMP, TFTP
+	
+Multiple Separate Communications:
+	:80 -> web services
+	:21 -> file transfer protocols(FTP)
+	-numarul de la source port este dynamic creat pentru a putea exista mai multe conversatii deodata
 
 Socket Pairs:
-	- portul sursa si cel destinatie sunt scrise intr-un segment
-	-segmentul este apoi encapsulat intr-un pachet IP
-	-pachetul IP contine adresa IP a sursei si a destinatiei
-	-combinatie dintre portul si IP-ul sursa sau destinatie se numeste SOCKET
-	- socketul sursa si cel destinatie, impreuna formeaza o pereche socket
+	-combinatia dintre source ip si source port number, sau dintre destination ip si destination port number se numeste socket
+	-combinatia dintre source socket si destination socket se numeste socket pair
 	
+Port Number Groups:
+	Well-known Ports( 0 - 1023) : servicii si aplicatii comune 
+	Registered Ports( 1024 - 49121) : pentru chestii obiective gen pentru un software pe care eu aleg sa il instalez
+	Private and/or Dynamic Ports( 49152 - 65535) : port-urile alea generate pentru sursa
+
 The netstat Command:
-	-daca scrii "netstat" in cmd o sa iti apara o lista cu toate port-urile folosite in LAN, si poti sa-ti dai seama daca ai ceva user nepoftit conecatat la LAN
-	-daca scrii si "-n" o sa iti apara adresele IP si port-urile
+	-comanda "netsat" in cmd, arata toate protocoalele folosite in acel moment
 
-Client and Server Interaction:
-	- serverul este un host care are instalat un software care da informatii sau servici altor host-uri care unt conecatate la net
-	- un exemplu de software este web serverul
-	- sunt milioane de servere conectate la internet, web site-urile, email, tranzictile bancare, music downloads etc.
-	- un pac crucial pentru ca aceste comunicatii sa fie posibile, este protocoalele si standardele dupa care functioneaza
-	- un exemplu de client software este Chrome-ul sau Firefox-ul
-	- un host poate sa aiba mai multe client software-uri instalate
+TCP Server Processes:
+	Clients Sending TCP Requests:
+		PC1 cere un serviciu web
+		PC2 cere un serviciu email
+	Request Destination Ports:
+		PC1 cere servicii web pe portu 80(HTTP)
+		PC2 cere servicii email pe portu 25(SMTP)
+	Request Source Ports:
+		PC1 si PC2 cer un source port dynamic generat
+	Response Destination Ports:
+		Cand Serveru da raspunsu doar inverseaza port-urile
 	
-Web Server and Client IP Interactions:
-	- clientul baga un URL
-	-apoi se face un DNS lookup, adica trimite un request la DNS server ca sa primeasca adresa IP a URL-ului
-	-apoi se face o conexiune TCP intre client si server
-	-cand serveru primeste pachetu TCP la :80 si apoi trimite datele pe care le cere clientu
-	
-URI, URN and URL:
-	- Uniform Resource Identifier(URI) este un string care identifica o specifica sursa a internetului
-	URI = URN + URL.
-	-Uniform Resource Name(URN) identifica doar namespace-ul resursei
-		-ex: web page, document, image, etc.
-	-Uniform Resource Locator(URL) identifica locatia de pe net a unei surse specifie, URL-uri de tip HTTP si HTTPS sunt folosite deobicei pe web browsers
-		-alte protoacele precum FTP, SFTP, SSH, sau altele pot si ele fi folosite ca un URL.
-		-un URL care foloseste SFTP poate arata asa sftp://sftp.example.com
-	-Structura URI:
-		1 -> ce protocol foloseste HTTPS, FTP, SFTP, malito si NNTP	
-		2 -> hostname-ul
-		3 -> path-ul catre fisier si numele fisierului
-		4 -> fragment; ex: #page155
-	URI: https://www.example.com/author/book.html#page155
+TCP Connection Establishment:
+	-ala ma SYN , ACK and SYN, ACK
+	SYN(1):
+		-clientul cere o sesiune de comunicatie de tip client-to-server cu serveru
+	ACK and SYN(2):
+		-serveru acknowledges comunicatia client-to-server si cere o sesiune de comunicatie de tip server-to-client
+	ACK(3):
+		-clientul acknowledges sesiune de comunicatie server-to-client
+	-asta ii un three-way handshake
 
-Common Network Application Services:
-	-cele mai comune servicii de pe net sunt:
-		-internet searches, social media sites, video and audio streaming, on-lin shopping sites, email and messaging
-	-toate aceste servicii functioneaza dupa protocolul TCP/IP
-	- Protcoale:
-		DNS - face rost de adresa URL-ului
-		SSH - te poti conecta la un host de pe alt host
-		SMTP - trimite email-uri si atasamente de la clienti catre servere si de la servere la server
-		POP - email clientu cere email-uri si atasamente de la un email server
-		IMAP - email clientu cere email-uri si atasamente de la un email server
-		DHCP - da adrese IP automat si alte necesare ca un host sa poata comunica pe net
-		HTTP - folosit de web browsers sa dea request la pagini web, si web servere ca sa trimita fisiere care construiesc World Wide Web(WWW)
-		FTP - folosit la transferul interactiv de fisiere intre host-uri
+Session Termintaion:
+	-ca sa inchizi o conexiune trebuie sa bagi FIN control flagu in segment header
+	FIN(1):
+		-cand clientul nu mai are data de trimis, o sa trimita un segment cu flagu FIN setat
+	ACK(2):
+		-serveru trimite un ACK ca o inteles FINu sa incheie sesiunea client-to-server
+	FIN(3):
+		-serveru trimite un FIN la client ca sa incheie sesiunea server-to-client
+	ACK(4):
+		-clientul trimite un ACK ca o inteles FINu de la server
+
+	The six control bits flags are as follows:
+		URG - Urgent pointer field significant
+		ACK - Acknowledgment flag used in connection establishment and session termination
+		PSH - Push function
+		RST - Reset the connection when an error or timeout occurs
+		SYN - Synchronize sequence numbers used in connection establishment
+		FIN - No more data from sender and used in session termination
+
+TCP Reliability:
+	-TCPu retrimite pachetele care nu ajung, si indexeaza pachetele ca sa le poata aranja corect
+
+TCP Flow Control:
+	-window size-u determina numarul de byte care pot fi trimisi inainte de a expecta un ack, si numarul ack este numarul a urmatorului byte asteptat
+	
+MSS:
+	-marimea maxima a unui segment este de 1460 bytes
+	-MSS este o optiune in TCP header
+	-Ethernet maximum transmission(MTU) pe o interfata ethernet este de 1500 bytes, iar daca scadem 20 bytes de la headeru IPv4 si 20 inca de la headeru TCP, marimea default va fi de 1460 bytes
+	
+UDP Client Processes:
+	Clients Sending UDP Requests:
+		-Clientul 1 trimite un request DNS
+		-Clientul 2 cere servicii de autentificare RADIUS
+	UDP Request Destination Ports:
+		-Clientul 1 trimite la portul destinatie 53
+		-Clientul 2 trimite la portul destinatie 1812
+	UDP Request Source Ports:
+		-se generaza dinamic porturi sursa
+	UDP Response Destination:
+		-serveru schimba porturile intre ele si trimite raspunsu pt fiecare
+	UDP Response Source Ports:
+		-porturile sursa sunt cele care initial au fost porturile destinatie
+	 
+Application Layer:
+	-cel mai apropiat de end user
+	-interfata dintre apliicatile folosite pentru comunicare si internetul
+
+Presentation Layer:
+	-formateaza sau prezinta data de la dispozitivul sursa intr-un format compatibil care sa fie inteles de dispozitivul destinatie
+	-comprima datele intr-un anumit fel care poate fi decompresat de dispozitivul destinatie
+	-encripteaza data pentru transmitere si decripteaza data la primire
+	
+Session Layer:	
+	-mentine dialogurile intre dispozitivele sursa si cele destinatie
+	-schimbul de informatii intre host-uri
+
+Client-Server Model:
+	-un client face un requet catre un server, ori de upload ori de download
+	
+Peer-to-Peer Networks(P2P):
+	P2P are doua parti:
+		-P2P networks
+		-P2P applications
+	P2P networks:	
+	-sunt conectate 2 sau mai multe host-uri intr-un LAN si impart resurse intre ele
+
+	-orice host conectat poate fi unclient sau un server, adica hostA 	poate fi Print Client si File Server, iar hostB poate fi File 	Client si Print server
+	P2P applications:
+	-pe un host este si client si server pentru aceasi chestie(un chat live)
+	-in aceasi comunicatie este si client si server
+	-ambele hosturi au si interfata pentru user si un serviciu de backend
+	ex:
+		-BitTorrent
+		-Direct Connect
+		-eDonkey
+		-Freenet
+
+HTTP and HTTPS:
+	-un protocol de tip request/respons
+	mesaje comune:
+		GET : cere data de la server
+		POST : uploadeaza data la un server
+		PUT : updateaza resurse la un server
+
+	HTTPS : HTTP encriptat
+
+Domain Name System:
+	FQDN : fully-qualified domain names
+	-userul scrie un FQDN intr-o aplicatie browser(in search bar)
+	-un query DNS este trimis la serveru DNS al clientului
+	-serveru DNS gaseste in tabel IPu FQDN-ului
+	-serveru DNS trimite raspunsu cu adresa IP si FQDNu catre client
+	-clientul foloseste acel IP ca sa faca un request catre server
+
+DNS Message Format:
+	A : un end device IPv4 address
+	NS : un name server autoritar
+	AAAA(quad-A) : un end device IPv6 address
+	MX :  a mail exchange
+	Comunicatii intre servere:
+		Question : intrebarea pentru name server
+		Answer : raspuns la intrebare
+		Authority : resursele indruma catre o autoritate
+		Additional : resursele care tin informatii aditionale
+
+DNS Hierarchy:
+	-domain name-urile sunt salvate in db dupa tipu de domeniu
+	ex: 
+		.com -> o afacere sau o industrie
+		.org -> a organizatie non-profit
+		.au -> australia
+		.co -> columbia
 
 The nslookup Command:
-	-daca dupa comanda nslookup bagi un url o sa iti dea ip-ul public al acelui url
-
-HTTP and HTML:
-	- http -> protocolul care face rost de fisierul unui webpage
-	- html -> limbajul de programare in care se scrie fisierul unui webpage
-	- cand un client face un request la adresa IP a unui web server la portu 80, acest request  este trimis serverului folosinduse de Hyper Transfer Protocol(HTTP)
-	- protocolul HTTP nu este sigur, find usor de interceptat informatile de alti useri
-	- HTTP-u poate fi folosit cu secure transport protocols
-	- requestu pt HTTP securizat se fac la portu 443, iar aceste requesturi folosesc protocolul HTTPS 
+	nslookup : o comanda care iti da informatii dupa un FQDN
+	-gen o bagi in cmd, enter si dupa de baga intr-un nslookup prompt unde sa bagi FQDNu
 	
-File Transfer Protcol(FTP):
-	-FTP o metoda usoara de a transfera fisiera de la host la host
-	-un host care are FTP client software pot accesa un FTP server, ca sa schimbe fisiere pe acolo
-	- FTP-ul lasa un client sa faca schimb de fisiere cu un host, lasa clientul sa menegerieze fisiere remote
-	- ca FTP-ul sa poata functia accesta foloste 2 port-uri diferite pentru a comunica intre server si client
-	- FTP client software este scrie in computer operating system(windows, linux, etc) si in multe web browsere. 
+DHCP:
+	-imprumuta adrese IP, subnet mask-uri,  gateway-uri si alte informatii catre un host nou conectat
+	
+DHCP Operation:
+	-cand un host vrea sa faca rost de adrese face asta
+	-trimite un DHCPDISCOVER, ca sa primeasca un DHCPOFFER de la fiecare server DHCP la care e conectat
+	-daca primeste mai multe DHCPOFFER-uri o sa trimita din nou un DHCPREQUEST care intreaba specific pe acel DHCP de date
+	-daca hostu o mai fost conectat poate intreba daca nu is pot da datele de mai de dinainte, si daca is valabile server trimite un DHCPACK daca nu un DHCPNACK
+	-daca primeste un DHCPNAK se face iarasi procesu incepand cu DHCPDISCOVER
 
-Telnet:
-	- unul dintre cele mai vechi application layer protocols
-	- telnet iti da voie sa folosesti terminalul unui host, de la tine de acasa, de la hostu tau 
-	- telnet asculta client request-uri pe portul TCP 23 
+FTP(File transfer protcol):
+	clientul face o conexiune la server la portu 21, traficul consta in comenzi de la client si reply-uri de la server
+	clientul face o conexiunea la server la portu 20, doar cand data trebuie transferata
+	transferul de date poate sa fie din ambele parti, clinetul poate downloada(pull) sau uploada(push)
 
-Security Issues with Telnet:
-	- telnetu nu encripteaza datele cand le transmite la hostu la care esti conectat
-	- SSH este un telnet securizat
-	- SSH encripteaza datele cand le transmite
+Server Message Block (SMB):
+	-incep, autentifica si sfarsesc sesiuni
+	-controleaza acesul la fiesiere si imprimante
+	-permite unei aplicatii sa primeasca sau sa trimita mesaje unei aplicatii
 
-Email Clients and Severs:
-	-emailul este una dintre cele mai populare aplicatii de tip client-server 
-	-serverele email au un software care le permite sa interactioneze cu clientul si cu alte servere email
-	-fiecare server email stocheaza mailuri pentru useri
-	-fiecare user apoi trebuie sa se foloseasca de un email client ca sa se conecteze la email server si sa citeasca email-urile
-	-protocoale folosite in procesarea email-urilor sunt SMTP, POP3, si IMAP4
+Types of Threats:
+	Information Theft : sa intri intr-un computer ca sa obtii date confidentiale
+	Data Loss and Manipulation : sa intri intr-un computer ca sa distrugi fisiere 
+	Identity Theft : sa ii furi ceva ca sa ii iei identitatea(buletinu, cardu bancar pula mea)
+	Disruption of Service : sa nu le dai voie la oameni asigurati sa acceseze anumite resure de pe net
 
-Email Protocols:
-	Simple Mail Transfer Protocol(SMTP):
-		-SMTP este folosit de un email client ca sa trimita email-uri catre server-u local
-		-apoi serveru local decide daca mesajul este destinat unei db locale sau unei db de pe un alt server
-		-daca serveru tre sa trimita emailu catre alt server, SMTP se va ocupa de aceasta transmitere
-		-requestu-rile SMTP se trimit la portu 25
-	Post Office Protocol(POP3):
-		-un server care are POP clients, primeste si stocheaza mesajele adresate userilor.
-		-cand clientul se conecteaza la email server, mesajele sunt downloadate catre client
-		-by default mesajele nu raman la server dupa ce au fost accesate de client
-		-clientul conecteaza POP3 server la portu 110
- 	Internet Message Access Protocol(IMAP4):
-		-un server care suporta IMAP clients, primeste si stocheaza mesajele adresate userilor.
-		-insa IMAP tine mesajele intr-o db din server si isi face o copie care ramane la el, pana sunt sterse de client.	
-		-cea mai noua versiune de IMAP este IMAP4, care primeste client request la portu 143
+Types of Vulnerabilities:
+	Technological Vulnerabilities:
+		-TCP/IP protocol weakness
+		-Operating system weakness
+		-Network Equipment weakness
+	Configuration Vulnerabilities:
+		-unsecured user accounts
+		-system accounts with easily guesses passwords
+		-misconfigured internet services
+		-unsecured default setting within products
+		-misconfigured network equipment
+	Policy Vulnerabilities:
+		-lack of written security policy
+		-politics
+		-lack of authentication continuity
+		-logical access controls not applied
+		-software and hardware installation and changes do not follow policy
+		-disaster recovery plan is nonexistant
 
-Text Messaging:
-	-permite userilor sa comunice pe internet in timp real.
-	-servicile de tip text-messaging pe un computer sunt deobicei accesate printr-un client bazat web(ex: Gmailu) care este integrat intr-o aplicatie de tip social media sau information sharing.
-	-clientii deobicei se conecteaza doar la ceilalti useri de pe acelasi site
-	-sunt si aplicatii de tip text messaging care au fost dezvoltate pe o platforma privata
-		ex:  cisco webex teams, microsoft team, whatsapp, facebook, messenger, etc.
-	- aceste aplicatii suporta si transferul de documente, videouri, muzica si fisiere audio 
+Physical Security:
+	-hardawre threats
+	-environmental threats
+	-electrical threats
+	-maintenance threats
+	
+Types of Malware:
+	Viruses : un malware care isi scrie o copie, si devenind o parte dintr-un program, se extinde la host la host over network, acest malware trebuie sa fie executat de user ca sa functioneze
+	Worms :  este un virus dar care functioneaza standalone adica nu trebuie sa fie executat fisierul
+	Trojan Horses : un malware care pare un program obisnuit, folosit ca sa dea acces la pc-u tau un alt user, ca un SSH rau
 
-Internet Phone Calls:
-	-IP telephony se foloseste de tehnologia Voice over IP(VoIP), care transforma signalele analog ale vocii in date digitale
-	-datele vocale apoi sunt encapsulate intr-un pachet IP, apoi transmise pe net 
-	-trebe sa ai casti microfon, si un user unic
-	-daca vrei sa vorbesti de pe un telefon IP la unu normal atunci o sa folosesti un gateway ca sa accesezi the Public Switched Telephone Network(PSTN).
-	-porturile de accesare difera de la software-ul folosit
- 
-ipconfig - Displays IP configuration information.
-ping - Tests connections to other IP hosts.
-netstat - Displays network connections.
-tracert - Displays the route taken to the destination.
-nslookup - Directly queries the name server for information on a destination domain.
+Reconnaissance Attacks:
+	-gasesti vulnerabiliti pe network
+	contine:
+		internet queries : informatii initiale despre un target 
+		ping sweeps : se uita sa vada care adrese IP sunt active
+		port scans : se uita sa vada ce porturi functioneaza
+
+Access Attacks:
+	-gasesti vulnerabilitati in servicii de autentificare
+	Password Attacks:
+		-brute-force 
+		-trojan horeses
+		-packet sniffers
+	Trust Exploitations
+		-un hostA are incredere in alt hostB, hostB are incredere in orcine, asa ca hostB este compromis, ca apoi sa compromiti hostA
+	Port Redirections:
+		-te folosesti de un system compromis ca basa pentru a ataca alte targeturi
+	Man-in-the-Middle:
+		-hackeru e pozitionat intre destinatie si sursa, ca sa schimbe ce e trimis
+
+DoS Attacks(Denial of Service Attacks):
+	-un risc major pentru intrerup comunicatie si pot semnifica priedere de bani si timp
+
+DDos Attacks:
+	-un DoS Attack care vine din mai multe parti
+
+Keep Backups:
+	frequency : backup-uri regulate, lunare, saptamanale
+	valiadtion : backuprile trebuie validateca fi sigur de integritatea datelor
+	storage : baackupurile nu trebuie sa stacneze intr-o db sa exista o rotatie saptamanala lunara anuala de db la db
+	security : trebuie protejate folosind parole strong
+	
+Firewall:
+	-permite datelor sa mearga de la un host dintr-un LAN sa iasa si sa reintre
+	-nu permite datelor sa vina din WAN in LAN
+	-poate da acces limitat la anumite chestii, de exemplu sa se bage un demilitarized zone(DMZ)
+	tipuri:
+		-packet filtering : iti da accesu dupa MAC sau IP
+		-aplication filtering : iti da accesu dupa specificul aplicatie, bazat pe port numbers
+		-url filtering : iti da accesu la website-uri bazat pe URL-uri specifice sau keyworduri
+		-stateful packet inspection(SPI) : pachetele care vin trebuie sa fie raspunsuri legitime la requesturi de la hosturi din LAN
+
+Device Selection for a Small Network:
+	Cost :  cat costa ca gen sa nui iti iei un router prea smecher pt ce iti trebuie tie sau un switch etc
+	Speed and Types of Ports/Interfaces : ar fi bine sa iei dispozitive de layer2 care se acomodeaza usor la bandwidth mai mare
+	Expandability : dispozitivele modulare iti permit sa mai adaugi noi piese
+	Operating System Features and Services:
+		-sistemele de operare trebuie sa suporte anumite chestii cum ar fi:
+			Layer 3 switching
+			Network Address Translation (NAT)
+			Dynamic Host Configuration Protocol (DHCP)
+			Security
+			Quality of service (QoS)
+			Voice over IP (VoIP)
+
+IP Addressing for a Small Network:
+	-trebuie sa ai o schema dupa care atribui IP-uri gen, dupa loc, dupa tipul de dispozitiv sau dupa alte chestii
+	
+Redundancy in a Small Network:
+	-gen sa fie mai multe cai prin care informatia sa ajunga la server astfel incat daca se strica vre-un dispozitiv de layer2 sa se mai poate comunica in LAN
+	-deobicei se instaleaza echipament duplicat sau supplying duplicate network links for critical areas
+	
+Traffic Management:
+	-prioritate:
+		Voice : high priority
+		SMTP : medium priority
+		Instant Messaging : normal priority
+		FTP : low priority
+
+Common Applications:
+	Network Applications : software-urile folosite pentru a comunica pe internet
+	Application Layer Services : interactioneaza cu user-ul si pregatest datele pentru aplicatiile network
+	
+Common Protocols:
+	Web Server -> HTTP, HTTPS
+	Email Server -> SMTP, POP3, MAP
+	FTP Server -> FTP, FTPS, SFTP
+	DHCP Server -> DHCP
+	DNS Server -> DNS
+	-aceste protocoale cuprind:
+		-Processes on either end of a communication session
+		-Types of messages
+		-Syntax of the messages
+		-Meaning of informational fields
+		-How messages are sent and the expected response
+		-Interaction with the next lower layer	
+
+Voice and Video Applications:
+	-trebuie sa respecte niste criterii:
+		Infrastrucutura : trebuie sa suporte aplicatile real-time, dispozitivele si media trebuie sa fie testate si validate
+		VoIP : schimba signalul telefonic in pachete IP, VoIP e mai ieftin ca IP telephony dar nu si la fel de calitativ
+		IP Telephony : un telefon IP transforma semnalele in pachete IP cu ajutorul unui server dedicat 
+		Real-Time Applications : trebuie sa respecte QoS pentru a fi cat mai puting lag, RTP si RTCP sunt doua protocoale care respecta aceste lucruri
+
+Small Network Growth:
+	Network documentation : diagrame cu locatia fizica sau adresele IP a unor dispozitive
+	Device inventory : o lista cu dispozitivele de pe LAN
+	Budget : bugetu dracu
+	Traffic analysis : protocoalele, aplicatiile si servicile sa functioneze in norme normale
+
+Verify Connectiviy with Ping:
+	-faci si tu un ping ca sa vezi ca este conexiune layer3 intre doua host-uri
+	Ping Indicators:
+		! : indica ca o primit un mesaj de tip echo reply
+		. : indica ca timpul a expirat pana cand a primit un mesaj de tip echo reply
+		U : indica ca un router a raspuns cu un mesaj de tip ICMP Type 3 "destination unreachable"
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
